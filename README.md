@@ -8,10 +8,9 @@ This is a simple site set up to log the meeting minutes of those meetings for po
 
 ### Summary: ###
 
-- Statuses from Gideon, Jorge, and Rudolph
-- Mo is back from leave
-- Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations
-- Discussion points:
+- **Statuses** - from Gideon, Jorge, and Rudolph
+- **Demo** - Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations
+- **Discussion points:**
   - UI Model for working with files
   - dircopy only taking one path as an argument, would like to take multiple
   - Exposing more details about plugin execution status in UI
@@ -20,6 +19,15 @@ This is a simple site set up to log the meeting minutes of those meetings for po
   - March Hackathon timeline not decided yet
   - User file permissions / security in swift with paths
   - Trend of versioning data (Palantir, openneuro)
+- Mo is back from leave
+
+### Action Items ###
+
+- mo to mock up dialog for inputting arugments to plugins
+- rudolph & team to set up public facing fnndsc.harvard site to run latest code for ui
+- mo will try to set up latest locally
+- mo also going to look at a mockup for feed status based on the 4 parts / states
+- jorge to continue work on security for user files in swift
 
 ### Status: Gideon ###
 
