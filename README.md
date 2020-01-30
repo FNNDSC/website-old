@@ -2,9 +2,11 @@
 
 Every Thursday, a group of folks working on [the ChRIS project](https://github.com/FNNDSC) meet to share their status for working on the project. There are often useful discussions about development and planning and demos during these meetings.
 
-This is a simple site set up to log the meeting minutes of those meetings for posterity. It is driven via the [https://github.com/FNNDSC/status/](https://github.com/FNNDSC/status) repository.
+This is a simple site set up to log the meeting minutes of those meetings for posterity. It is driven via the [FNNDSC status](https://github.com/FNNDSC/status) repository.
 
 ### 30 Jan 2020
+
+### Markdown matter
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
