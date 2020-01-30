@@ -1,10 +1,10 @@
-## Welcome to GitHub Pages
+## ChRIS Weekly Status Updates
 
-You can use the [editor on GitHub](https://github.com/FNNDSC/status/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Every Thursday, a group of folks working on [the ChRIS project](https://github.com/FNNDSC) meet to share their status for working on the project. There are often useful discussions about development and planning and demos during these meetings.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This is a simple site set up to log the meeting minutes of those meetings for posterity. It is driven via the [https://github.com/FNNDSC/status/](https://github.com/FNNDSC/status) repository.
 
-### Markdown
+### 30 Jan 2020
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
