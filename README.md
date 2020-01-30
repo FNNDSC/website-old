@@ -58,6 +58,9 @@ One of the reasons for this - we're also aiming down the line to integrate the w
 
 ### Discussion: Plugin Execution Status ###
 
+![Job status](https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-job-status-info_30jan2020.png)
+![Plugin status from feed](https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-plugin-status_30jan2020.png)
+
 For Hackathon in March -
 
 - Would like more intuitive feedback to user on actual execution status of any plugin.
@@ -83,6 +86,10 @@ Would be great to expose those 4 states as a progress bar, change color based on
 ### Discussion: Plugin configuration UI ###
 
 - (Rudolph) Before Mo went on leave we had a lot of discussions about how to handle plugin configuration in UI. We have gone in this direction - to have a form to fill in the flags. Doesn't handle dependencies.  But better than a large blank textbox for writing command line manually. Provides hints for each plugin argument.
+
+![Add node 1](https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-30jan2020.png)
+![Add node 2](https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-2-30jan2020.png)
+![Node parameter entry](https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-node-params_30jan2020.png)
 
 ### March Hackathon ###
 
