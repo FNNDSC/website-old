@@ -27,6 +27,9 @@ This is a simple site set up to log the meeting minutes of those meetings for po
 - ChRIS file select works too
 - Worked on UI performance optimizations and it is much snappier now.
 
+![Local file upload screenshot](https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png)
+
+
 #### Web UI Demo ###
 
 ChRIS file select root now starts with 'chris' file root. It now shows the entire swift space, potentially all the users as well. So you'll see the ChRIS root node. The feeds are created by this user 'chris'. If user 'rudolph' were doing this, it'd start with a 'rudolph' file root.
