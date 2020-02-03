@@ -8,12 +8,14 @@ If you would like to contribute a post to this repo:
 2. **Use the correct file naming format:** Do note the post's name must start with a timestamp in the format `YYYY-MM-DD-` followed by a name for the post. If you use just the date, the template system won't recognize the post.
 3. **Add YAML 'front matter' metadata to the top of the post:** The YAML itself is pretty self-explanatory; here is an example you can copy/paste and modify for your post:
 
+```
     ---
     layout: post
     title:  "30 Jan Status - Local file upload in web UI"
     author: mo
     image: "https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-file-select_30jan2020.png"
     ---
+```
 
 Other tips:
 - **Featured Posts:** If you like a post to be featured on the "Featured" section on the top of the page, insert `featured:true` in the YAML metadata at the top of your post's markdown file.
