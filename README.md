@@ -1,23 +1,18 @@
-# Mediumish - Jekyll Theme
+# ChRIS Status Updates Blog
 
-[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/) &nbsp; | &nbsp; [Buy me a coffee](https://www.wowthemes.net/donate/)
+This repo drives [https://fnndsc.github.io/status/](https://fnndsc.github.io/status/), which is meant to be a permanent place to store the ChRIS team's weekly meeting status updates & discussions.
 
-![mediumish](assets/images/mediumish-jekyll-template.png)
+If you would like to contribute a post to this repo, simply go to the `_posts` folder and add a post in markdown. You can do this straight in the github UI. Do note the post's name must start with a timestamp in the format `YYYY-MM-DD-` followed by a name for the post. If you use just the date, the template system won't recognize the post.
 
+## Blog development
 
-### Copyright
+If you would like to set up a local copy of this blog to test changes, etc. to it beyond adding posts:
 
-Copyright (C) 2019 Sal, https://www.wowthemes.net
+1. You want to do [some basic setup of Jekyll & ruby on your system](https://jekyllrb.com/docs/installation/) if you don't have it set up already.
+2. git clone git@github.com:FNNDSC/status.git
+3. navigate to your checkout
+4. bundle exec jekyll serve --watch
 
-**Mediumish for Jekyll** is designed and developed by [Sal](https://www.wowthemes.net) and it is *free* under MIT license. 
+## Blog upstream
 
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
-### Contribute
-
-1. [Fork the repo](https://github.com/wowthemesnet/mediumish-theme-jekyll).
-2. Clone a copy of your fork on your local
-3. Create a branch off of master and give it a meaningful name (e.g. my-new-mediumish-feature).
-4. Make necessary changes, commit, push and open a pull request on GitHub.
-
-Thank you!
+We are using the [Mediumish Jekyll](https://wowthemesnet.github.io/mediumish-theme-jekyll/) theme developed by WOWthemes for this blog with some minor customizations. It is *free* under MIT license. 
