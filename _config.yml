@@ -16,11 +16,11 @@ authors:
   mo:
     name: mo
     display_name: Máirín Duffy
-    #gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    gravatar: 6538a2e21a4f5358c628382dd63e5be5
     #email: wowthemesnet@gmail.com
-    #web: https://www.wowthemes.net
+    web: http://www.bu.edu/rhcollab/people/mairin-duffy/
     #twitter: https://twitter.com/wowthemesnet
-    #description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+    description: "Red Hat UX designer working on the ChRIS project."
 
 # Plugins
 plugins:
