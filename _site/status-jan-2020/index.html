@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/status/assets/images/logo.png">
+
+<title>30 Jan Status - Local file upload in web UI | ChRIS Status Updates</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>30 Jan Status - Local file upload in web UI | status</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="30 Jan Status - Local file upload in web UI" />
+<meta name="author" content="mo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Summary: Statuses - from Gideon, Jorge, and Rudolph Demo - Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations Discussion points: UI Model for working with files dircopy only taking one path as an argument, would like to take multiple Exposing more details about plugin execution status in UI UI for admins to load multiple plugins at once into ChRIS from store Plugin configuration UI March Hackathon timeline not decided yet User file permissions / security in swift with paths Trend of versioning data (Palantir, openneuro) Mo is back from leave" />
+<meta property="og:description" content="Summary: Statuses - from Gideon, Jorge, and Rudolph Demo - Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations Discussion points: UI Model for working with files dircopy only taking one path as an argument, would like to take multiple Exposing more details about plugin execution status in UI UI for admins to load multiple plugins at once into ChRIS from store Plugin configuration UI March Hackathon timeline not decided yet User file permissions / security in swift with paths Trend of versioning data (Palantir, openneuro) Mo is back from leave" />
+<link rel="canonical" href="http://localhost:4000/status/status-jan-2020/" />
+<meta property="og:url" content="http://localhost:4000/status/status-jan-2020/" />
+<meta property="og:site_name" content="status" />
+<meta property="og:image" content="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-30T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"mo"},"description":"Summary: Statuses - from Gideon, Jorge, and Rudolph Demo - Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations Discussion points: UI Model for working with files dircopy only taking one path as an argument, would like to take multiple Exposing more details about plugin execution status in UI UI for admins to load multiple plugins at once into ChRIS from store Plugin configuration UI March Hackathon timeline not decided yet User file permissions / security in swift with paths Trend of versioning data (Palantir, openneuro) Mo is back from leave","@type":"BlogPosting","url":"http://localhost:4000/status/status-jan-2020/","headline":"30 Jan Status - Local file upload in web UI","dateModified":"2020-01-30T00:00:00-05:00","datePublished":"2020-01-30T00:00:00-05:00","image":"https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/status/assets/images/logo.png"},"name":"mo"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/status/status-jan-2020/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/status/assets/css/screen.css" rel="stylesheet">
+
+<link href="/status/assets/css/main.css" rel="stylesheet">
+
+<script src="/status/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+	    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/status/">
+    <img src="/status/assets/images/logo.png" alt="ChRIS Status Updates">
+    </a>
+    <h1 class="sitetitle">ChRIS Status Updates</h1>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/status/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/status/about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
+                </li>
+
+                <script src="/status/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/status/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+
+<div class="mainheading">
+    <p class="lead">
+        The latest developments and news on the <a href="http://www.bu.edu/rhcollab/projects/radiology/">ChRIS project</a>.
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=30 Jan Status - Local file upload in web UI&url=http://localhost:4000/status/status-jan-2020/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/status/status-jan-2020/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/status/status-jan-2020/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="Máirín Duffy">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="">Máirín Duffy</a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">30 Jan Status - Local file upload in web UI</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png" alt="30 Jan Status - Local file upload in web UI">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Summary:</p>
+<ul>
+  <li><strong>Statuses</strong> - from Gideon, Jorge, and Rudolph</li>
+  <li><strong>Demo</strong> - Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations</li>
+  <li><strong>Discussion points:</strong>
+    <ul>
+      <li>UI Model for working with files</li>
+      <li>dircopy only taking one path as an argument, would like to take multiple</li>
+      <li>Exposing more details about plugin execution status in UI</li>
+      <li>UI for admins to load multiple plugins at once into ChRIS from store</li>
+      <li>Plugin configuration UI</li>
+      <li>March Hackathon timeline not decided yet</li>
+      <li>User file permissions / security in swift with paths</li>
+      <li>Trend of versioning data (Palantir, openneuro)</li>
+    </ul>
+  </li>
+  <li>Mo is back from leave</li>
+</ul>
+
+<h3 id="action-items">Action Items</h3>
+
+<ul>
+  <li>mo to mock up dialog for inputting arugments to plugins</li>
+  <li>rudolph &amp; team to set up public facing fnndsc.harvard site to run latest code for ui</li>
+  <li>mo will try to set up latest locally</li>
+  <li>mo also going to look at a mockup for feed status based on the 4 parts / states</li>
+  <li>jorge to continue work on security for user files in swift</li>
+</ul>
+
+<h3 id="status-gideon">Status: Gideon</h3>
+
+<ul>
+  <li>Gideon has local file upload working now in the UI</li>
+  <li>ChRIS file select works too</li>
+  <li>Worked on UI performance optimizations and it is much snappier now.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png" alt="Local file upload screenshot" /></p>
+
+<h4 id="web-ui-demo">Web UI Demo</h4>
+
+<p>ChRIS file select root now starts with ‘chris’ file root. It now shows the entire swift space, potentially all the users as well. So you’ll see the ChRIS root node. The feeds are created by this user ‘chris’. If user ‘rudolph’ were doing this, it’d start with a ‘rudolph’ file root.</p>
+
+<p>One of the reasons for this - we’re also aiming down the line to integrate the whole PACS query &amp; retrieve mechanism into this dialog. The idea would be when you do a pacspull or from any external db, that’s also packed into swift and navigable from this tree. so you have to be able to see the entire swift space. The pacs stuff you pull isn’t going to be user-specific, it’ll be generic.</p>
+
+<h3 id="discussion-model-for-working-with-files">Discussion: Model for Working with Files</h3>
+
+<ul>
+  <li><strong>Q:</strong> (Dan) How often would a set of files be only used by one user, or shared by others? Is it correct to associate with one user vs. the source which is more tied to the data?</li>
+  <li><strong>A:</strong> (Rudolph) I don’t have a well-reasoned argument either way - not sure what’s optimal. We’re still adhering to a full filesystem philosophy here. We need it to be able to, within ChRIS itself, copy an existing dataset somewhere in the swift storage to be the root of a new tree, to have dircopy to be able to see the entire tree instead of assuming it’s always this user just runing it. Sharing between users… I don’t know yet how that would work.</li>
+  <li>
+    <p><strong>A:</strong> (Jorge) Feeds can be shared between users, so feeds shared with you by another user, they have paths that have the other user as a root.</p>
+  </li>
+  <li>
+    <p><strong>Q:</strong> (Dan) If we were to ask people to give it a name, instead of taking their username and making it the root. If we asked them to give it a name, would they have one naturally or too cumbersome to ask?  Do you associate data with usersm or where it came from? If I’m a researcher or doctor, whomever, if I run it, do I want to see output under my name or output associated with patient / study/ etc tied to data. If I leave the organization and someone else comes in. How do they pick up data where it was if it’s in my name?</p>
+  </li>
+  <li>
+    <p><strong>A:</strong> (Rudolph) To me it’s logical to have username as root. Having it rooted in this structure to me is logical. That’s a good point about users leaving an org. Not sure if one way to do this that covers every use case. Arguments that can be made every way to represent the data. All I could say, this is now representing how we’ve organized swift without any filters. This is how swift storage is currently organized. It rooted its display in your user dir. Now switching display to root of entire tree.</p>
+  </li>
+  <li>(Rudolph) So at this point we can upload data arbitrarily. Can also create new root feeds from anywhere in the swift storage.</li>
+  <li>(Jorge) Previously only ability was creating new feeds from data in the user’s upload space. Now it’s extended to the whole 20 other preivous feeds. Now that we see file browser… maybe if pacspull can pull data to somewhere that not under the user space… a plugin will always pull in under a user space.</li>
+  <li>(Rudolph) The way PACS being put together… a separate microservice that actually sees the swift storage ChRIS sees, and writes the resultant pacs results into the same swift storage. Has no concept of the user necessarily who is doing the request. PACS query / retrieve doesnt have to be strictly tied to ChRI Sor cube</li>
+  <li>(Mo) The high level model of file handling currently is implemented like Google Drive with some of the same issues (when an employee leaves, files are in a bit of a limbo, for example.) I would like to evenetually have a model where this userdir is like home dir on laptop - a scratch space rough files and drafts in progress for individual users, and eventually have a more formal “published” space, a commons of some sort. A workflow would enable users to ‘publish’ more finished / final draft work to a shared commons area. Published files wouldn’t be owned by that user so if the user left they’d still be accessible.</li>
+</ul>
+
+<h3 id="issue-does-dircopy-take-only-one-directory-at-a-time-or-can-you-select-multiple-directories-at-a-time">Issue: Does dircopy take only one directory at a time or can you select multiple directories at a time?</h3>
+
+<ul>
+  <li>(Rudolph) Gideon mentioned, dircopy plugin now only accepts one target dir argument, that’s why you can only choose one. But dircopy plugin can be reengineered to handle multiple directory as possible arguments to copy stuff from all over the tree into one feed again.</li>
+  <li>(Jorge) Also will require changes in base class…. datatype is now defined as a single path. So that will require making more general, a list of paths separated by comma or such.</li>
+</ul>
+
+<h3 id="discussion-plugin-execution-status">Discussion: Plugin Execution Status</h3>
+
+<p><img src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-job-status-info_30jan2020.png" alt="Job status" />
+<img src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-plugin-status_30jan2020.png" alt="Plugin status from feed" /></p>
+
+<p>For Hackathon in March -</p>
+
+<ul>
+  <li>Would like more intuitive feedback to user on actual execution status of any plugin.</li>
+  <li>
+    <p>When you run it, you just get a spinner in the status area. When you click on status you don’t get more info. In the backend though we get info about it’s currently computing and pushing files. Would be cool to show when user clicks to see files, we could give them the remote job status where it’s in the pipeline (computing, pushing to swift, etc.)</p>
+  </li>
+  <li><strong>Q:</strong> (Parul) When we see status in right panel, does status get updated?</li>
+  <li><strong>A:</strong> (Rudolph) yes, what happens in cube, there’s a module. When you ask it for status on a job, it gives you a json object that has 4 parts, each of which have scheduled, started, completed, error states:
+    <ol>
+      <li>Sending data from cube to remote location</li>
+      <li>Compute scheduled / started / completed</li>
+      <li>Remote data being pulled back into cube</li>
+      <li>Data in cube being packed into swift. 
+Would be great to expose those 4 states as a progress bar, change color based on current state that stage is in. Would like to have that as part of the UI feedback.</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="discussion-ui-for-admins-to-load-multiple-plugins-at-once-into-chris">Discussion: UI for admins to load multiple plugins at once into ChRIS</h3>
+
+<ul>
+  <li>(Rudolph) The other thing we’re doing, Jorge is looking at, once you have a running ChRIS… to make the whole process of having a user (workshop attendee) who’s made a plugin and registered it to the ChRIS store, to allow the admin at the workshop to pull that plugin into ChRIS.</li>
+  <li>(Jorge) Users don’t register plugins directly to ChRIS, register to ChRIS store. That is now currently through ChRIS store UI. Register and upload there.</li>
+  <li>(Parul) We discussed last time, registration through UI is not MVP component, we were going to do adhoc registration at hackfest.</li>
+  <li>(Jorge) But users will have ChRIS store instance running for them at hackathon, will create plugins in that chris store and upload. Then ChRIS admin at hackathon can run that script or use another UI for ChRIS to add into ChRIS</li>
+  <li>(Rudolph) For the MVP, being able to do this - I think we can do this today, it’s just behind the scenes and hacky-ish. I think it’s doable for us to have a better end user workflow, so they could make their plugin, register to the store, and that’s all they’d need to do. And what registers from the store ad hoc to cube is working today already through command line scripts. That’s where we are with that.</li>
+  <li>(Jorge) We can improve the ChRIS admin experience. If he can have a private website to register plugins</li>
+</ul>
+
+<h3 id="discussion-plugin-configuration-ui">Discussion: Plugin configuration UI</h3>
+
+<ul>
+  <li>(Rudolph) Before Mo went on leave we had a lot of discussions about how to handle plugin configuration in UI. We have gone in this direction - to have a form to fill in the flags. Doesn’t handle dependencies.  But better than a large blank textbox for writing command line manually. Provides hints for each plugin argument.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-30jan2020.png" alt="Add node 1" />
+<img src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-2-30jan2020.png" alt="Add node 2" />
+<img src="https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-node-params_30jan2020.png" alt="Node parameter entry" /></p>
+
+<h3 id="march-hackathon">March Hackathon</h3>
+
+<ul>
+  <li>(Parul) Have not decided a time line or deadline for the MVP. Planning to have hackathon and not decided on date or when we have achieved or finished components. Will decide on a date soon.</li>
+</ul>
+
+<h3 id="status-jorge">Status: Jorge</h3>
+
+<ul>
+  <li>Gideon said most of what I did. I exposed some API descriptors that Gideon needed for creating file browser.</li>
+  <li>Also working on the permissions problem. Previously the frontend didn’t have a full path to the backend. Kind of truncated path, then the backend build that path automatically based on the user. Was possible bc already looking at files based on user uploads. Now upload needs to send full paths to backend to provide standardization for everything. Some things in swift, some in user upload space ,some things in the feed space, which are all managed differently by cube.</li>
+  <li>In order to see as a single thing, use path as a standard thing. needed to expose a full path frm the backend to every file, but this comes also with security problems, as the user can send a malicious path - eg root of swift - to put all the files inside a feed, so those things need to be considered. i’m working on validating paths to make sure user has the right to pull files from the path he’s sending to the front end.</li>
+  <li>We also had a lot of discussions. that’s what i spent my time on.</li>
+</ul>
+
+<h3 id="discussion-user-file-permissions--security">Discussion: User file permissions / security</h3>
+
+<ul>
+  <li><strong>Q:</strong> (Parul) would swift allow you to pull from the root as a user wo privilege? Does swift not restrict this by default?</li>
+  <li><strong>A:</strong> (Jorge) swift is object storage system, it understands stream. we’re using paths with a / to make it easy for scientists / etc who are used to paths, but swift doesn’t understand really about paths. it’s a good thing, it takes a lot of the nightmare of dealing with path mgmt system…. if i could a /, it’s just a path. it doesn’t put any restrictions on the name for files. so swift doesn’t really have paths, just strings.</li>
+  <li><strong>A:</strong> (Rudolph) Right now the way it’s impemented, there’s swift storage, and that obvs is authetnticated with a swift user. right now that swift user isn’t anything to do with chris user. Swift storage has one user, one password, so chris is effectively storing stuff in object storage only ever as one user.</li>
+  <li>
+    <p><strong>A:</strong> (Rudolph) there’s no file system in swift, we’re making it look like one. we’re interpreting the strings as a filesystem tree but swift doesn’t have any concept of that.</p>
+  </li>
+  <li><strong>Q:</strong> (Parul) So what kind of validation are we doing in swift</li>
+  <li><strong>A:</strong> (jorge) each obj has a string assoc with it, we make it look like we’re using paths. User of chris system who has plugins running, everytihng in the store for him the string starts with his username, that’s how the system works. looks like the first part of a path, but the beginning of each string. we havea to make sure that eveyr string the user sends, for the ui user looks like a path, always starts with the user name of the user making the request. that’s one case.</li>
+  <li>(Jorge) he could also be allowed to send strings that start with another user name for a shared feed. in that case, validatoin needs to be done. so that’s the kind of validation we’re working on . make sure the string is a valid string for the user making the request, so he can’t just pull files from wherever he wants.</li>
+  <li>(Parul) what we are trying to do is make sure he’s not putting in an invalid path, bc all the users who are logged in would have access to other user’s files otherwise</li>
+  <li>(Jorge) API enforces very well that users can’t access other files, but the new issue here is the dircopy plugin. we need to implement a way to avoid the loophole it poses.</li>
+</ul>
+
+<h3 id="status-rudolph">Status: Rudolph</h3>
+
+<ul>
+  <li>In parallel to this demo, working on finishing work to implement the infrastructure to do the PACS query and retrieve. that is one kind of thing that is the most-used feature of the current ChRIS (the clunky cartoony 5 years old version in production here at children’s) People use the pacs query, mostly people want to use ChRIS for no reason other than to use it as an easy way to access images from the PACS. it’s a big thing for people. one of the things missing from the new ChRIS (ChRIS next gen, etc.) We can’t deploy this internally in the hospital wo having a usable ability to deal with a PACS query pull</li>
+  <li>The whole plugin model here doesn’t lend itself to a very satisfying way to do these kind of interactive client-side functionality. it’s clunky to try to recreate that interaction / model in the current plugin system in ChRIS. way around it is to have as much of that happening client side in javascript as possible</li>
+  <li>What we do have is another pf service… pfcon, pfioh… similar to pfcon calling it pfdcm (pf dicom). pfdcm will speak to the actual PACS or different PACS backends. exposes a REST interface to clients that is the same kind of dialect as pfcon and pfioh. Similar kind of json you sent to it, to say ‘hey do a query on PACS using this patient id’ .it does it all for you, spits back JSON object. can then ask for a particular series from the JSON, etc. that is what i’m working on at the moment</li>
+</ul>
+
+<h3 id="status-parul">Status: Parul</h3>
+
+<p>Nothing to report.</p>
+
+<h3 id="status-mo">Status: Mo</h3>
+
+<p>Happy to be back from maternity leave and impressed with the progress that’s been made on the UI.</p>
+
+<h3 id="discussion-versioning-data">Discussion: Versioning data</h3>
+
+<ul>
+  <li>(Jorge) Being able to pull data from many differnt sources in a simple single way, for ChRIS, from PACS, local fs, userspace, from relational dbs… it’s going to be key for success. See not only software versioning but data versioning. Not sure if that would be a thing for ChRIS, not sure how to envision that here. Seeing a lot of that - the trend is for data versioning, eg. Palantir… similar to what openneuro is doing… they are versioning data. Not sure if that would be useful here.</li>
+  <li>(Rudolph) the idea of verisoning data is definitely prevalant and creating a lot of buzz. It is true, a lot of importance in working w data w versioning like working w actual executable code.</li>
+</ul>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-01-30">30 Jan 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2020 ChRIS Status Updates 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/status/assets/js/mediumish.js"></script>
+
+
+
+<script src="/status/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

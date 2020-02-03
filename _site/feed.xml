@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>status</title>
+    <description>The latest developments and news on the &lt;a href=&quot;http://www.bu.edu/rhcollab/projects/radiology/&quot;&gt;ChRIS project&lt;/a&gt;.</description>
+    <link>http://localhost:4000/status/</link>
+    <atom:link href="http://localhost:4000/status/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 03 Feb 2020 09:43:15 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Feb 2020 09:43:15 -0500</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>30 Jan Status - Local file upload in web UI</title>
+        <description>&lt;p&gt;Summary:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Statuses&lt;/strong&gt; - from Gideon, Jorge, and Rudolph&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Demo&lt;/strong&gt; - Web UI demo from Gideon to show local file upload working as well as ChRIS file select and UI perf optimizations&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Discussion points:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;UI Model for working with files&lt;/li&gt;
+      &lt;li&gt;dircopy only taking one path as an argument, would like to take multiple&lt;/li&gt;
+      &lt;li&gt;Exposing more details about plugin execution status in UI&lt;/li&gt;
+      &lt;li&gt;UI for admins to load multiple plugins at once into ChRIS from store&lt;/li&gt;
+      &lt;li&gt;Plugin configuration UI&lt;/li&gt;
+      &lt;li&gt;March Hackathon timeline not decided yet&lt;/li&gt;
+      &lt;li&gt;User file permissions / security in swift with paths&lt;/li&gt;
+      &lt;li&gt;Trend of versioning data (Palantir, openneuro)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mo is back from leave&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;action-items&quot;&gt;Action Items&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mo to mock up dialog for inputting arugments to plugins&lt;/li&gt;
+  &lt;li&gt;rudolph &amp;amp; team to set up public facing fnndsc.harvard site to run latest code for ui&lt;/li&gt;
+  &lt;li&gt;mo will try to set up latest locally&lt;/li&gt;
+  &lt;li&gt;mo also going to look at a mockup for feed status based on the 4 parts / states&lt;/li&gt;
+  &lt;li&gt;jorge to continue work on security for user files in swift&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;status-gideon&quot;&gt;Status: Gideon&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gideon has local file upload working now in the UI&lt;/li&gt;
+  &lt;li&gt;ChRIS file select works too&lt;/li&gt;
+  &lt;li&gt;Worked on UI performance optimizations and it is much snappier now.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png&quot; alt=&quot;Local file upload screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;web-ui-demo&quot;&gt;Web UI Demo&lt;/h4&gt;
+
+&lt;p&gt;ChRIS file select root now starts with ‘chris’ file root. It now shows the entire swift space, potentially all the users as well. So you’ll see the ChRIS root node. The feeds are created by this user ‘chris’. If user ‘rudolph’ were doing this, it’d start with a ‘rudolph’ file root.&lt;/p&gt;
+
+&lt;p&gt;One of the reasons for this - we’re also aiming down the line to integrate the whole PACS query &amp;amp; retrieve mechanism into this dialog. The idea would be when you do a pacspull or from any external db, that’s also packed into swift and navigable from this tree. so you have to be able to see the entire swift space. The pacs stuff you pull isn’t going to be user-specific, it’ll be generic.&lt;/p&gt;
+
+&lt;h3 id=&quot;discussion-model-for-working-with-files&quot;&gt;Discussion: Model for Working with Files&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Q:&lt;/strong&gt; (Dan) How often would a set of files be only used by one user, or shared by others? Is it correct to associate with one user vs. the source which is more tied to the data?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A:&lt;/strong&gt; (Rudolph) I don’t have a well-reasoned argument either way - not sure what’s optimal. We’re still adhering to a full filesystem philosophy here. We need it to be able to, within ChRIS itself, copy an existing dataset somewhere in the swift storage to be the root of a new tree, to have dircopy to be able to see the entire tree instead of assuming it’s always this user just runing it. Sharing between users… I don’t know yet how that would work.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; (Jorge) Feeds can be shared between users, so feeds shared with you by another user, they have paths that have the other user as a root.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; (Dan) If we were to ask people to give it a name, instead of taking their username and making it the root. If we asked them to give it a name, would they have one naturally or too cumbersome to ask?  Do you associate data with usersm or where it came from? If I’m a researcher or doctor, whomever, if I run it, do I want to see output under my name or output associated with patient / study/ etc tied to data. If I leave the organization and someone else comes in. How do they pick up data where it was if it’s in my name?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; (Rudolph) To me it’s logical to have username as root. Having it rooted in this structure to me is logical. That’s a good point about users leaving an org. Not sure if one way to do this that covers every use case. Arguments that can be made every way to represent the data. All I could say, this is now representing how we’ve organized swift without any filters. This is how swift storage is currently organized. It rooted its display in your user dir. Now switching display to root of entire tree.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(Rudolph) So at this point we can upload data arbitrarily. Can also create new root feeds from anywhere in the swift storage.&lt;/li&gt;
+  &lt;li&gt;(Jorge) Previously only ability was creating new feeds from data in the user’s upload space. Now it’s extended to the whole 20 other preivous feeds. Now that we see file browser… maybe if pacspull can pull data to somewhere that not under the user space… a plugin will always pull in under a user space.&lt;/li&gt;
+  &lt;li&gt;(Rudolph) The way PACS being put together… a separate microservice that actually sees the swift storage ChRIS sees, and writes the resultant pacs results into the same swift storage. Has no concept of the user necessarily who is doing the request. PACS query / retrieve doesnt have to be strictly tied to ChRI Sor cube&lt;/li&gt;
+  &lt;li&gt;(Mo) The high level model of file handling currently is implemented like Google Drive with some of the same issues (when an employee leaves, files are in a bit of a limbo, for example.) I would like to evenetually have a model where this userdir is like home dir on laptop - a scratch space rough files and drafts in progress for individual users, and eventually have a more formal “published” space, a commons of some sort. A workflow would enable users to ‘publish’ more finished / final draft work to a shared commons area. Published files wouldn’t be owned by that user so if the user left they’d still be accessible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;issue-does-dircopy-take-only-one-directory-at-a-time-or-can-you-select-multiple-directories-at-a-time&quot;&gt;Issue: Does dircopy take only one directory at a time or can you select multiple directories at a time?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(Rudolph) Gideon mentioned, dircopy plugin now only accepts one target dir argument, that’s why you can only choose one. But dircopy plugin can be reengineered to handle multiple directory as possible arguments to copy stuff from all over the tree into one feed again.&lt;/li&gt;
+  &lt;li&gt;(Jorge) Also will require changes in base class…. datatype is now defined as a single path. So that will require making more general, a list of paths separated by comma or such.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discussion-plugin-execution-status&quot;&gt;Discussion: Plugin Execution Status&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-job-status-info_30jan2020.png&quot; alt=&quot;Job status&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-plugin-status_30jan2020.png&quot; alt=&quot;Plugin status from feed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For Hackathon in March -&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Would like more intuitive feedback to user on actual execution status of any plugin.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When you run it, you just get a spinner in the status area. When you click on status you don’t get more info. In the backend though we get info about it’s currently computing and pushing files. Would be cool to show when user clicks to see files, we could give them the remote job status where it’s in the pipeline (computing, pushing to swift, etc.)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Q:&lt;/strong&gt; (Parul) When we see status in right panel, does status get updated?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A:&lt;/strong&gt; (Rudolph) yes, what happens in cube, there’s a module. When you ask it for status on a job, it gives you a json object that has 4 parts, each of which have scheduled, started, completed, error states:
+    &lt;ol&gt;
+      &lt;li&gt;Sending data from cube to remote location&lt;/li&gt;
+      &lt;li&gt;Compute scheduled / started / completed&lt;/li&gt;
+      &lt;li&gt;Remote data being pulled back into cube&lt;/li&gt;
+      &lt;li&gt;Data in cube being packed into swift. 
+Would be great to expose those 4 states as a progress bar, change color based on current state that stage is in. Would like to have that as part of the UI feedback.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discussion-ui-for-admins-to-load-multiple-plugins-at-once-into-chris&quot;&gt;Discussion: UI for admins to load multiple plugins at once into ChRIS&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(Rudolph) The other thing we’re doing, Jorge is looking at, once you have a running ChRIS… to make the whole process of having a user (workshop attendee) who’s made a plugin and registered it to the ChRIS store, to allow the admin at the workshop to pull that plugin into ChRIS.&lt;/li&gt;
+  &lt;li&gt;(Jorge) Users don’t register plugins directly to ChRIS, register to ChRIS store. That is now currently through ChRIS store UI. Register and upload there.&lt;/li&gt;
+  &lt;li&gt;(Parul) We discussed last time, registration through UI is not MVP component, we were going to do adhoc registration at hackfest.&lt;/li&gt;
+  &lt;li&gt;(Jorge) But users will have ChRIS store instance running for them at hackathon, will create plugins in that chris store and upload. Then ChRIS admin at hackathon can run that script or use another UI for ChRIS to add into ChRIS&lt;/li&gt;
+  &lt;li&gt;(Rudolph) For the MVP, being able to do this - I think we can do this today, it’s just behind the scenes and hacky-ish. I think it’s doable for us to have a better end user workflow, so they could make their plugin, register to the store, and that’s all they’d need to do. And what registers from the store ad hoc to cube is working today already through command line scripts. That’s where we are with that.&lt;/li&gt;
+  &lt;li&gt;(Jorge) We can improve the ChRIS admin experience. If he can have a private website to register plugins&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discussion-plugin-configuration-ui&quot;&gt;Discussion: Plugin configuration UI&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(Rudolph) Before Mo went on leave we had a lot of discussions about how to handle plugin configuration in UI. We have gone in this direction - to have a form to fill in the flags. Doesn’t handle dependencies.  But better than a large blank textbox for writing command line manually. Provides hints for each plugin argument.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-30jan2020.png&quot; alt=&quot;Add node 1&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-2-30jan2020.png&quot; alt=&quot;Add node 2&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-node-params_30jan2020.png&quot; alt=&quot;Node parameter entry&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;march-hackathon&quot;&gt;March Hackathon&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(Parul) Have not decided a time line or deadline for the MVP. Planning to have hackathon and not decided on date or when we have achieved or finished components. Will decide on a date soon.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;status-jorge&quot;&gt;Status: Jorge&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gideon said most of what I did. I exposed some API descriptors that Gideon needed for creating file browser.&lt;/li&gt;
+  &lt;li&gt;Also working on the permissions problem. Previously the frontend didn’t have a full path to the backend. Kind of truncated path, then the backend build that path automatically based on the user. Was possible bc already looking at files based on user uploads. Now upload needs to send full paths to backend to provide standardization for everything. Some things in swift, some in user upload space ,some things in the feed space, which are all managed differently by cube.&lt;/li&gt;
+  &lt;li&gt;In order to see as a single thing, use path as a standard thing. needed to expose a full path frm the backend to every file, but this comes also with security problems, as the user can send a malicious path - eg root of swift - to put all the files inside a feed, so those things need to be considered. i’m working on validating paths to make sure user has the right to pull files from the path he’s sending to the front end.&lt;/li&gt;
+  &lt;li&gt;We also had a lot of discussions. that’s what i spent my time on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discussion-user-file-permissions--security&quot;&gt;Discussion: User file permissions / security&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Q:&lt;/strong&gt; (Parul) would swift allow you to pull from the root as a user wo privilege? Does swift not restrict this by default?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A:&lt;/strong&gt; (Jorge) swift is object storage system, it understands stream. we’re using paths with a / to make it easy for scientists / etc who are used to paths, but swift doesn’t understand really about paths. it’s a good thing, it takes a lot of the nightmare of dealing with path mgmt system…. if i could a /, it’s just a path. it doesn’t put any restrictions on the name for files. so swift doesn’t really have paths, just strings.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A:&lt;/strong&gt; (Rudolph) Right now the way it’s impemented, there’s swift storage, and that obvs is authetnticated with a swift user. right now that swift user isn’t anything to do with chris user. Swift storage has one user, one password, so chris is effectively storing stuff in object storage only ever as one user.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; (Rudolph) there’s no file system in swift, we’re making it look like one. we’re interpreting the strings as a filesystem tree but swift doesn’t have any concept of that.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Q:&lt;/strong&gt; (Parul) So what kind of validation are we doing in swift&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A:&lt;/strong&gt; (jorge) each obj has a string assoc with it, we make it look like we’re using paths. User of chris system who has plugins running, everytihng in the store for him the string starts with his username, that’s how the system works. looks like the first part of a path, but the beginning of each string. we havea to make sure that eveyr string the user sends, for the ui user looks like a path, always starts with the user name of the user making the request. that’s one case.&lt;/li&gt;
+  &lt;li&gt;(Jorge) he could also be allowed to send strings that start with another user name for a shared feed. in that case, validatoin needs to be done. so that’s the kind of validation we’re working on . make sure the string is a valid string for the user making the request, so he can’t just pull files from wherever he wants.&lt;/li&gt;
+  &lt;li&gt;(Parul) what we are trying to do is make sure he’s not putting in an invalid path, bc all the users who are logged in would have access to other user’s files otherwise&lt;/li&gt;
+  &lt;li&gt;(Jorge) API enforces very well that users can’t access other files, but the new issue here is the dircopy plugin. we need to implement a way to avoid the loophole it poses.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;status-rudolph&quot;&gt;Status: Rudolph&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In parallel to this demo, working on finishing work to implement the infrastructure to do the PACS query and retrieve. that is one kind of thing that is the most-used feature of the current ChRIS (the clunky cartoony 5 years old version in production here at children’s) People use the pacs query, mostly people want to use ChRIS for no reason other than to use it as an easy way to access images from the PACS. it’s a big thing for people. one of the things missing from the new ChRIS (ChRIS next gen, etc.) We can’t deploy this internally in the hospital wo having a usable ability to deal with a PACS query pull&lt;/li&gt;
+  &lt;li&gt;The whole plugin model here doesn’t lend itself to a very satisfying way to do these kind of interactive client-side functionality. it’s clunky to try to recreate that interaction / model in the current plugin system in ChRIS. way around it is to have as much of that happening client side in javascript as possible&lt;/li&gt;
+  &lt;li&gt;What we do have is another pf service… pfcon, pfioh… similar to pfcon calling it pfdcm (pf dicom). pfdcm will speak to the actual PACS or different PACS backends. exposes a REST interface to clients that is the same kind of dialect as pfcon and pfioh. Similar kind of json you sent to it, to say ‘hey do a query on PACS using this patient id’ .it does it all for you, spits back JSON object. can then ask for a particular series from the JSON, etc. that is what i’m working on at the moment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;status-parul&quot;&gt;Status: Parul&lt;/h3&gt;
+
+&lt;p&gt;Nothing to report.&lt;/p&gt;
+
+&lt;h3 id=&quot;status-mo&quot;&gt;Status: Mo&lt;/h3&gt;
+
+&lt;p&gt;Happy to be back from maternity leave and impressed with the progress that’s been made on the UI.&lt;/p&gt;
+
+&lt;h3 id=&quot;discussion-versioning-data&quot;&gt;Discussion: Versioning data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(Jorge) Being able to pull data from many differnt sources in a simple single way, for ChRIS, from PACS, local fs, userspace, from relational dbs… it’s going to be key for success. See not only software versioning but data versioning. Not sure if that would be a thing for ChRIS, not sure how to envision that here. Seeing a lot of that - the trend is for data versioning, eg. Palantir… similar to what openneuro is doing… they are versioning data. Not sure if that would be useful here.&lt;/li&gt;
+  &lt;li&gt;(Rudolph) the idea of verisoning data is definitely prevalant and creating a lot of buzz. It is true, a lot of importance in working w data w versioning like working w actual executable code.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 30 Jan 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/status/status-jan-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status/status-jan-2020/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
