@@ -5,13 +5,15 @@
     <description>The latest developments and news on the &lt;a href=&quot;http://www.bu.edu/rhcollab/projects/radiology/&quot;&gt;ChRIS project&lt;/a&gt;.</description>
     <link>http://localhost:4000/status/</link>
     <atom:link href="http://localhost:4000/status/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2020 11:37:15 -0500</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2020 11:37:15 -0500</lastBuildDate>
+    <pubDate>Mon, 03 Feb 2020 11:49:59 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Feb 2020 11:49:59 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>30 Jan Status - Local file upload in web UI</title>
-        <description>&lt;h3 id=&quot;action-items&quot;&gt;Action Items&lt;/h3&gt;
+        <description>&lt;p&gt;The main item of discussion during this meeting was Gideon’s demo of the web ui which is now enabled to handle local file uploads into ChRIS.&lt;/p&gt;
+
+&lt;h3 id=&quot;action-items&quot;&gt;Action Items&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;mo to mock up dialog for inputting arugments to plugins&lt;/li&gt;
@@ -168,6 +170,18 @@ Would be great to expose those 4 states as a progress bar, change color based on
         <link>http://localhost:4000/status/status-jan-2020/</link>
         <guid isPermaLink="true">http://localhost:4000/status/status-jan-2020/</guid>
         
+        <category>file-model</category>
+        
+        <category>plugin-state</category>
+        
+        <category>hackathon</category>
+        
+        <category>swift</category>
+        
+        <category>data-versioning</category>
+        
+        
+        <category>status</category>
         
       </item>
     

@@ -16,4 +16,7 @@
 <url>
 <loc>http://localhost:4000/status/tags</loc>
 </url>
+<url>
+<loc>http://localhost:4000/status/category/status/</loc>
+</url>
 </urlset>
