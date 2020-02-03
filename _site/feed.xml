@@ -5,8 +5,8 @@
     <description>The latest developments and news on the &lt;a href=&quot;http://www.bu.edu/rhcollab/projects/radiology/&quot;&gt;ChRIS project&lt;/a&gt;.</description>
     <link>http://localhost:4000/status/</link>
     <atom:link href="http://localhost:4000/status/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2020 09:43:15 -0500</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2020 09:43:15 -0500</lastBuildDate>
+    <pubDate>Mon, 03 Feb 2020 09:52:22 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Feb 2020 09:52:22 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
