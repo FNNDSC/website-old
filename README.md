@@ -20,7 +20,13 @@ If you would like to contribute a post to this repo:
 Other tips:
 - **Featured Posts:** If you like a post to be featured on the "Featured" section on the top of the page, insert `featured:true` in the YAML metadata at the top of your post's markdown file.
 - **Hide from 'All Stories' list:** `hidden:true`
-
+- **Categories:** `categories: [ category1, category2]`
+- **Tags:** `tags: [tag1, tag2]`
+- **Table of Contents:** 
+```
+    beforetoc: "Markdown editor is a very powerful thing. In this article I'm going to show you what you can actually do with it, some tricks and tips while editing your post."
+    toc: true
+```
 ## Blog development
 
 If you would like to set up a local copy of this blog to test changes, etc. to it beyond adding posts:

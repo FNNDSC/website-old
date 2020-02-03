@@ -7,6 +7,7 @@ License: https://www.wowthemes.net/freebies-license/
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
 }
+@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
 .mainheading {
     padding: 1rem 0rem;
 }

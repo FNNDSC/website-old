@@ -8,7 +8,7 @@ var documents = [{
     "id": 1,
     "url": "http://localhost:4000/status/about",
     "title": "About",
-    "body": "Every Thursday, a group of folks working on the ChRIS project meet to share their status for working on the project. There are often useful discussions about development and planning and demos during these meetings. This is a simple site set up to log the meeting minutes of those meetings for posterity. It is driven via the https://github. com/FNNDSC/status repository. Questions or bug reports?: Head over to the Github repository for this site. "
+    "body": "Every Thursday, a group of folks working on the ChRIS project meet to share their status for working on the project. There are often useful discussions about development and planning and demos during these meetings. This is a simple site set up to log the meeting minutes of those meetings for posterity. It is driven via the https://github. com/FNNDSC/status repository. Questions or bug reports?: Head over to the Github repository for this site.  "
     }, {
     "id": 2,
     "url": "http://localhost:4000/status/categories",

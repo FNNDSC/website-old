@@ -5,8 +5,8 @@
     <description>The latest developments and news on the &lt;a href=&quot;http://www.bu.edu/rhcollab/projects/radiology/&quot;&gt;ChRIS project&lt;/a&gt;.</description>
     <link>http://localhost:4000/status/</link>
     <atom:link href="http://localhost:4000/status/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2020 09:52:22 -0500</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2020 09:52:22 -0500</lastBuildDate>
+    <pubDate>Mon, 03 Feb 2020 11:23:50 -0500</pubDate>
+    <lastBuildDate>Mon, 03 Feb 2020 11:23:50 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -48,7 +48,7 @@
   &lt;li&gt;Worked on UI performance optimizations and it is much snappier now.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-file-select_30jan2020.png&quot; alt=&quot;Local file upload screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-file-select_30jan2020.png&quot; alt=&quot;Local file upload screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;web-ui-demo&quot;&gt;Web UI Demo&lt;/h4&gt;
 
@@ -85,8 +85,8 @@
 
 &lt;h3 id=&quot;discussion-plugin-execution-status&quot;&gt;Discussion: Plugin Execution Status&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-job-status-info_30jan2020.png&quot; alt=&quot;Job status&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-plugin-status_30jan2020.png&quot; alt=&quot;Plugin status from feed&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-job-status-info_30jan2020.png&quot; alt=&quot;Job status&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-plugin-status_30jan2020.png&quot; alt=&quot;Plugin status from feed&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For Hackathon in March -&lt;/p&gt;
 
@@ -124,9 +124,9 @@ Would be great to expose those 4 states as a progress bar, change color based on
   &lt;li&gt;(Rudolph) Before Mo went on leave we had a lot of discussions about how to handle plugin configuration in UI. We have gone in this direction - to have a form to fill in the flags. Doesn’t handle dependencies.  But better than a large blank textbox for writing command line manually. Provides hints for each plugin argument.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-30jan2020.png&quot; alt=&quot;Add node 1&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-add-node-2-30jan2020.png&quot; alt=&quot;Add node 2&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/img/chris-node-params_30jan2020.png&quot; alt=&quot;Node parameter entry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-add-node-30jan2020.png&quot; alt=&quot;Add node 1&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-add-node-2-30jan2020.png&quot; alt=&quot;Add node 2&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/status/master/assets/images/chris-node-params_30jan2020.png&quot; alt=&quot;Node parameter entry&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;march-hackathon&quot;&gt;March Hackathon&lt;/h3&gt;
 
