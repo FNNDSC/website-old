@@ -9,7 +9,7 @@ License: https://www.wowthemes.net/freebies-license/
 }
 @import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
 .mainheading {
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
 }
 
 .mainheading .lead {
@@ -909,3 +909,13 @@ iframe {
     opacity: 0;
     transition: opacity .25s;
 }
+
+.jumbotron.jumbo-top {
+    margin-top: 3rem;
+    padding: 0;
+    border-radius: 0;
+    background-image: url(../images/jumbo-front.jpg);
+    background-size: cover;
+    min-height: 400px;
+}
+

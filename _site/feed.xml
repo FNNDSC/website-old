@@ -1,13 +1,804 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>status</title>
+    <title>website</title>
     <description>The latest developments and news on the &lt;a href=&quot;http://www.bu.edu/rhcollab/projects/radiology/&quot;&gt;ChRIS project&lt;/a&gt;.</description>
-    <link>http://localhost:4000/status/</link>
-    <atom:link href="http://localhost:4000/status/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Feb 2020 11:49:59 -0500</pubDate>
-    <lastBuildDate>Mon, 03 Feb 2020 11:49:59 -0500</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 03 Apr 2020 14:22:08 -0400</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2020 14:22:08 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>26 March Status - Node parameter UI demo</title>
+        <description>&lt;p&gt;Gideon showed us his updates to the node parameter entry UI based on the discussion we had during the last time he demoed it. Sandeep, Parul, and Rudolph planned an MOC howto session tomorrow afternoon. Jorge updated us on his progress adding shortform parameter names as a separate attribute in CUBE, and Mo discussed ideas for recruiting new contributors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-3.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;gideon-node-parameter-ui-demo&quot;&gt;Gideon Node Parameter UI Demo&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-2.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-2.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-5.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-2.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-6.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Worked on “Add a new node feature”&lt;/li&gt;
+  &lt;li&gt;Demoed using the form and the freeform entry box to enter parameters for a plugin&lt;/li&gt;
+  &lt;li&gt;Demoed required parameter plugin too&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-4.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-4.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Question:
+    &lt;ul&gt;
+      &lt;li&gt;Decision in the UI, either form vs terminal&lt;/li&gt;
+      &lt;li&gt;If you put guided configuration off… terminal should fill command window with form values&lt;/li&gt;
+      &lt;li&gt;Gideon will implement a common buffer between the guided and freeform modes so the parameters will stay the same across, and also will try to tokenize the parameters and have error checking for the freeform mode.&lt;/li&gt;
+      &lt;li&gt;If user enters nonsense parameters in the freeform and clicks back to the form, the form will flag them as nonsense and remove them from the command.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;bill-status&quot;&gt;Bill Status&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nothing new to report except scheduling meeting with Parul and Dan to figure out next steps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;sandeep-status&quot;&gt;Sandeep Status&lt;/h1&gt;
+
+&lt;p&gt;Been working on plugin, containerize application with all its dependences. GPU part is still pending because some tensorflow libraries are failing because he’s using a newer version of tensorflow and the dependencies are older.&lt;/p&gt;
+
+&lt;p&gt;Have a strategy and know what to do.&lt;/p&gt;
+
+&lt;p&gt;Using stoi to build the image - more intuitive and supports many libraries. Built a sample, might need Parul’s help to move forward on that.&lt;/p&gt;
+
+&lt;p&gt;Parul suggests Sandeep could also reach out to Bill if needed as they both worked on the demo.&lt;/p&gt;
+
+&lt;p&gt;Sandeep planning to use a GPU internal to BCH. It’s a machine running Ubuntu 19.10 with whatever the latest Ubuntu drivers are - Kuda drivers. Two titan 5 GPUs, each GPU has 12 GB of RAM. Medium-end GPU workstation.&lt;/p&gt;
+
+&lt;p&gt;Parul: You’re free to use the one on MOC as well, in case you want to try out the whole stoi, in the sense you don’t have to care about the version - everything is there in the template. But it’s what you wish to do.&lt;/p&gt;
+
+&lt;p&gt;Sandeep - I will try a sample application on MOC first then, and if that works I’ll do my application there.&lt;/p&gt;
+
+&lt;p&gt;Parul: We don’t know when the hackathon will happen, but will be a useful thing to demo in the hackathon.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: How would you do this in the MOC right now - that sounds complicated to try to get up and runing.&lt;/p&gt;
+
+&lt;p&gt;Sandeep: As of right now I have limited knowledge of MOC, just have an account that was provided to me.&lt;/p&gt;
+
+&lt;p&gt;Parul: I’ve been working with Elise a bit, Rudolph, and being able to run things on power9, I have been giving her help on OpenStack vs OpenShift and pfman and pfio on MOC. I’ll give her a demo on how to configure an app on MOC, you could join that call.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: Would like to join too.&lt;/p&gt;
+
+&lt;p&gt;Parul: I’m swamped this week so I put it on Friday between 3:30-4:30 (tomorrow.) Adding both of you to the invite now.&lt;/p&gt;
+
+&lt;p&gt;Parul: The plugin Bill and I worked on was doing handwriting analysis, but your plugin would be more meaningful to show bc it works with MRI.&lt;/p&gt;
+
+&lt;h1 id=&quot;mo-status&quot;&gt;Mo Status&lt;/h1&gt;
+
+&lt;p&gt;Has been working on short notice assets for Red Hat Summit, but mostly completed now so going to work on PACS search design today.&lt;/p&gt;
+
+&lt;p&gt;Rudolph will be working on PACS search today too so will be available in Slack.&lt;/p&gt;
+
+&lt;h1 id=&quot;jorge-status&quot;&gt;Jorge Status&lt;/h1&gt;
+
+&lt;h2 id=&quot;short-form-and-long-form-parameter-work&quot;&gt;short form and long form parameter work&lt;/h2&gt;
+&lt;p&gt;Modified the plugins super class, so gives the short version and long version of flags in plugin representation. This was an issue that came up for the node configuration UI last week.&lt;/p&gt;
+
+&lt;p&gt;Also working on the ChRIS store, adding this change to the models. Right now the system works as before because the long flags are used by default, so current plugins work as the long flag is assigned to the short flag. New descriptor is called shortflag. If you want a plugin that defines both that shows up in the system, need to commit something to the plugin (docker image) to pick the new version of the superclass.&lt;/p&gt;
+
+&lt;p&gt;You don’t have to do anything in the frontend, Gideon, because previously you were taking the flag, now flag will be assigned to the long flag. If you want to show both, you can use the short flag.&lt;/p&gt;
+
+&lt;h2 id=&quot;making-our-repos-more-friendly-to-new-contrbutors&quot;&gt;making our repos more friendly to new contrbutors&lt;/h2&gt;
+&lt;p&gt;Make some changes to open source repos, make them more attractive so we could onboard more people. Added the ChRIS logo. CuBE, ChRIS store, and cookie cutter github repos. Trying to make repos more informative to get more people interested.&lt;/p&gt;
+
+&lt;h2 id=&quot;admin-interface-updates&quot;&gt;admin interface updates&lt;/h2&gt;
+&lt;p&gt;Next, will be working on admin interface. Adding text edit so people can paste directly the plugin URL. A little more involved because I have to work with Django templates. That’s it for me.&lt;/p&gt;
+
+&lt;h1 id=&quot;rudolph-status&quot;&gt;Rudolph Status&lt;/h1&gt;
+
+&lt;p&gt;Mostly, have been working on the PACS javascript and intermediate service that powers it. From that having discussions with Mo as they come up.&lt;/p&gt;
+
+&lt;h1 id=&quot;parul-status&quot;&gt;Parul Status&lt;/h1&gt;
+
+&lt;p&gt;Finished CI-CD healthcheck I wrote. Also worked on the email notifications.&lt;/p&gt;
+
+&lt;p&gt;The whole set of things I planned for ChRIS before the hackathon are done. Maybe next thing I’ll start working on is - whenever someone makes a push to pfio pfman, to github, run services on MOC to hook it in. Pretty much my plan.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: On that note, how much work would it be to do auto-updates on power9, assuming you get the power9 images&lt;/p&gt;
+
+&lt;p&gt;Parul: I don’t know how much effort it’d take, but my plan is first to do on x86, and whatever works on x86 should work on power9, because I don’t know if theres a thing, I don’t think there would be any difference between power9 and x86. Need to add playbook to git repo, should be a flag or whatever to build as power9 or x86. One of the challenges I see - how would I be building power9, where would the image be built, because x86 you can built statically from github but I’m not sure about power9.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: I don’t know myself, if on dockerhub, you can build non-x86 containers… I don’t know myself.&lt;/p&gt;
+
+&lt;p&gt;Parul: Dan was talking about there was a way to do in openshift… not sure or familiar with it. This is an interesting thing we can work on. After closing the loop with pfman and pfio, should take care of everything otherwise it’ll send us an email if things aren’t working.&lt;/p&gt;
+
+&lt;p&gt;Jorge: Running swift and openshift on MOC right, have a question. Trying to figure out a website for my company, was going to put a partner with Red Hat, BCH, MOC, is that fine&lt;/p&gt;
+
+&lt;p&gt;Rudolph: Fine by me.&lt;/p&gt;
+
+&lt;h1 id=&quot;discussion-recruiting-new-contributors&quot;&gt;Discussion: Recruiting new contributors&lt;/h1&gt;
+
+&lt;p&gt;Some ideas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Participate in next Outreachy round (need ~$6k funding)&lt;/li&gt;
+  &lt;li&gt;Set up a domain for the project and website&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 26 Mar 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/status-mar-26-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-mar-26-2020/</guid>
+        
+        <category>node-parameter-ui</category>
+        
+        <category>admin-panel</category>
+        
+        <category>pacsquery</category>
+        
+        <category>ui</category>
+        
+        <category>hackathon</category>
+        
+        
+        <category>status</category>
+        
+      </item>
+    
+      <item>
+        <title>19 March Status - ChRIS admin panel demo</title>
+        <description>&lt;p&gt;Jorge walked us through a demo of the ChRIS admin panel to register plugins to ChRIS from the ChRIS store.&lt;/p&gt;
+
+&lt;h1 id=&quot;jorge-chris-admin-panel-demo&quot;&gt;Jorge ChRIS Admin Panel Demo&lt;/h1&gt;
+
+&lt;p&gt;This panel uses an admin tool built into Django. It’s part of a larger workflow we need to support for the hackathon:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create plugin&lt;/li&gt;
+  &lt;li&gt;Add plugin to the ChRIS store&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Register plugin to a ChRIS server&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Run plugin on data in ChRIS&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This admin panel is what would be used to register a plugin already added to the ChRIS store into the ChRIS server the panel is running on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/Screenshots/adminpanel-04.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/Screenshots/adminpanel-04.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We had a discussion around the layout of the form for adding plugins as well as the interface for modifying how already-registered plugins are configured.&lt;/p&gt;
+
+&lt;h2 id=&quot;add-plugin-interface&quot;&gt;Add plugin interface&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/Screenshots/adminpanel-03b.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/Screenshots/adminpanel-03b.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some confusion that came up about this form was the environment around it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is there only 1 ChRIS store?&lt;/li&gt;
+  &lt;li&gt;Could there be more than one ChRIS store you might want to register a plugin from?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently ChRIS can only register to one ChRIS store, but there isn’t any reason why it shouldn’t be able to register to multiple ChRIS stores. There could be a multitude of stores - for example, a given institution may want to stand up their own store of content curated specifically for their staff’s usage rather than allowing anything on the public store to be registered to their ChRIS.&lt;/p&gt;
+
+&lt;p&gt;Each plugin in a ChRIS store has a unique id that is unique to that ChRIS store. Each plugin+version has an id. So for example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;some-plugin v 1.0 could be id == 1&lt;/li&gt;
+  &lt;li&gt;some-plugin v 1.1 could be id == 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The way the ChRIS store works, it doesn’t treat different versions of the same plugin any differently than other plugins.&lt;/p&gt;
+
+&lt;p&gt;The issue here is that an ID number of 1 on ChRIS Store A is likely not the same plugin with id #1 on ChRIS store B. If a given ChRIS instance could be registered to multiple ChRIS stores, we need to ensure there’s clarity about which specific plugin the user intends to register to their ChRIS.
+We talked about two potential solutions to this issue:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;There could be an order of precedence across the ChRIS stores your ChRIS server is registered to, kind of like how there is for package repos on a Linux system, when it can’t find a package in repo #1 it falls back to repo #2, so on and so forth.&lt;/li&gt;
+  &lt;li&gt;We could have a unique ID of some sort that would encode both the ChRIS plugin + the ChRIS store it resides on&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first option, it was pointed out that for researchers trying to reproduce results with the exact same image as preivously used, this might not be precise enough a mechanism. The latter might be a better solution since it is very clear the exact plugin source and version needed. Using the plugin’s URL was suggested as an easy unique ID, or having a dropdown to indicate which ChRIS Store.&lt;/p&gt;
+
+&lt;p&gt;After the meeting, Jorge and Mo discussed this and came up with this mockup:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/IMG_20200319_113324.jpg&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/IMG_20200319_113324.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One issue Jorge pointed out - what happens if the user fills both sides of the form? Mo suggested a javascript that greys out the vertical half of the form that is not in focus so it’s clear the in focus side would be submitted.&lt;/p&gt;
+
+&lt;h2 id=&quot;modify-already-registered-plugins-in-admin-interface&quot;&gt;Modify already registered plugins in admin interface&lt;/h2&gt;
+
+&lt;p&gt;The other piece Jorge demoed was a list of plugins registered to the ChRIS server in the admin panel:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/Screenshots/adminpanel-01.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/ChRIS-admin-panel/Screenshots/adminpanel-01.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was suggested the list be put into alphabetical order and allow for searching of specific plugins so it’s less overwhelming to find what you’re looking for.&lt;/p&gt;
+
+&lt;h1 id=&quot;mo-status&quot;&gt;Mo Status&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/pacs_rough_17mar2020.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/pacs_rough_17mar2020.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mo showed a work-in-progress mockup that translates Rudolph’s PACS search application as a tool embedded into the main ChRIS UI.&lt;/p&gt;
+
+&lt;p&gt;One question that came up - would we build custom UIs like this for other data sources, or how would those be handled? We talked about having a separate ‘Reference’ section of the library which would be a single place multiple ‘collections’ of data could be plugged into in a generic / standardized way, not requiring custom UI:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/references_rough_5mar2020.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/references_rough_5mar2020.png&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Mar 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/status-mar-19-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-mar-19-2020/</guid>
+        
+        <category>admin-panel</category>
+        
+        <category>pacsquery</category>
+        
+        <category>ui</category>
+        
+        <category>hackathon</category>
+        
+        <category>library</category>
+        
+        
+        <category>status</category>
+        
+      </item>
+    
+      <item>
+        <title>12 March Status - Node config UI Demo + pacsquery UI demo</title>
+        <description>&lt;p&gt;Gideon has a working demo for the node config UI, so we walked through it and discussed it. Then, Rudolph gave us a demo of the pacsquery UI he has written on top of ChRIS. We went through everyone’s status as well.&lt;/p&gt;
+
+&lt;h1 id=&quot;gideon-node-config-ui-demo&quot;&gt;Gideon Node Config UI Demo&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_12032020.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_12032020.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Demo of the node config UI.  Main discussion points:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;UI Discrepancy&lt;/strong&gt;: flag is ‘-a ‘in form field box, but the generated command at the bottom shows ‘–ageSpec’ instead of ‘-a’
+    &lt;ul&gt;
+      &lt;li&gt;Rudolph: discontinuity a UI concern&lt;/li&gt;
+      &lt;li&gt;Rudolph: the actual plugin can specify long and short forms… whichever is in the python code first, gets returned. When I wrote this plugin - I think the ordering there has an impact.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dropdown confusion&lt;/strong&gt;: why is flag a dropdown
+    &lt;ul&gt;
+      &lt;li&gt;you can change it, in case you picked the wrong one&lt;/li&gt;
+      &lt;li&gt;if you click on -a and make it -P, this doesn’t update the generated command. Gideon hasn’t wired that yet. Whatever changes you make, will update the generated command.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Idea:&lt;/strong&gt; [Rudolph] as soon as you choose a parameter, dropdown shouldn’t be changeable, if you make a mistake you can instead click on the x to delete the row and fill in another one.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Idea:&lt;/strong&gt; [Parul] instead of clicking add config options button to create a new row… you fill out a new row with a dropdown and field, and you submit it to add it to the list, and it gets added to generated command and saves and isn’t editable but can be x’ed out.&lt;/li&gt;
+      &lt;li&gt;when you remove a row, it should remove from generated command, isn’t wired yet so this didn’t work for the demo.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Number of clicks&lt;/strong&gt; Rudolph worried about the # of clicks, we talked it through a bit - Mo explained the tradeoff is there’s more clicks compared to the previous version, but because the screen starts out less cluttered there’s more vertical real estate for users to notice the generated command box right away. If all parameters were listed by default, it could fall below the fold and the user might not notice it. Having the generated command box enables the full blown text box on the other tab that is essentially 0 clicks if you know what you are doing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gideon will work on finishing this UI up today, then will work towards and end-to-end demo for next week, from plugin registration to the store to ChRIS to configuring the node.&lt;/p&gt;
+
+&lt;h1 id=&quot;rudolph-pacs-query-ui-demo&quot;&gt;Rudolph PACS query UI demo&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/pacsquery/pacsquery.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/pacsquery/pacsquery.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is a UI on top of ChRIS. It doesn’t interact with a PACS directly, it interfaces through pfdcm, which is like pfcon but connects to PACS.&lt;/li&gt;
+  &lt;li&gt;There’s a form at the top that is repopulated with tags - patient id, accession number, etc. - standard tags that are used to query PACS..&lt;/li&gt;
+  &lt;li&gt;When you run the query, there would be results that appear in bottom black box. Those results would be organized according to different studies. Each one will appear with tabs. Then you can choose a different series in each study, it does the actual retrieve command and shows status above.
+    &lt;ul&gt;
+      &lt;li&gt;Accession number is one-to-one with studies - each number maps to only one study. If no accession number is given, all of the studies for a given patient ID would be returned.&lt;/li&gt;
+      &lt;li&gt;The smallest unit this UI can retrieve is a series. A series is a type of scan that can have multiple images associated with it. You cannot retrieve just one image.&lt;/li&gt;
+      &lt;li&gt;A study is a single session with a piece of scanning equipment. Multiple series can take place during a study. (From the time you roll into the scanner until you roll out of the scanner, that is a study. Multiple series can occur during that study - different scan types.)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The UI should show some kind of status on the hits - it’s asynchronous and can take any number of minutes… after making their selections, it should allow user to query current status with the UI.
+    &lt;ul&gt;
+      &lt;li&gt;We’re not using any plugins or services to do this, only when this app is finished, once you’re satisfied everything is pulled, will this backend will push the results into swift storage. Once in swift storage, will tell ChRIS to register those files, only then will they be visible to chris.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Query from the form - the form constructs JSON payload to send to pfdcm.
+    &lt;ul&gt;
+      &lt;li&gt;Status on what the system is doing&lt;/li&gt;
+      &lt;li&gt;Push ‘query’ button, ‘performing query … be patient while running’&lt;/li&gt;
+      &lt;li&gt;Results of search, each of those elements are selectable. they are the basic things you’re trying to pull.
+        &lt;ul&gt;
+          &lt;li&gt;Can grab entire study, or all studies together&lt;/li&gt;
+          &lt;li&gt;Results are in the form of a table&lt;/li&gt;
+          &lt;li&gt;Most of the results will be ‘series’ - a ‘series’ is a collection of files. 1 scan that has been done during a study.&lt;/li&gt;
+          &lt;li&gt;The most basic you can choose is a series. you can also choose a study.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/pacsquery/pacsquery2.png&quot; alt=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/pacsquery/pacsquery2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;jorge-status&quot;&gt;Jorge Status&lt;/h1&gt;
+
+&lt;h2 id=&quot;new-asynchronous-task-queue-in-cube&quot;&gt;New Asynchronous Task Queue in CUBE&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;finished async task queue work
+    &lt;ul&gt;
+      &lt;li&gt;can now scale cube processing independently of server serving requests&lt;/li&gt;
+      &lt;li&gt;will improve UX, offloads work from CUBE to async workers&lt;/li&gt;
+      &lt;li&gt;most difficult thing was implementing automated test. worker didn’t have access to same temp DB that django creates for the tests…. figured out a solution - in-process worker in the same process as the test, then run test with that worker. It’s a nice solution.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;admin-interface-for-registering-plugins&quot;&gt;Admin interface for registering plugins&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;next thing Jorge will work on is the admin interface to be able to register a plugin through a django admin website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;simplefsapp-issue&quot;&gt;simplefsapp issue&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if i run simple fs app twice, first time is registers, but the second one doesn’t finish. seems like pfcon can no longer communicate with pfman or pfioh. an issue with swarm.
+    &lt;ul&gt;
+      &lt;li&gt;if i have system up, run simple-fs-app, and it finishes successfuly. if i run it again, it never finishes, and when i see the communications, pfcon doesn’t seem to get a response from pfman or pfioh in the logs.&lt;/li&gt;
+      &lt;li&gt;[gideon] i saw this as well, communication didn’t happen and files not returning from backend. data exchange finished successfully - i have it on my screen i can show it.&lt;/li&gt;
+      &lt;li&gt;[rudolph] you instantiated cube and didn’t run the tests, right because you have to clear state from the tests or bugs like this happen.&lt;/li&gt;
+      &lt;li&gt;[jorge] yeh i didn’t run the tests at all. files registered, runs successfully first time. i dont see any response. i thikn pfcon trying to send requests but pfman pfioh not responding.&lt;/li&gt;
+      &lt;li&gt;[rudolph] i can look into that. are you looking at logs in real time or buffered&lt;/li&gt;
+      &lt;li&gt;[jorge] i’m using docker attach command, so it’s real time, interactive terminal attached to container.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;mizmo-status&quot;&gt;Mizmo Status&lt;/h1&gt;
+
+&lt;p&gt;Nothing to report.&lt;/p&gt;
+
+&lt;h1 id=&quot;hackathon&quot;&gt;Hackathon&lt;/h1&gt;
+
+&lt;p&gt;We pushed out hackathon until things more stable… but not coronavirus is throwing a wrench into a lot of stuff.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Mar 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/status-mar-12-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-mar-12-2020/</guid>
+        
+        <category>node-config-ui</category>
+        
+        <category>pacsquery</category>
+        
+        <category>ui</category>
+        
+        <category>hackathon</category>
+        
+        <category>performance</category>
+        
+        <category>async-queue</category>
+        
+        
+        <category>status</category>
+        
+      </item>
+    
+      <item>
+        <title>05 March Status - Async task queue for cube and more fsplugin UX discussion</title>
+        <description>&lt;p&gt;We went through everyone’s status, and The main items of discussion during this meeting were the new asynchronous task queue Jorge developed and further work needed for the frontend handling of that, and we also walked through some mockups on how to integrate fsplugins in the UI.”&lt;/p&gt;
+
+&lt;h1 id=&quot;rudolph-status&quot;&gt;Rudolph Status&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Want to show Mo a demo of how the new PACS lookup tool works, after meeting because not ready yet&lt;/li&gt;
+  &lt;li&gt;For usage of ChRIS inside institution, PACS lookup is the main way people interact with the system, so it’s an important workflow to get done and get done right.&lt;/li&gt;
+  &lt;li&gt;New member of the team : Sandeep. Will start out developing plugins. Worked with him end of last year - was a grad student in cloud computing course with Parul. Plugins will work on deployment of network for cementing brain images. Will try to productize and have as a usable workflow. He will start by looking at that.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;gideon-status&quot;&gt;Gideon Status&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Still working on adding plugin node workflow&lt;/li&gt;
+  &lt;li&gt;Once that’s done, tomorrow will start registering the plugins, one that is created in the lab by someone else. See if the workflow works end to end, with a demo likely next Thursday on the entire workflow&lt;/li&gt;
+  &lt;li&gt;Entire workflow: from adding a new node, to registering someone else’s node, then adding their dataset to swift storage and run their plugin through the new wizard that Mo mocked up&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;jorge-status&quot;&gt;Jorge Status&lt;/h1&gt;
+
+&lt;h2 id=&quot;new-asynchronous-task-queue-in-cube&quot;&gt;New Asynchronous Task Queue in CUBE&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Implementing asynchronous task queue for CUBE. Have it almost totally implemented now. It’s working and works fine. This queue is to offload some of the work out of the CUBE container into a separate ocntainer. For example - registering output files with CUBE can be done from a separate container. That should improve the UX because the requests will resolve more quickly.&lt;/li&gt;
+  &lt;li&gt;The main issue here is with integration tests… the workers for asynchronous queue don’t pick up Django temporary testing DB, they pick up the normal DB. Django is testing with one DB, this is working with another. Getting those integration tests working now, otherwise whole thing is working nicely.&lt;/li&gt;
+  &lt;li&gt;[Rudolph] This adds some extra complexity but we believe the payoff is worth it. There are some actions in CUBE that are super important, registering all the files after the plugin is finished and they come back. Unfortunately these are synchronous, so it freezes the web front end for 10 seconds registering files into Swift. So we’re offloading it to threaded / async workers so there’s no lag visible to the user during file registration.&lt;/li&gt;
+  &lt;li&gt;[Jorge] Very common in web apps… server shouldn’t spend more of a fractoin of a second attending each req. Any req that requires data processing or external REST API calls, etc. should be offloaded to asynchronous worker. Everything is about contacting pfconf, so pfcon has to contact remote services. Everything outside of CUBE will be offlanded to async queue.&lt;/li&gt;
+  &lt;li&gt;[Jorge] There is a GET request to check running status of task in remote compute….. that GET req has to contact remote services. If everything is finished… come back and register file.&lt;/li&gt;
+  &lt;li&gt;[Dan] Is the result of registering the files previously required and now will have to be polled in a second request?
+    &lt;ul&gt;
+      &lt;li&gt;[Jorge] User made a GET req, internal svcs contact remote. IF the job didn’t finish in the remote, then the req came back immediately saying ‘status started’ - then front end kept polling (not sure how it’s implemented now) until the GET request comes back with successful finish status.&lt;/li&gt;
+      &lt;li&gt;[Jorge] We could implement as polling directly from the workers, polling the backend services instead of the front end doing it. Not sure.&lt;/li&gt;
+      &lt;li&gt;[Rudolph] When you’re running a plugin, all of that handled by pfcon. When it’s finished, pfcon will have received all the data and packed into swift. But CUBE doesn’t pull or know about it - runs async to CUBE. Only way CUBE knows is that in the front end theres a GET status to find out the current status - it asks pfcon. So no polling in the system, all external event driven. At some point it’s finished and sitting in swift. If pfcon says it’s done, then and only then, will CUBE in its thread of exec will register the files sitting in swift to itself.&lt;/li&gt;
+      &lt;li&gt;[Dan] if there’s no polling from client to swift side…. [1] hasn’t finished yet [2] finished but not ready to return result bc registering it [3] finished and reg finished. So at a minimum client has to ask twice - when it’s done but results not registered…. then again when results are done and registered. So you’ll never get the result on the first try unless it finished an hour ago.&lt;/li&gt;
+      &lt;li&gt;[Jorge] Once the plugin makes the GET request, entire thing is pushed off to the async service .Will come back with not finished yet - async svc will contact backend, will know that the status is finished, db updated, all files downloaded, then next time when the user makes another GET request, it says yes finished successfully - files will be there.&lt;/li&gt;
+      &lt;li&gt;[Dan] The weird part I’m describing - it’ll never be there on the first request, because the first request kicks off the registration process?&lt;/li&gt;
+      &lt;li&gt;[Jorge] It never says it’s done if the files are not there&lt;/li&gt;
+      &lt;li&gt;[Dan] Let’s say it finished an hour ago. IF I make request now, it’ll say done but not registered…. even if finished 2 months ago… then I’ll be confused… that delay is a weird UX.&lt;/li&gt;
+      &lt;li&gt;[Rudolph] It’s so client dependent bc didn’t want CUBE To internally poll bc it would hit synchronous thread… it’ll freeze for X amount of time bc it hits before file reg is done.&lt;/li&gt;
+      &lt;li&gt;[ACTION] We should adjust the expreience so when the user comes back they don’t always have to wait for registering on the fly.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;mizmo-status&quot;&gt;Mizmo Status&lt;/h1&gt;
+
+&lt;h2 id=&quot;library-mockups-for-fsplugin-ui-integration&quot;&gt;Library mockups for fsplugin UI integration&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gave a quick demo of rough library mockups to demonstrate how fsplugins that output reference data could be integrated into the ChRIS UI:&lt;/li&gt;
+  &lt;li&gt;Overall workflow similar to RAW image processing tools like Adobe Lightroom or Darktable - you gather the raw data first, then go to processing (feeds)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;This is a very rough sketch of what the library would look like. From here you can do a new PACS lookup, upload local data, or search for reference data (which is essentially searching for fsplugins that output reference data). You can also view a list of data you accessed via any of these methods in reverse chronological order. &lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/library_rough_5mar2020.png&quot; alt=&quot;Rough library overview mockup&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;This is a very rough sketch of how the reference lookup could work. Essentially this is a searchable listing of the fsplugins available on the system that output reference data. &lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/references_rough_5mar2020.png&quot; alt=&quot;Rough reference lookup mockup&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Once you’ve selected the data you want, you should be able to:
+    &lt;ul&gt;
+      &lt;li&gt;Create a new feed straight from the data or&lt;/li&gt;
+      &lt;li&gt;Go to the feeds tab at a later time, click create a new feed, and access the data you retrieved into your library there&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;next-steps&quot;&gt;Next steps&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;[ACTION] Continue with the library mockups and iterate on them&lt;/li&gt;
+  &lt;li&gt;[ACTION] take a look at Rudolph’s PACS search demo and mock up how to integrate into the library&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;sandeep-status&quot;&gt;Sandeep Status&lt;/h1&gt;
+&lt;p&gt;(I missed this because I had to step off the call for a moment. :( )&lt;/p&gt;
+
+&lt;h1 id=&quot;parul-status&quot;&gt;Parul Status&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finished PR, couple of comments on tensorflow work, finished it off.&lt;/li&gt;
+  &lt;li&gt;Close to finishing off health check app to check the services on the MOC. Some trouble with the MOC and working with intern to get result. Once resolved, will get idea of the perf of the services running on MOC.&lt;/li&gt;
+  &lt;li&gt;Having trouble running simple-dsapp on MOC. Getting python file not found in path error. Should not be the case, use #! in the file and should be running itself, so exec shouldn’t be happening. Looking into that. First thinking of running a different plugin to see if it’s this plugin only or an issue with MOC.&lt;/li&gt;
+  &lt;li&gt;Had a workshop on Tuesday and it went well - the MOC workshop - a lot of researchers from the medical college at BU and seemed pretty interested in the ChRIS framework. We have an interested party who might be willing to explore a project. We extended invitations to the hackathon. And at least now we have contacts we can reach out to - inviting grad students in the med college would give them good exposure to ChRIS.&lt;/li&gt;
+  &lt;li&gt;Before we close I want to recap what we achieved for hackathon and what we have to do:
+    &lt;ul&gt;
+      &lt;li&gt;next week demo for new plugin registration&lt;/li&gt;
+      &lt;li&gt;Parul working on MOC perf. Rudolph, a script for performance would be good.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;[Rudolph] Looking at domains available to have a more established presence on the web instead of our little DMZ machine here. Were thinking about getting domains and getting an ISP for it. A standard open source project setup with info - docs, repos, etc.&lt;/li&gt;
+  &lt;li&gt;[Jorge] Two websites - .org for everything about ChRIS, and one for the ChRIS store as a unique entity, will be unique for all ChRIS instances.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;dan-status&quot;&gt;Dan Status&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Have nothing to add&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 05 Mar 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/status-mar-05-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-mar-05-2020/</guid>
+        
+        <category>hackathon</category>
+        
+        <category>swift</category>
+        
+        <category>ui</category>
+        
+        <category>performance</category>
+        
+        <category>fsplugin</category>
+        
+        <category>async-queue</category>
+        
+        
+        <category>status</category>
+        
+      </item>
+    
+      <item>
+        <title>27 Feb Status - More Hackathon planning and fsplugin UX discussion</title>
+        <description>&lt;p&gt;The two major discussions we had during this meeting beyond the usual status reports was Hackathon planning, how to integrate fsplugins in the ChRIS UI, and Jorge’s implementation of an extended path parameter type to enable a list of multiple files to be passed into a plugin to operate on.&lt;/p&gt;
+
+&lt;h2 id=&quot;mo-status&quot;&gt;Mo status&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Not much status to report, did another iteration of plugin config UI with Gideon: (https://github.com/FNNDSC/cube-design/tree/master/CHRIS-UI/PNG/add-new-new-3)[https://github.com/FNNDSC/cube-design/tree/master/CHRIS-UI/PNG/add-new-new-3]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/add-new-new-3/add-new-node_step2b-alt.png&quot; alt=&quot;Form switch&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/add-new-new-3/add-new-node_step2b.png&quot; alt=&quot;Raw parameters switch&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bill-status&quot;&gt;Bill Status&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bill has code review pending - Parul is still working on tensor flow, hasn’t gotten to code review yet&lt;/li&gt;
+  &lt;li&gt;Bill has 10 interns out of Westford, working with Steve Huels, Sarah Coghlan &amp;amp; Hugh Brock - working on putting together bootcamp for new interns, so if anybody has interns coming in this summer, get in touch with Sarah and let them know and they can be included in this orientation session. New space in Boston will not be available in time for interns in Boston office this summer, will be tight.&lt;/li&gt;
+  &lt;li&gt;Bill will be unavailable after this Friday for 2 weeks on PTO… Parul has his mobile if needed to get in touch.&lt;/li&gt;
+  &lt;li&gt;Bill and Parul will sync up on what’s next.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;rudolph-status&quot;&gt;Rudolph Status&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Travelling last week and this week so not much specific to report&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discussion-points&quot;&gt;Discussion points:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;1 - Hackathon dates: Thinking about a time &amp;amp; date for hackathon. Don’t want to push out too long. Need to decide.&lt;/li&gt;
+  &lt;li&gt;2 - fsplugins: How do we address the fsplugins in a way that doesn’t have them scattered all over the place… maybe revive a design conversation we had a long time ago about fsplugins.&lt;/li&gt;
+  &lt;li&gt;3 - How do we incorporate javsacript apps in ChRIS: Making progress on a PACS query/retrieve javascript app. Within Children’s, having the PACS query/retrieve working internally an MVP. Most ppl use ChRIS right now to pull data from PACS, so getting this working will allow us to use the latest version in ChRIS internally, which we cannot currently do without this functionality. Another thing that’s important to talk about from a design perspective - based on what I’m hitting up against with PACSpull, how do we incorporate these external apps seamlessly into ChRIS, since PACSpull is an important one.&lt;/li&gt;
+  &lt;li&gt;4 - PACSpull/cube changes: Changes we’re considering internally wrt CUBE that relate to this PACSpull request stuff. I can speak to it briefly, it’s on the CUBE side.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dates-for-hackathon&quot;&gt;Dates for hackathon&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can push back to april-may. Conferences happen in June so people leave the area. Before summer would be optimal.&lt;/li&gt;
+  &lt;li&gt;Need to show system working end to end before hackathon. Is it reliable and can be tested in hackathon env?
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Front end&lt;/strong&gt;: depends on progress on front end - gideon will have plugin config mockups ready by end of week, has been working on plugin registration functionality&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;User registration&lt;/strong&gt;: do we need to have user registration ready for hackathon? gideon unsure. rudolph thinks not required. we can stick w existing user.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Stress test&lt;/strong&gt;: is there a way to stress test plugins running on MOC? rudolph says we don’t have that at the moment, or have an automated set of tests that run through a couple of plugins… we need more feedback in the UI about what is happening in the MOC since it takes so long - 3 minute delay before job is executed. When MOC decides to schedule it, spins up init container, etc. If you see spinner for &amp;gt; 20s.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;3 minute job execution delay&lt;/strong&gt;: dmcphers says it shouldn’t take 3 minutes, that should be considered a bug. parul says yes it’s a bug related to persistent volume issues, we need to figure it out&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;pman/pfioh stress testing&lt;/strong&gt;: parul is doing pman/pfioh stress testing through openshift. script a little broken and she is working on it - by end of week should have some pfioh push and pman pull MOC perf findings. testing them directly and not through pfcon. Tried to do that earlier but ran into issues, sometimes pfcon doesn’t provide a response with the scripts so it’s hard to parse response and move to the next step. Have removed pfcon from the picture for now.&lt;/li&gt;
+          &lt;li&gt;CCC course intern is working on getting pfioh/pman working on k/openshift (x86) on power9… the work won’t be applicable to benchmark / perf testing.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;ChRIS store plugin upload&lt;/strong&gt; [jorge] Plugin developers need to be able to upload plugins to the ChRIS store, needs to be ready for hackathon. We have ChRIS store instance running at fnndsc.childrens.harvard.edu. It’s an important part of the workflow.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Make decision on CUBE server django vs apache&lt;/strong&gt; [jorge] CUBE is runing in a development environment rihgt now, not sure if what you are thinking for stress test. Is running django server there. We have a single machine prod env that we can run if you want based on apache. But the current ChRIS is running on the normal django devel server so it won’t be as robust as a prod apache server. Make decision if we are going to stick with django dev server or to a prod apache server. CUBE server won’t be hammered too hard by 10-12 hackfest participants. But would be worthwhile to investigate how much effort involved in switching from django to apache server. Can talk about next week.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;to-dos-for-hackathon&quot;&gt;TO-DOs for Hackathon&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Probably do not need to switch from django dev to apache prod server for front ends.&lt;/li&gt;
+  &lt;li&gt;Parul complete pman/pfioh stress testing.&lt;/li&gt;
+  &lt;li&gt;Need to fix 3 minute MOC job execution delay bug.&lt;/li&gt;
+  &lt;li&gt;Gideon to complete plugin registration work.&lt;/li&gt;
+  &lt;li&gt;Need to ensure ChRIS store plugin upload functioning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;fsplugin-discussion&quot;&gt;fsplugin Discussion&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Current feed create workflow… how do we run an arbitrary fsplugin. Crosses different conceptual domains… runing a pacs query, is to create a new feed, or just creating in the library. We’re hitting up against that. Have PACSquery thing coming online soonish. How do we get it into ChRIS? Larger question - bunch of other fsplugins that just do something and create data - how do we run them with the current UI.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;classes of fsplugins that fall outside of these categories… generate a bunch of data from some internal process, have flags and create data. Basically a dsplugin workflow without input…&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;[mizmo] there’s a couple of spectrums as to how we could handle plugins in the UI:
+    &lt;ol&gt;
+      &lt;li&gt;On one side is we think about who is producing the plugins:
+        &lt;ul&gt;
+          &lt;li&gt;We produce the plugins &amp;lt;===&amp;gt; Third-party produced plugins&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;On the other side is how deeply the plugin functionality should/could be integrated into the UI:
+        &lt;ol&gt;
+          &lt;li&gt;It’s a default piece of the core UI&lt;/li&gt;
+          &lt;li&gt;It’s an &lt;em&gt;optional&lt;/em&gt; part of the core UI&lt;/li&gt;
+          &lt;li&gt;It integrates in ways visible across the core UI, but is installed and managed under an apps sandbox (similar to how WordPress plugins work)&lt;/li&gt;
+          &lt;li&gt;It exclusively lives in a plugins sandbox and does not integrate outside of that box&lt;/li&gt;
+          &lt;li&gt;It’s a completely separate UI with different base URL connected to the main UI backend via APIs etc&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;[mizmo] for a pacspull fsplugin specifically I would suggest the functionality live as a piece of the core UI or an optional component of the core UI under the ‘library’ tab. It can also exist where it currently lives in the create new feed workflow, or the new feed workflow tool can reference it via the library.&lt;/li&gt;
+  &lt;li&gt;[rudolph] what about other fsplugins that emit data, e.g. that produce reference data?&lt;/li&gt;
+  &lt;li&gt;[mizmo] I would also suggest treating these as library components. We could have different classes or categories within the library, and these could be categorized as ‘reference’ datasets. I would want to emphasize the content the fsplugin provides to users instead of how it is provided to them (whether that’s an fsplugin output, a shared network filesystem mount point, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jorge-status&quot;&gt;Jorge Status&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Internal storage in CUBE/ChRIS Swift storage… hospital-wide repository where you can put data from various hospital DBs. One thing I’ve been working on is all the file-related APIs in CUBE, such as user-uploaded files, plugin-generated files within a feed, new PACS file API I’ve been working on. Have to represent path to the file within internal Swift storage. Will expose within the APIs, the path within Swift storage, so plugins can now use that path to access any file within any feed or within the user storage space. We have to make sure the user running the plugin is authorized to access those paths. Many things will be in swift from different sources - CUBE will register those files with the APIs so those files are available to users in ChRIS.&lt;/li&gt;
+  &lt;li&gt;Also worked on optimization we wanted to implement. Created new parameter data type: xpath / extracted path - list of strings, paths separated by commas. Now you can pass to a plugin a list of paths in the internal storage so that the plugin can grab those files and do whatever it wants with it. All of this is part of an effort to make any file in Swift available to cube users.
+    &lt;ul&gt;
+      &lt;li&gt;extracted path data type can also indicate just copy from swift, do not go out to the MOC to optimize movement of files&lt;/li&gt;
+      &lt;li&gt;[rudolph] once this is enabled…. topological implication. If we have the ability for cube to access files arbitrarily from swift storage, plugins can now in theory be able to pull from nodes that are not their direct predecessor. Eliminates need for bucket brigade. Plugins can work with data of different ancestry down the tree.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;At some point we need to think about the idea of a single swift as the backbone between the remote compute environment (MOC) and the ChRIS servers inside the hospital.&lt;/li&gt;
+  &lt;li&gt;Added a new PACSfile django app to cube to manage files downloaded from the hospital pacs. So he has some services and apps that can download files from the hospital pacs and store them in swift. Those files can now be registered with cube so they are available to the users of ChRIS. They will also be searchable using PACS query parameters.&lt;/li&gt;
+  &lt;li&gt;Next thing I’m working on now - will be added an asynchronous broker to cube, to enable a sync process running in a diff container or machine to register files. Right now, when the files come back from pfcon and they need to be registered in cube, it makes a get request that takes quite some time, shouldn’t take more than a fraction of a section. So we will offland that process to an external containers.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 27 Feb 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/status-feb-27-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-feb-27-2020/</guid>
+        
+        <category>production</category>
+        
+        <category>node-parameter-ui</category>
+        
+        <category>hackathon</category>
+        
+        <category>swift</category>
+        
+        <category>ui</category>
+        
+        <category>performance</category>
+        
+        <category>fsplugin</category>
+        
+        <category>xpath</category>
+        
+        
+        <category>status</category>
+        
+      </item>
+    
+      <item>
+        <title>06 Feb Status - Hackathon, Swift, and node parameter UI</title>
+        <description>&lt;p&gt;The main items of discussion during this meeting were using the fnndsc.childrens server for the hackathon and making it more persistent, optimizing file ops that occur within swift, and the node parameter config UI.&lt;/p&gt;
+
+&lt;h2 id=&quot;gideon-demo&quot;&gt;Gideon Demo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;bugs in the UI around animation in legacy coode. has been working on fixing them.&lt;/li&gt;
+  &lt;li&gt;added ‘share feed’ button &amp;amp; capability&lt;/li&gt;
+  &lt;li&gt;working with mo on adding new node mockups&lt;/li&gt;
+  &lt;li&gt;a production bug working on&lt;/li&gt;
+  &lt;li&gt;will be working on deleting node feature&lt;/li&gt;
+  &lt;li&gt;will also be working on implementing mo’s new mockups (adding new node)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hackathon-server-and-performance-discussion&quot;&gt;Hackathon Server and Performance Discussion&lt;/h2&gt;
+
+&lt;p&gt;Parul: When can we put new ChRIS UI on MOC? I’m talking about the time it takes for the job to kick off, long time it takes because of the binding time for the PVC, he’s working on that. But if you can do some testing from your side, making a note of all the issues we face, then we can coordinate and talk things out.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: That’s fantastic, not sure if we have the most recent version on fnndsc.childrens.harvard.edu page…&lt;/p&gt;
+
+&lt;p&gt;Gideon: I don’t have the same bug in devel but I have it in production. I fixed that yesterday. If I can get through that today, I’ll build it for production and have it up on fnndsc. That was the goal yesterday, hoping to do today.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: I think Jorge might have production end ideas. Parul, yeh, two things:&lt;/p&gt;
+
+&lt;p&gt;1 - we should have this up on the public exposed site.
+2 - on the public exposed site - all the ones that end with _moc are registered to run at the moc.&lt;/p&gt;
+
+&lt;p&gt;So yes, as long as a chris is instantiated and exposed, you shoul dbe able to dispatch any of these *_moc plugins and ru non the moc.&lt;/p&gt;
+
+&lt;p&gt;Paul: Sounds good.&lt;/p&gt;
+
+&lt;p&gt;Parul: For hackathon, are we going to use public facing fnndsc.childrens site, or some other server?&lt;/p&gt;
+
+&lt;p&gt;Rudolph: We can do either. The public facing server is not on a fantastic machine, it’s a VM with just 2 CPUs and 16 GB ram. My laptop is more powerful than that. So we can do either/or, whatever makes the most sense then.&lt;/p&gt;
+
+&lt;p&gt;Dan: If we’re doing the hackathon, I think - correct me if i’m wrong - part of the goal is to utilize the MOC resources, play aroud iwth chris and learn more about it, write plugins etc. Build out interest. If we don’t have something there runing they can go back to consistently, we won’t get as much attachment as we’d like .So should we devote more resources to that vm, get more VMs at childrens? Or set up more resources elsewhere, but then how would that tie into childrens?&lt;/p&gt;
+
+&lt;p&gt;Rudolph: the public-facing one should be fine, just suggesting - we have more powerful machines just sitting around probably.&lt;/p&gt;
+
+&lt;p&gt;Dan: Can we fix that problem? Seems like if we’re ready for hackathon, seems like we also need to have an instance we can point them to consistently&lt;/p&gt;
+
+&lt;p&gt;Rudolph: yes we can do that. In the meantime I can put in a request to have that VM beefed up a bit. You might be suggesting, if I’m reading between the lines, the idea of a more premanent ChRIS as opposed to currently how it goes up and down, we restarted it, wipe it, switch storage, etc. That’s something we should think about - having a persisten almost production site.&lt;/p&gt;
+
+&lt;p&gt;Dan: Yeh, at a minimum, a permanent playground, we can always point people to, let them build stuff, make it work. For permanent production - not sure about use case… not sure about any org that would run something on it permanently. but some level of prod capability so people can develop againt it, and it’ll be there fairly reliably.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: esp if you have a hackathon, if they want to come back a week later and see what they put into it. From that POV it makes sense. Altho usually hackathon playground, are just up for the few days of the workshop. So it’s 4 cpus and 16GB of ram but we can def make that more permanent. We can just decide, have the one on fnndsc become more of a permanent resource. I think it’s fine for now to have it available as a playground for a stretch of time as well.&lt;/p&gt;
+
+&lt;p&gt;Jorge: It’s fine… we can make a kind of a single machine production deployment. was working in the past, maybe give me some access to that machinem, i don’t have access right now. Really important to show devs the workflow of writing the plugins and submitting to the chris store.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: I Was hoping you could take the lead on those instructions / write up, using the ChRIS store UI.&lt;/p&gt;
+
+&lt;p&gt;Jorge: Maybe try to do this once with your own plugin through the chris store UI, also running on fnndsc, not difficult at all.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: I haven’t done that for a long time, will try the UI.&lt;/p&gt;
+
+&lt;p&gt;Parul: Check with whatever the capacity of the VMs right now, how many concurrent users it supports. We should be prepared at least for 10 (or just decide on a number) for concurrent users a single instance of time. I think we shoul dhave a dry run of how many users can be supported yb the VM we have right now. Just an idea, we can discuss on it, or think on another solution so we have an approximation of how many users we can support so the hackathon is less chaotic.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: Yeh that’s a good idea&lt;/p&gt;
+
+&lt;p&gt;Jorge: The resources the machine has should be enough for 1000s of users, could be the network though…&lt;/p&gt;
+
+&lt;p&gt;Dan: do you have a perf run that shows how well it scales?&lt;/p&gt;
+
+&lt;p&gt;Jorge: no but, as I see typical amazon services machines… when you use them you get 32gb or 64gb ram machine…&lt;/p&gt;
+
+&lt;p&gt;Parul: it’s not just hte machine, the capacity of the app as well, how many users can cube handle, we’ve never touched such a scenario.&lt;/p&gt;
+
+&lt;p&gt;Jorge: the slow part could be files coming back from pfcon?&lt;/p&gt;
+
+&lt;p&gt;Dan: Maybe let’s not guess and just if we can perf test it, it’s probably worth it.&lt;/p&gt;
+
+&lt;p&gt;Jorge: We can use the hackathon to see ;-) At least the ChRIS store will work fine, the most important part they’ll interact with.&lt;/p&gt;
+
+&lt;p&gt;Dan: gut feel or do you have a data point there on chris store?&lt;/p&gt;
+
+&lt;p&gt;Jorge: The ChRIS store should be fine bc nothing compute intensive there, nothing extraordinary.&lt;/p&gt;
+
+&lt;p&gt;Dan: Im sure youre right but I’ve seen apps that are pretty simple that have flaws that cause issues too. It’s ok either way, if we want to take a risk so be it, but could be worthwhile to perf test.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: I totally agree.&lt;/p&gt;
+
+&lt;p&gt;Jorge: We were also going to discuss some optimizations we have in mind today.&lt;/p&gt;
+
+&lt;p&gt;Parul: these are good points, I’ll make a note on it and follow up again some time later during our meeting in a few weeks.&lt;/p&gt;
+
+&lt;p&gt;== Note: Exposing JSON feed status data in  UI ==&lt;/p&gt;
+
+&lt;p&gt;Parul: Another Q - not important but Rudolph, you were talking about JSON?&lt;/p&gt;
+
+&lt;p&gt;Rudolph: you mean the feed status feedback? That’s an important one, from the UI perspective, we have the information already, so it shouldn’t be too much to capture that. 
+To provide more meaningful feedback to user.&lt;/p&gt;
+
+&lt;p&gt;Parul: I created an issue under MVP&lt;/p&gt;
+
+&lt;h2 id=&quot;jorge-status&quot;&gt;Jorge Status&lt;/h2&gt;
+
+&lt;h3 id=&quot;backend-modifications-to-enable-front-end-to-work-with-files&quot;&gt;Backend modifications to enable front end to work with files&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;I enabled the front end by working on the back end, to enable front end to choose files when in the new node UI, could choose files from everywhere in chris from the user’s feed, filesystems, or the users upload filesystems. the backend also needs to be able to validate that any request is accessing files in an authorized path in swift, for that user. I implemented that and seems to be working fine now.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;discussion-inefficiency-in-swift-copy-operations&quot;&gt;Discussion: Inefficiency in swift copy operations&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;[Jorge] Rudolph and I were talking about optimizations for ChRIS. Especially for plugins that only want to move files around in swift. Let’s say currently a plugin that only wants to move a file from somwehwere in swift to somewhere else in swift - goes thorugh a very inefficient pipeline Let’s say data first needs to be copied out of swift? Then data is sent to pfioh, then pman runs the plugin, plugin copies the data to its output there, pfioh sends data back to pfcon, pfcon put data back in swift again. All of that just to move a file from somewhere in swift, to somewhere else in swift. It’s a very inefficient pipeline. So I was thinking about how we could optimize these things:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Basically a plugin that wants to work with swift, can only download a file from swift, process, and then upload it back to swift. I think that can be done by pfioh in the usual way. That use case is pretty much done properly by pfioh.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The other case is copying files from one place in swift to another place in swift. Important thing is a plugin can only write files to its output dir. That’s the key in the ChRIS system. A plugin can only write files to its output dir. It means a plugin can not just go around in swift and access things, copying whatever it wants. That can make the system inconsistent and other things. Having that in mind… the best solution - instead of adding new services and credential secrets - i think we can just add a property to the path data type. If that property is true, then please don’t download the files from swift but just copy them to the output dir of that plugin. The service doesn’t know where the output dir of that plugin is going to be in swift…&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Rudolph: There’s a whole bunch of stuff here, let’s not get too lost in the weeds bc conceptually and technically can get very complicated. Short story is, when we were putting together how to do the file upload and choose places in chris storage to create a new feed - it’s a very powerful thing to do. Upload local files. What you cannot do right now but for arugment’s sake - if you can select more than one dir in the chris file select. It’s an extremely powerful operation here - it’s a dircopy that creates a new root feed with info taken from somewhere else in the swift storage space. This comes down to what we’ve talked about, harvester plugins or some mechanism by which you can pull data from diff sources in the tree. Imagine ChRIS feed tree here - we’re kind of making a JOIN between arbitrary data points in the tree. What we’re doing in this dialog box here is pulling together data from diff sources across the tree which is extremely powerful. GO into it deeper, there’s definitely a case to be made for some kind of behavior in the system where something we call a plugin is able to harvest data from multiple places in the tree. That’s a bit of the discussion Jorge is touching on. I do think something like that owuld be super powerful to do. We’ve essentially done this but using an fs metaphor. If we could do this with a ds type plugin, we could link any kind of previous directory to a next node down the chain. Detail can be hairy and complex, but a very powerful thing to do. We don’t know a good way in which to do it, but thinking along those lines. Could mean a new class of plugin or behavior in the system that doesn’t yet exist. In our current metaphor / context / syntax we can’t do it.&lt;/p&gt;
+
+&lt;p&gt;Jorge: That’s part of the thing - we currently are able to copy files from one of those folders in the path in the ChRIS tree… that can be done by dsplugin or fsplugin. Currently system is able to do that. Multipe choices in the UI is a bit more complicated, bc it means you are sending a list of files to the backend, and that is difficult to put the maximum number of connectors on that. But we can do that actually with whatever in the chris path, choose a file or dir and will be made available for it to process. Rudolph. I was also talking about the other part of how the system works for these plugins that copy a file from swift to another place in swift. Pipeline is very inefficient for that.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: Yes it’s super inefficient for that.&lt;/p&gt;
+
+&lt;p&gt;Jorge: We were talking about that, maybe adding new services, bc you were thinking along the lines, maybe plugins could access swift directly. That would be very difficult, would imply creating new services, passing around credentials.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: We’re thinking about this and a lot of technical ipmlications. SImple one line message, we’re thinking about a new way of internacting with the system not currently captured by the current design. IF anyone has any ideas or thinking about this - some mechanism by which you can do some operations without going through the whole pipeline of things we do now, you can boost efficiency by orders of magnitutde. A simple copy right now involves 5-6 network operations, when just involves copying things within swift. Should be almost instant but takes minutes to do right now. Our pipeline was never geared to do those kind of internal ops. That’s the short story.&lt;/p&gt;
+
+&lt;p&gt;Jorge: Proposing a solution for that - adding a flag to a parameter so the system knows not to go thorugh the typical pipeline, and instead handle internally in swift. Would make pipeline more efficient. This is easy to do with amazon services, easy to do if you want to have swift local from private to public / hybrid cloud. my question is, is it easy to do this with the moc? Can we have a swift cluster there, on premise to the cloud? Only on-premise chris system that doesnt interact with the cloud - it’s obvious having two swift clusters doesn’t make sense. For hybrid cloud, also makes sense to have a single swift cluster, simplify a lot of the pipelines.&lt;/p&gt;
+
+&lt;p&gt;Rudolph: This is an important discussion and we need to get to it. Technical and hairy but could make a huge difference to the system.&lt;/p&gt;
+
+&lt;p&gt;Jorge: Yep, just want to get a take on how difficult this would be in the moc.&lt;/p&gt;
+
+&lt;p&gt;Rudolph. Probably not necessarily easy but probably doable, not happening likely before the next 6-8 months.&lt;/p&gt;
+
+&lt;p&gt;Parul: We can come back then to discuss.&lt;/p&gt;
+
+&lt;h2 id=&quot;mo-status&quot;&gt;Mo Status&lt;/h2&gt;
+
+&lt;p&gt;Talked to Gideon and Rudolph about add new node mockups - would like a copy/paste freeform text field for specifying paramters + arguments to them rather than just the form. Considered having a ‘mode’ where you’re in freeform vs form mode. Or allowing users to override freeform with the form. Mo will noodle on this and figure out an approach.&lt;/p&gt;
+
+&lt;p&gt;Mockups are available here: (https://github.com/FNNDSC/cube-design/tree/master/CHRIS-UI/PNG/add-new-node-2)[https://github.com/FNNDSC/cube-design/tree/master/CHRIS-UI/PNG/add-new-node-2]&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 06 Feb 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000/status-feb-06-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-feb-06-2020/</guid>
+        
+        <category>production</category>
+        
+        <category>file-model</category>
+        
+        <category>node-parameter-ui</category>
+        
+        <category>hackathon</category>
+        
+        <category>swift</category>
+        
+        <category>ui</category>
+        
+        <category>performance</category>
+        
+        
+        <category>status</category>
+        
+      </item>
     
       <item>
         <title>30 Jan Status - Local file upload in web UI</title>
@@ -167,8 +958,8 @@ Would be great to expose those 4 states as a progress bar, change color based on
 
 </description>
         <pubDate>Thu, 30 Jan 2020 00:00:00 -0500</pubDate>
-        <link>http://localhost:4000/status/status-jan-2020/</link>
-        <guid isPermaLink="true">http://localhost:4000/status/status-jan-2020/</guid>
+        <link>http://localhost:4000/status-jan-2020/</link>
+        <guid isPermaLink="true">http://localhost:4000/status-jan-2020/</guid>
         
         <category>file-model</category>
         
