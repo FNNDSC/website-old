@@ -58,6 +58,7 @@ pre {
     padding-top: 1.5rem;
     margin-top: 57px;
     transition: all 0.4s;
+    padding-left: 1rem;
 }
 
 section {
@@ -285,7 +286,7 @@ span.post-read-more a:hover {
 
 .mediumnavigation .navbar-brand {
     font-weight: 700;
-    margin-left: -30px;
+    margin-left: 0px;
     margin-right: 0px;
     padding-right: 16px;
 }
