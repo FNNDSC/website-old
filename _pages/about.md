@@ -1,25 +1,26 @@
 ---
 layout: page
-title: About
+title: About ChRIS
 permalink: /about
-comments: true
 ---
 
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
+<h3>Overview</h3>
 
-<p>Every Thursday, a group of folks working on <a href="https://github.com/FNNDSC">the ChRIS project</a> meet to share their status for working on the project. There are often useful discussions about development and planning and demos during these meetings. This is a simple site set up to log the meeting minutes of those meetings for posterity. It is driven via the <a href="https://github.com/FNNDSC/status">https://github.com/FNNDSC/status</a> repository.</p>
+<p>ChRIS is a pervasively open source framework that utilizes cloud technologies to democratize medical analytics application development and enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. 
+</p>
+<p>ChRIS allows researchers the ability to simply deploy the same application they have already developed in a cloud infrastructure with access to more data, more compute, and more collaboration to drive medical innovation. ChRIS uses Docker/containers, Kubernetes/OpenShift, and a set of other technologies to standardize healthcare application development.</p>
 
-<h4>Questions or bug reports?</h4>
-
-<p>Head over to the <a href="https://github.com/FNNDSC/status">Github repository</a> for this site.</p>
+<p>
+An instance of ChRIS is already deployed over Boston Children’s Hospital (BCH) and Massachusetts Open Cloud (MOC), and it is possible to develop medical analytics plugins to be embedded into the BCH-MOC deployment. This deployment was highlighted in two keynotes at the Red Hat summit in 2019 with over seven thousand people in attendance.</p>
 
 </div>
 
 <div class="col-md-4">
 
-<p><img src="{{site.baseurl}}/assets/images/ChRIS-2018-Hackathon.jpg" alt="photo of ChRIS developers in a conference room with laptops hacking on code" /></p>
+<p><img src="{{site.baseurl}}/assets/images/chris-screenshot.jpg" alt="screenshot of the ChRIS web application showing a 3D brain scan from a multi-plugin analysis tree" /></p>
 
 </div>
 </div>
