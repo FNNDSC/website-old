@@ -63,20 +63,60 @@ ga('send', 'pageview');
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
-
-                {% if page.url == "/" %}
+                
+		{% if page.url == "/about" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/devel-blog.html">Blog</a>
-                </li>
-
                 <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
+                
+		{% if page.url == "/demo" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/demo">Demo</a>
+                </li>
+                
+		{% if page.url == "/plugins" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/plugins">Plugins</a>
+                </li>
+
+		{% if page.url == "/devel-blog" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/devel-blog">Blog</a>
+                </li>
+
+                {% if page.url == "/docs" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/docs">Docs</a>
+                </li>
+
+                {% if page.url == "/code" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/code">Code</a>
+                </li>
 
                 <li class="nav-item">
+
+                <li class="nav-item">
+
                 <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
                 </li>
 
@@ -115,6 +155,7 @@ ga('send', 'pageview');
             			
 				<p>ChRIS is a platform that enables you to benefit from the power of public cloud 
 				computing while still maintaining ownership of your own data.</p>
+				<p><a href="/about">Learn more →</a></p>
 				<br />
 				<button type="button" class="btn btn-light">Try our demo →</button>
 				<button type="button" class="btn btn-outline-light">View us on Github →</button>
