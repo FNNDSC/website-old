@@ -318,6 +318,8 @@ h1.sitetitle {
     font-size: 32px;
 }
 
+a:link .sitetitle, a:active .sitetitle, a:visited .sitetitle { color: black; }
+
 .mainheading h1.posttitle {
     font-weight: 700;
     margin-bottom: 1rem;
