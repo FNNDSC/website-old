@@ -5,7 +5,7 @@ permalink: /about
 ---
 
 <div class="row justify-content-between">
-<div class="col-md-8 pr-5">
+<div class="col-md-7 pr-5">
 
 <h3>Overview</h3>
 
@@ -18,7 +18,10 @@ An instance of ChRIS is already deployed at <a href="https://www.fnndsc.org/">Bo
 
 </div>
 
-<div class="col-md-4">
+<div class="col-md-5">
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/e3QJjLwVwQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 <p><img src="{{site.baseurl}}/assets/images/chris-screenshot.jpg" alt="screenshot of the ChRIS web application showing a 3D brain scan from a multi-plugin analysis tree" /></p>
 
