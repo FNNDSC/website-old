@@ -9,12 +9,12 @@ permalink: /about
 
 <h3>Overview</h3>
 
-<p>ChRIS is a pervasively open source framework that utilizes cloud technologies to democratize medical analytics application development and enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. 
+<p>ChRIS is a pervasively open source framework that utilizes cloud technologies to democratize medical analytics application development. It enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. 
 </p>
-<p>ChRIS allows researchers the ability to simply deploy the same application they have already developed in a cloud infrastructure with access to more data, more compute, and more collaboration to drive medical innovation. ChRIS uses Docker/containers, Kubernetes/OpenShift, and a set of other technologies to standardize healthcare application development.</p>
+<p>ChRIS allows researchers the ability to simply deploy their applications in a cloud infrastructure with access to <strong>more data</strong>, <strong>more compute</strong>, and <strong>more collaboration</strong> to drive medical innovation. ChRIS uses Docker/containers, Kubernetes/OpenShift, and other technologies to standardize healthcare application development.</p>
 
 <p>
-An instance of ChRIS is already deployed over Boston Children’s Hospital (BCH) and Massachusetts Open Cloud (MOC), and it is possible to develop medical analytics plugins to be embedded into the BCH-MOC deployment. This deployment was highlighted in two keynotes at the Red Hat summit in 2019 with over seven thousand people in attendance.</p>
+An instance of ChRIS is already deployed at <a href="https://www.fnndsc.org/">Boston Children’s Hospital</a> (BCH) using the <a href="https://massopen.cloud">Massachusetts Open Cloud</a> (MOC). It is possible to develop and embed medical analytics plugins into the BCH-MOC deployment. This deployment was <a href="https://www.dotmed.com/news/story/42972?p_begin=0">highlighted in two keynotes at the Red Hat Summit in 2019</a> with over seven thousand people in attendance.</p>
 
 </div>
 
