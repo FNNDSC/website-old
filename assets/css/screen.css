@@ -16,6 +16,13 @@ License: https://www.wowthemes.net/freebies-license/
   padding-top: 5rem;
 }
 
+#home .mainheading .lead {
+  padding: 0 !important;
+}
+#home .mainheading {
+  padding-top: .55rem !important;
+}
+
 a {
     color: #00ab6b;
     transition: all 0.2s;
@@ -58,6 +65,10 @@ pre {
     padding-top: 1.5rem;
     margin-top: 90px;
     transition: all 0.4s;
+}
+
+.site-content .container {
+    padding-left: 3rem;
 }
 
 section {
@@ -920,3 +931,33 @@ iframe {
     background-position: bottom 10% left 0%;
  }
 
+ .callout {
+    font-size: x-large;
+    font-style: italic;
+    line-height: 3rem;
+    padding: 4rem 5rem;
+    background: rgb(58,124,199);
+    background: -moz-linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
+    background: -webkit-linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
+    background: linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a7cc7",endColorstr="#7ad4ed",GradientType=1); 
+    color: white;
+    font-weight: 300;
+}
+
+#home .card-deck.front {
+    margin: 2.5rem 0rem !important;
+}
+
+#home .front .card-header {
+    padding: 0;
+    min-height: 270px;
+}
+
+#home .card-deck.front .card:first-child {
+     margin-left: 0;
+}
+
+#home .card-deck.front .card:last-child {
+     margin-right: 0;
+}

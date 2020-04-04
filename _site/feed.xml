@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>website</title>
-    <description>The latest developments and news on the &lt;a href=&quot;http://www.bu.edu/rhcollab/projects/radiology/&quot;&gt;ChRIS project&lt;/a&gt;.</description>
+    <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 03 Apr 2020 14:22:08 -0400</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2020 14:22:08 -0400</lastBuildDate>
+    <pubDate>Sat, 04 Apr 2020 01:14:33 -0400</pubDate>
+    <lastBuildDate>Sat, 04 Apr 2020 01:14:33 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>

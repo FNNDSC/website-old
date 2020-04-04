@@ -6,21 +6,19 @@
 
 <link rel="icon" href="/assets/images/logo.png">
 
-<title>Home | ChRIS Research Integration Service</title>
+<title>Home | The ChRIS Project</title>
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Home | website</title>
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The latest developments and news on the ChRIS project." />
-<meta property="og:description" content="The latest developments and news on the ChRIS project." />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="website" />
 <link rel="next" href="http://localhost:4000/page2/" />
 <script type="application/ld+json">
-{"description":"The latest developments and news on the ChRIS project.","@type":"WebSite","headline":"Home","url":"http://localhost:4000/","name":"website","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"@context":"http://schema.org"}</script>
+{"@type":"WebSite","headline":"Home","url":"http://localhost:4000/","name":"website","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -37,7 +35,7 @@
 
 
 
-<body class="layout-default">
+<body class="layout-default" id="home">
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
 		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -53,9 +51,9 @@
 
 	    <!-- Begin Logo -->
     <a class="navbar-brand" href="/">
-    <img src="/assets/images/logo.png" alt="ChRIS Research Integration Service">
+    <img src="/assets/images/logo.png" alt="The ChRIS Project">
     </a>
-    <h1 class="sitetitle">ChRIS Research Integration Service</h1>
+    <a href="/"><h1 class="sitetitle">The ChRIS Project</h1></a>
     <!-- End Logo -->
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,18 +65,46 @@
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
-
                 
-                <li class="nav-item active">
+		
+                <li class="nav-item">
                 
-                <a class="nav-link" href="/devel-blog.html">Blog</a>
-                </li>
-
                 <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
                 </li>
+                
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/demo">Demo</a>
+                </li>
+                
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/plugins">Plugins</a>
+                </li>
+
+		
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/devel-blog">Blog</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/docs">Docs</a>
+                </li>
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/code">Code</a>
+                </li>
 
                 <li class="nav-item">
+
                 <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
                 </li>
 
@@ -135,11 +161,11 @@
 			</div>
 			<div class="p-3">
             			
-				<p>ChRIS is a platform that enables you to benefit from the power of public cloud 
-				computing while still maintaining ownership of your own data.</p>
+				<p>Supercharge your medical imaging analysis with the power of the Massachusetts Open Cloud — while still maintaining ownership of your own data. ChRIS is the platform that makes it possible and easy.</p>
+				<p><a href="/about">Learn more →</a></p>
 				<br />
-				<button type="button" class="btn btn-light">Try our demo →</button>
-				<button type="button" class="btn btn-outline-light">View us on Github →</button>
+				<a href="http://fnndsc.childrens.harvard.edu:5010/" class="btn btn-light">Try demo →</a>
+				<a href="https://github.com/fnndsc" class="btn btn-outline-light">View on Github →</a>
 		
 			</div>
                 </div>
@@ -158,7 +184,7 @@
 <div class="mainheading">
    <!-- 
     <p class="lead">
-        The latest developments and news on the <a href="http://www.bu.edu/rhcollab/projects/radiology/">ChRIS project</a>.
+        
     </p>
     -->
 </div>
@@ -168,11 +194,50 @@
 <div class="main-content">
     
 
+<div class="callout">
+
+As more and more of our lives become ever intimately impacted by computing, <strong>open source</strong>, <strong>open standards</strong>, and <strong>open platforms</strong> are fundamentally important.
+
+</div>
+
+<div class="card-deck front">
+  <div class="card">
+	  <div class="card-header">
+	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" />
+	</div>
+    <div class="card-body">
+	    <h4 class="card-title"><a href="http://fnndsc.childrens.harvard.edu:5055/">The ChRIS Store</a></h4>
+      <p class="card-text"><a href="http://fnndsc.childrens.harvard.edu:5055/">The ChRIS Store</a> is where you can find, download, or contribute your own medical imaging analytical software for deployment on the ChRIS platform. We link to a recent prototype here.</p>
+    </div>
+  </div>
+
+  <div class="card">
+	  <div class="card-header">
+	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_creating-chris.jpg" />
+	  </div>
+    <div class="card-body">
+	    <h4 class="card-title"><a href="https://redhat.com/chris">Creating ChRIS</a></h4>
+	    <p class="card-text">This <a href="https://redhat.comVchris">video series</a> created by <a href="https://redhat.com">Red Hat</a> tells the story of the ChRIS project, introduces some of the people behind it, and lays out the ChRIS vision of cloud technology improving medical care.</p>
+    </div>
+  </div>
+
+  <div class="card">
+	  <div class="card-header">
+		<iframe style="width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/e3QJjLwVwQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+    <div class="card-body">
+	    <h4 class="card-title"><a href="https://youtu.be/e3QJjLwVwQo">ChRIS on theCUBE</a></h4>
+      <p class="card-text">Watch this great overview of ChRIS as explained by Dr. Ellen Grant and Dr. Rudolph Pienaar of Boston Children's Hospital in an interview with theCUBE during the 2019 Red Hat Summit in Boston, Massachusetts.</p>
+    </div>
+  </div>
+
+</div>
+
 <!-- Featured
 ================================================== -->
 <section class="featured-posts">
     <div class="section-title">
-        <h2><span>Featured</span></h2>
+        <h2><span>Featured Development Blog Posts</span></h2>
     </div>
     <div class="row">
 
@@ -180,7 +245,57 @@
 
         
 
-    
+            <!-- begin post -->
+
+<div class="col-md-6 mb-30px">
+    <div class="listfeaturedtag h-100">
+        <div class="row h-100">
+            <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
+                <div class="h-100">
+                    <div class="wrapthumbnail">
+                        <a href="/status-mar-26-2020/">
+                            
+                            <img class="featured-box-img-cover" src="https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/node-config/add-new-node_26032020-1.png">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+                <div class="h-100 card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <a class="text-dark" href="/status-mar-26-2020/">26 March Status - Node parameter UI demo</a>
+                                
+                            </h2>
+
+                            <h4 class="card-text">Gideon showed us his updates to the node parameter entry UI based on the discussion we had during the last time he demoed it. Sandeep,...</h4>
+                        </div>
+                        <div class="card-footer b-0 bg-white mt-auto">
+                            <div class="wrapfooter">
+                                
+                                <span class="meta-footer-thumb">
+                                
+                                <img class="author-thumb" src="https://www.gravatar.com/avatar/6538a2e21a4f5358c628382dd63e5be5?s=250&d=mm&r=x" alt="Máirín Duffy">
+                                
+                                </span>
+                                <span class="author-meta">
+                                <span class="post-name"><a target="_blank" href="http://www.bu.edu/rhcollab/people/mairin-duffy/">Máirín Duffy</a></span><br/>
+                                
+                                <span class="post-date">26 Mar 2020</span>
+                                </span>
+                                <span class="post-read-more"><a href="//status-mar-26-2020/" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end post -->
 
         
 
@@ -192,7 +307,173 @@
 
         
 
+            <!-- begin post -->
+
+<div class="col-md-6 mb-30px">
+    <div class="listfeaturedtag h-100">
+        <div class="row h-100">
+            <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
+                <div class="h-100">
+                    <div class="wrapthumbnail">
+                        <a href="/status-mar-12-2020/">
+                            
+                            <img class="featured-box-img-cover" src="https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/pacsquery/pacsquery.png">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+                <div class="h-100 card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <a class="text-dark" href="/status-mar-12-2020/">12 March Status - Node config UI Demo + pacsquery UI demo</a>
+                                
+                            </h2>
+
+                            <h4 class="card-text">Gideon has a working demo for the node config UI, so we walked through it and discussed it. Then, Rudolph gave us a demo of...</h4>
+                        </div>
+                        <div class="card-footer b-0 bg-white mt-auto">
+                            <div class="wrapfooter">
+                                
+                                <span class="meta-footer-thumb">
+                                
+                                <img class="author-thumb" src="https://www.gravatar.com/avatar/6538a2e21a4f5358c628382dd63e5be5?s=250&d=mm&r=x" alt="Máirín Duffy">
+                                
+                                </span>
+                                <span class="author-meta">
+                                <span class="post-name"><a target="_blank" href="http://www.bu.edu/rhcollab/people/mairin-duffy/">Máirín Duffy</a></span><br/>
+                                
+                                <span class="post-date">12 Mar 2020</span>
+                                </span>
+                                <span class="post-read-more"><a href="//status-mar-12-2020/" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end post -->
+
+        
+
     
+
+        
+
+            <!-- begin post -->
+
+<div class="col-md-6 mb-30px">
+    <div class="listfeaturedtag h-100">
+        <div class="row h-100">
+            <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
+                <div class="h-100">
+                    <div class="wrapthumbnail">
+                        <a href="/status-mar-05-2020/">
+                            
+                            <img class="featured-box-img-cover" src="https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/library/references_rough_5mar2020.png">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+                <div class="h-100 card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <a class="text-dark" href="/status-mar-05-2020/">05 March Status - Async task queue for cube and more fsplugin UX discussion</a>
+                                
+                            </h2>
+
+                            <h4 class="card-text">We went through everyone’s status, and The main items of discussion during this meeting were the new asynchronous task queue Jorge developed and further work...</h4>
+                        </div>
+                        <div class="card-footer b-0 bg-white mt-auto">
+                            <div class="wrapfooter">
+                                
+                                <span class="meta-footer-thumb">
+                                
+                                <img class="author-thumb" src="https://www.gravatar.com/avatar/6538a2e21a4f5358c628382dd63e5be5?s=250&d=mm&r=x" alt="Máirín Duffy">
+                                
+                                </span>
+                                <span class="author-meta">
+                                <span class="post-name"><a target="_blank" href="http://www.bu.edu/rhcollab/people/mairin-duffy/">Máirín Duffy</a></span><br/>
+                                
+                                <span class="post-date">05 Mar 2020</span>
+                                </span>
+                                <span class="post-read-more"><a href="//status-mar-05-2020/" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end post -->
+
+        
+
+    
+
+        
+
+            <!-- begin post -->
+
+<div class="col-md-6 mb-30px">
+    <div class="listfeaturedtag h-100">
+        <div class="row h-100">
+            <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
+                <div class="h-100">
+                    <div class="wrapthumbnail">
+                        <a href="/status-feb-27-2020/">
+                            
+                            <img class="featured-box-img-cover" src="https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/PNG/add-new-new-3/add-new-node_step2b-alt.png">
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+                <div class="h-100 card-group">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <a class="text-dark" href="/status-feb-27-2020/">27 Feb Status - More Hackathon planning and fsplugin UX discussion</a>
+                                
+                            </h2>
+
+                            <h4 class="card-text">The two major discussions we had during this meeting beyond the usual status reports was Hackathon planning, how to integrate fsplugins in the ChRIS UI,...</h4>
+                        </div>
+                        <div class="card-footer b-0 bg-white mt-auto">
+                            <div class="wrapfooter">
+                                
+                                <span class="meta-footer-thumb">
+                                
+                                <img class="author-thumb" src="https://www.gravatar.com/avatar/6538a2e21a4f5358c628382dd63e5be5?s=250&d=mm&r=x" alt="Máirín Duffy">
+                                
+                                </span>
+                                <span class="author-meta">
+                                <span class="post-name"><a target="_blank" href="http://www.bu.edu/rhcollab/people/mairin-duffy/">Máirín Duffy</a></span><br/>
+                                
+                                <span class="post-date">27 Feb 2020</span>
+                                </span>
+                                <span class="post-read-more"><a href="//status-feb-27-2020/" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end post -->
 
         
 
@@ -231,7 +512,37 @@
             
             
                 
-                    <a class="mt-1 mb-1" href="/categories#status">status (7)</a>
+                    <a class="mt-1 mb-1" href="/tags#file-model">file-model (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#plugin-state">plugin-state (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#hackathon">hackathon (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#swift">swift (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#data-versioning">data-versioning (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#production">production (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#node-parameter-ui">node-parameter-ui (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#ui">ui (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#performance">performance (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#fsplugin">fsplugin (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#xpath">xpath (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#async-queue">async-queue (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#node-config-ui">node-config-ui (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#pacsquery">pacsquery (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#admin-panel">admin-panel (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/tags#library">library (1)</a>
                 
             
             
@@ -239,16 +550,30 @@
 	</div>
 </div>
 
+
+<!--            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#status">status (7)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+-->
+
+
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © 2020 ChRIS Research Integration Service 
+		    Copyright © 2020 Boston Children's Hospital <a href="https:www.fnndsc.org">Fetal-Neonatal Neuroimaging and Developmental Science Center</a><!-- The ChRIS Project -->
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">  
+                Theme based on <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
     </div>

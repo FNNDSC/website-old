@@ -33,7 +33,7 @@ ga('send', 'pageview');
 {% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-<body class="{{layout}}">
+<body class="{{layout}}" {% if page.url == "/" %}id="home"{% endif %}>
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
 		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -151,8 +151,7 @@ ga('send', 'pageview');
 			</div>
 			<div class="p-3">
             			
-				<p>ChRIS is a platform that enables you to benefit from the power of public cloud 
-				computing while still maintaining ownership of your own data.</p>
+				<p>Supercharge your medical imaging analysis with the power of the Massachusetts Open Cloud — while still maintaining ownership of your own data. ChRIS is the platform that makes it possible and easy.</p>
 				<p><a href="/about">Learn more →</a></p>
 				<br />
 				<a href="http://fnndsc.childrens.harvard.edu:5010/" class="btn btn-light">Try demo →</a>
@@ -215,7 +214,23 @@ ga('send', 'pageview');
             </div>
 		</div>
 		<div class="col-md-8 p-5 align-self-center text-center">
-            {% assign categories_list = site.categories %}
+            {% assign tags_list = site.tags %}
+            {% if tags_list.first[0] == null %}
+                {% for tag in tags_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/tags#{{ tag | url_escape | strip | replace: ' ', '-' }}">{{ tag | camelcase }} ({{ site.tags[tag].size }})</a>
+                {% endfor %}
+            {% else %}
+                {% for tag in tags_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/tags#{{ tag[0] | url_escape | strip | replace: ' ', '-' }}">{{ tag[0] | camelcase }} ({{ tag[1].size }})</a>
+                {% endfor %}
+            {% endif %}
+            {% assign tags_list = nil %}
+		</div>
+	</div>
+</div>
+
+
+<!--            {% assign categories_list = site.categories %}
             {% if categories_list.first[0] == null %}
                 {% for category in categories_list %}
                     <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
@@ -229,6 +244,8 @@ ga('send', 'pageview');
 		</div>
 	</div>
 </div>
+-->
+
 
 <!-- Begin Footer
 ================================================== -->
@@ -236,10 +253,10 @@ ga('send', 'pageview');
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+		    Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital <a href="https:www.fnndsc.org">Fetal-Neonatal Neuroimaging and Developmental Science Center</a><!-- {{ site.name }} -->
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
-                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">  
+                Theme based on <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
             </div>
         </div>
     </div>
