@@ -353,7 +353,6 @@ a:link .sitetitle, a:active .sitetitle, a:visited .sitetitle { color: black; }
 }
 
 .article-post {
-    font-family: Merriweather;
     font-size: 1.1rem;
     line-height: 1.84;
     color: rgba(0, 0, 0, .8);
@@ -945,19 +944,19 @@ iframe {
     font-weight: 300;
 }
 
-#home .card-deck.front {
+.card-deck.front {
     margin: 2.5rem 0rem !important;
 }
 
-#home .front .card-header {
+.front .card-header {
     padding: 0;
     min-height: 270px;
 }
 
-#home .card-deck.front .card:first-child {
+.card-deck.front .card:first-child {
      margin-left: 0;
 }
 
-#home .card-deck.front .card:last-child {
+.card-deck.front .card:last-child {
      margin-right: 0;
 }
