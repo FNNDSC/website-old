@@ -34,7 +34,7 @@ If you would like to set up a local copy of this website to test changes, etc. t
 1. You want to do [some basic setup of Jekyll & ruby on your system](https://jekyllrb.com/docs/installation/) if you don't have it set up already.
 2. git clone git@github.com:FNNDSC/status.git
 3. navigate to your checkout
-4. bundle exec jekyll serve --watch
+4. `bundle exec jekyll serve --watch`
 
 ## Upstream Theme Info
 
