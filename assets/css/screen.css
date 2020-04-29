@@ -960,3 +960,34 @@ iframe {
 .card-deck.front .card:last-child {
      margin-right: 0;
 }
+
+/* Custom People Headshot Listing Styles */
+/*
+/* These look for an element with id "team" as 
+/* the containing element. 
+/*
+***/
+
+#team .rounded-circle {
+    max-width: 120px !important;
+    margin-bottom: -6em;
+}
+
+#team .card {
+    background-color: rgba(122,212,237,1);
+    border: 0;
+    padding-top: 1.5em;
+}
+
+#team .card-body {
+    background-color: white;
+    padding-top: 7em;
+}
+
+#team .moc .card {
+    background-color: rgba(58,124,199,1);
+}
+
+#team .rht .card {
+    background-color: #BE0000;
+}
