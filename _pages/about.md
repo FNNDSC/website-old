@@ -72,7 +72,15 @@ Watch the full story of the origins around the ChRIS project in part 1 of Red Ha
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7WIGC1VjLqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<h5>Who works on ChRIS?</h5>
+
+{% include people.html %}
+
+
+
+
 </div>
+
 
 <div class="col-md-4">
 
