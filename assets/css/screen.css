@@ -992,7 +992,7 @@ iframe {
     background-color: #BE0000;
 }
 
-/* Custom styles for FNNDSC logo in footer
+/* Custom styles for logos in footer
 /*
 */
 
@@ -1001,6 +1001,7 @@ iframe {
 
 #fnndsc-logo * {
     font-family: "DINNextW01-Light" !important;
+    text-align: left;
 }
 
 #fnndsc-logo h5 {
@@ -1014,11 +1015,15 @@ iframe {
 }
 
 #fnndsc-logo img {
-    width: 90px;
+    width: 80px;
     float: left;
     margin-right: 1em;
 }
 
 #fnndsc-logo {
     color: #444;
+}
+
+#bch-logo img {
+    max-height: 50px;
 }

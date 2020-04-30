@@ -236,20 +236,44 @@ ga('send', 'pageview');
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
             <!-- Begin FNNDSC Logo -->
             <a id="fnndsc-logo" href="https://fnndsc.org">
-                    <img src="{{ site.baseurl }}/assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
-                    <h5>FNNDSC</h5>
-                    <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+                <img src="{{ site.baseurl }}/assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                <h5>FNNDSC</h5>
+                <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
             </a>
             <!-- End Logo -->
-            <div class="col-md-6 col-sm-6 text-center text-lg-left">
-		    Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital <a href="https:www.fnndsc.org">Fetal-Neonatal Neuroimaging and Developmental Science Center</a><!-- {{ site.name }} -->
             </div>
-            <div class="col-md-6 col-sm-6 text-center text-lg-right">  
-                Theme based on <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            <div class="col-lg-3 col-md-6 text-center d-flex justify-content-center">
+            <!-- Begin BCH Logo -->
+                <a id="bch-logo" href="https://childrenshospital.org">
+                    <img src="{{ site.baseurl }}/assets/images/logos/BCHlogomotto_inline_blue-4C.png" alt="Boston Children's Hospital logo">
+                </a>
+            <!-- End Logo -->
+            </div>
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-left">
+
+            </div>
+        
+    --> 
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+            Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital 
+            <a href="https:www.fnndsc.org">Fetal-Neonatal Neuroimaging and Developmental Science Center</a><!-- {{ site.name }} -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">  
+                <a href="{{ site.baseurl}}/credits}}">Credits for this website</a>
             </div>
         </div>
     </div>
