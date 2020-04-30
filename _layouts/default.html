@@ -47,7 +47,7 @@ ga('send', 'pageview');
 
     <div class="container pr-0">
 
-	    <!-- Begin Logo -->
+	<!-- Begin Logo -->
     <a class="navbar-brand" href="{{ site.baseurl }}/">
     <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
     </a>
@@ -120,14 +120,7 @@ ga('send', 'pageview');
 
                 {% include search-lunr.html %}
                 
-	    <!-- Begin FNNDSC Logo -->
-                    <a class="navbar-brand" href="fnndsc.org">
-                    <img src="{{ site.baseurl }}/assets/images/brain_gears.svg" alt="{{ site.name }}">
-                    </a>
-                    <a href="{{ site.baseurl }}/"><p class="sitetitle" style="font-family:Sans-Serif;">FNNDSC at Boston Children's</p></a>
-        <!-- End Logo -->
-
-                
+	                   
 
             </ul>
 
@@ -245,6 +238,13 @@ ga('send', 'pageview');
 <footer class="footer">
     <div class="container">
         <div class="row">
+            <!-- Begin FNNDSC Logo -->
+            <a id="fnndsc-logo" href="https://fnndsc.org">
+                    <img src="{{ site.baseurl }}/assets/images/brain_gears.svg" alt="FNNDSC Logo - Brain with gears">
+                    <h5>FNNDSC</h5>
+                    <p>Fetal-Neonatal Neuroimaging Development Science Center</p>
+            </a>
+            <!-- End Logo -->
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
 		    Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital <a href="https:www.fnndsc.org">Fetal-Neonatal Neuroimaging and Developmental Science Center</a><!-- {{ site.name }} -->
             </div>

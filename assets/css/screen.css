@@ -991,3 +991,34 @@ iframe {
 #team .rht .card {
     background-color: #BE0000;
 }
+
+/* Custom styles for FNNDSC logo in footer
+/*
+*/
+
+@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg"); } 
+
+
+#fnndsc-logo * {
+    font-family: "DINNextW01-Light" !important;
+}
+
+#fnndsc-logo h5 {
+    font-size: 2em;
+    margin-bottom: -2px;
+    font-weight: 500;
+}
+
+#fnndsc-logo p {
+    font-size: 1em;
+}
+
+#fnndsc-logo img {
+    width: 90px;
+    float: left;
+    margin-right: 1em;
+}
+
+#fnndsc-logo {
+    color: #444;
+}
