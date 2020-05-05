@@ -157,7 +157,10 @@ ga('send', 'pageview');
 ================================================== -->
 <div class="container-fluid" id="content-container">
 
-        {% include jumbotron_front.html %}
+        {% if page.url == "/" %}
+            {% include jumbotron_front.html %}
+        {% else %}
+        {% endif %}
 
 <div class="main-content">
     {{ content }}
