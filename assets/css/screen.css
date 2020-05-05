@@ -921,13 +921,19 @@ iframe {
     transition: opacity .25s;
 }
 
+#home .jumbotron {
+    margin-bottom: 0px;
+    border-radius: 0;
+}
+
 .jumbotron.jumbo-top {
     padding: 0;
     border-radius: 0;
     background-size: cover;
-    min-height: 480px;
+    min-height: 350px;
     background-image: url(../images/jumbo-front.jpg);
     background-position: bottom 10% left 0%;
+    color: white;
  }
 
  .callout {
@@ -1026,4 +1032,46 @@ iframe {
 
 #bch-logo img {
     max-height: 50px;
+}
+
+/** Custom styles for front page jumbos
+*/
+
+#content-container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#jumbo-containerize,
+#jumbo-frontend {
+    color: white;
+    background-color: #4185ca;
+}
+
+#jumbo-partners {
+    color: white;
+    background-color: #3c6eb4;
+}
+
+#jumbo-arch {
+    background-color: white;
+}
+
+#home .jumbotron p {
+    font-family: Overpass, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300 !important;
+}
+
+#jumbo-arch img {
+    width: 100%;
+    max-width: 400px;
+}
+
+#jumbo-frontend  {
+    padding-bottom: 0 !important;
+}
+
+#jumbo-envs img {
+    max-height: 60px;
 }

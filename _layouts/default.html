@@ -141,33 +141,24 @@ ga('send', 'pageview');
 <!-- NOTE:
 
      If you'd like to make changes to the front page jumbotron, check out the
-     _includes/jumbotron_front.html file in the repo.
+     _includes/jumbotron_top.html file in the repo.
 
 -->
 
 {% if page.url == "/" %}
 
-  {% include jumbotron_front.html %}
+  {% include jumbotron_top.html %}
 
 {% else %}
 {% endif %}
 
 
-<div class="container">
-
-<!-- Site Title
-================================================== -->
-
-<div class="mainheading">
-   <!-- 
-    <p class="lead">
-        {{ site.description }}
-    </p>
-    -->
-</div>
-
 <!-- Content
 ================================================== -->
+<div class="container-fluid" id="content-container">
+
+        {% include jumbotron_front.html %}
+
 <div class="main-content">
     {{ content }}
 </div>
