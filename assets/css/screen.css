@@ -1053,7 +1053,8 @@ iframe {
     background-color: #3c6eb4;
 }
 
-#jumbo-arch {
+#jumbo-arch,
+#jumbo-why {
     background-color: white;
 }
 
