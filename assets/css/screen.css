@@ -1111,3 +1111,99 @@ iframe {
   #page-sidebar li {
       font-size: .9em;
   }
+
+  .layout-page .article-post #join h2 {
+    font-weight: 400;
+    font-size: 3ex;
+}
+
+.layout-page .article-post #join h2 + p {
+    margin-bottom: 3ex;
+}
+
+.layout-page .article-post #join h3 {
+    font-weight: 600;
+    font-size: 2.5ex;
+    margin-top: 1ex;
+}
+
+.layout-page .article-post #join h3 div {
+    font-weight: 200;
+    font-size: 1.5ex;
+    margin-top: 1ex;
+}
+
+#join-header {
+    padding-left: 1.5em;
+    border-left: 3px solid #64b7e0;
+    clear: both;
+    margin-bottom: 3em;
+}
+
+#join-header p {
+    font-size: 2.2ex;
+}
+
+#join section#checklist {
+    background-color: #f7f7f7;
+    padding: 1.5em 3em;
+}
+
+#join section#library {
+    background-color: #ffffff;
+    padding: 1.5em 3em;
+}
+
+#join .card {
+    border: 0px;
+    font-size: small;
+    min-width: 120px;
+    line-height: 120%;
+}
+#join .card img {
+    max-width: 50px;
+    margin: auto;
+}
+
+#join #checklist li::marker {
+    border: 1px solid red !important;
+}
+
+#join #checklist li {
+  counter-reset: my-awesome-counter;
+}
+
+#join #checklist li:before {
+  content: counter(my-custom-counter);
+  counter-increment: my-custom-counter;
+}
+
+#join #checklist ol {
+  counter-reset: item;
+  margin-left: 0;
+  padding-left: 0;
+}
+#join #checklist li {
+  display: block;
+  margin-bottom: 2em;
+  margin-left: 4.5em;
+}
+#join #checklist li::before {
+  display: inline-block;
+  content: counter(item) "";
+  counter-increment: item;
+  width: 2em;
+  margin-left: -3.2em;
+  font-weight: 700 !important;
+  font-size: x-large;
+  background: #4e98d3;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+}
+
+#join #checklist li h4 {
+    margin-top: -1.5em !important;
+    font-weight: 300 !important;
+    font-size: 2.6ex;
+}
