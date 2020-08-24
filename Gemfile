@@ -15,6 +15,9 @@ group :jekyll_plugins do
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
     gem 'jekyll-archives'
+    gem 'ffi'
+    gem 'sassc'
     gem 'kramdown'
+    gem 'kramdown-parser-gfm'
     gem 'rouge'
 end
