@@ -68,6 +68,7 @@ pre {
 }
 
 .site-content .container {
+    padding-right: 3rem;
     padding-left: 3rem;
 }
 
@@ -1145,13 +1146,17 @@ iframe {
 }
 
 #join section#checklist {
-    background-color: #f7f7f7;
+    background-color: #e6f6fb;
     padding: 1.5em 3em;
 }
 
 #join section#library {
     background-color: #ffffff;
-    padding: 1.5em 3em;
+}
+
+#join #library .row {
+    margin-bottom: 1.2em;
+    box-shadow: 0px 0px 5px #ddd;
 }
 
 #join .card {
@@ -1163,6 +1168,20 @@ iframe {
 #join .card img {
     max-width: 50px;
     margin: auto;
+}
+
+#join #library h4 {
+    font-weight: 400;
+    font-size: 2ex;
+    margin-bottom: .33em;
+}
+
+#join #library .media {
+    min-height: 180px;
+}
+
+#join #library .media img {
+    max-width: 200px;
 }
 
 #join #checklist li::marker {
