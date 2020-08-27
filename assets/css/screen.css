@@ -121,6 +121,11 @@ section.recent-posts {
     }
 }
 
+nav.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .listfeaturedtag {
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
@@ -325,7 +330,7 @@ span.post-read-more a:hover {
 }
 
 h1.sitetitle {
-    font-family: "Overpass";
+    font-family: "Overpass" !important;
     font-weight: 300;
     font-size: 32px;
 }
@@ -1161,6 +1166,7 @@ iframe {
 #join section#checklist {
     background-color: #e6f6fb;
     padding: 1.5em 3em;
+    margin-bottom: 3em;
 }
 
 #join section#library {
@@ -1168,8 +1174,10 @@ iframe {
 }
 
 #join #library .row {
+/*
     margin-bottom: 1.2em;
     box-shadow: 0px 0px 5px #ddd;
+*/
 }
 
 #join .card {

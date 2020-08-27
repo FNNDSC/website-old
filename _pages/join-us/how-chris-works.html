@@ -1,0 +1,164 @@
+---
+layout: page
+title: How ChRIS Works
+permalink: /join-us/how-chris-works
+sidebar: false
+---
+
+<div id="tutorial">
+
+
+<div class="media">
+    <img class="mr-4" src="/assets/images/library/thumb-arch.png" alt="Generic placeholder image">
+    <div class="media-body">
+        <h3 class="mt-0">Let's get started.</h3>
+        In this tutorial, you'll learn about what ChRIS is, what technologies it's comprised of, and how it is architected.
+    </div>
+</div>
+
+<blockquote class="mt-5 mb-5">This tutorial is based on a presentation, "Medical Image Processing with OpenShift and OpenStack,” given by Dan McPherson (Red Hat), 
+Rudolph Pienaar (Boston Children's Hospital), and Ata Turk (Massachusetts Open Cloud) at the Red Hat Summit in 2018. 
+<a href="https://youtu.be/p1Y9wlPSgt4">The full video of this presentation is available</a>, but for the purposes of this tutorial 
+we have broken it down into chunks summarizing each section and linking directly to the timestamp where that part of the presentation begins.
+</blockquote>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <img style="filter: brightness(95%);" class="card-img-top" src="/assets/images/library/tutorial-images/preso-landscape.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">The Landscape of Medical Image Processing Tools</h5>
+          <p class="card-text">We begin with a brief background on the landscape of medical image processing tools to
+              better understand the context driving the technological and architectural choices made in ChRIS.</p>
+            <p class="card-text">
+              Computational research tends to happen in relative isolation, and researchers tend to build their own platform. The focus is 
+              on solving very difficult problems more efficiently, accurately, and rapidly; there aren’t incentives to build a system that’s 
+              easy to run, can be used for more general problems, or that will ever leave the lab it was created in. ChRIS aims to provide 
+              a better infrastructure for researchers to build cleaner solutions.
+            </p>
+          <a href="https://youtu.be/p1Y9wlPSgt4" class="btn btn-primary">Watch video</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+            <img style="filter: brightness(95%);" class="card-img-top" src="/assets/images/library/tutorial-images/preso-basics.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">ChRIS Basics</h5>
+            <p class="card-text">“There is about two decades worth of amazing tools that exist in the research community, but these almost 
+                never make it out to the clinical front lines,” Rudolph explains. “No clinician is ever going to fire up a Linux terminal, 
+                type in some commands, think about SSH and SCP and login to a cluster—it’s never going to happen.”</p>
+
+            <p class="card-text">Providing a simple user interface for clinicians to be able to benefit from this computing power is a big piece of the vision for ChRIS.
+                    ChRIS is comprised of containerized, microservice open source tools that communicate with each other via REST-based APIs in order
+                    to enable that vision.
+            </p>
+          <a href="https://youtu.be/p1Y9wlPSgt4?t=184" class="btn btn-primary">Watch video</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Massachusetts Open Cloud</h5>
+              <p class="card-text">The Massachusetts Open Cloud (MOC) is a collaborative effort between research universities, government, and industry.</p> 
+              
+              <p class="card-text">Unlike large commercial clouds, 
+                  MOC provides an open ecosystem of cloud services backed by OpenStack and OpenShift. The MOC operates in datacenter with a 15 
+                  Megawatts capacity and 2 acres of computing space—it is about half the size of the average Google datacenter. </p>
+                <p class="card-text">
+                    MOC is particularly interested in the healthcare space—hospitals are generating more and more data and facing challenges in maintaining and 
+                    analyzing it. MOC is interested in running industry-level healthcare applications on their cloud 
+                    to analyze and learn from. Healthcare applications can also gain access to the MOC's computing capacity without having to hand their data over to a large commercial cloud.
+                </p>
+              <a href="https://youtu.be/p1Y9wlPSgt4?t=343" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">The Technology</h5>
+                <p class="card-text">Everything in ChRIS is built as OCI / docker images, including the image processing tools. With ChRIS, anyone can take an existing 
+                    tool, containerize it, and gain portability to run it anywhere from a single laptop to a full production environment.</p>
+                    
+                <p class="card-text">OpenShift allows for scaling jobs running image processors in ChRIS using resource management 
+                    (CPU/Memory/Network/GPU). It also provides operational standardization for logging, metrics, and cluster management.</p>
+                <p class="card-text">Another area of focus is around Artifical Intelligence (AI) and Machine Learning (ML), e.g. Spark and Tensorflow. 
+                    A lot of research is looking to use ML technologies in this space, but it’s not yet gained wide adoption in production.</p>
+                        
+                        
+              <a href="https://youtu.be/p1Y9wlPSgt4" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+  <div class="row mt-5">
+        <div class="col-sm-6">
+          <div class="card">
+            <img style="filter: brightness(95%);" class="card-img-top" src="/assets/images/library/tutorial-images/preso-tractography.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Medical Image Processing</h5>
+              <p class="card-text">There are specific techniques that are particularly useful in the context of medical image processing 
+                  and the types of image processing ChRIS plugins might typically do:</p> 
+
+            <p class="card-text">
+                <dl>
+                <dt>Registration</dt>
+                <dd>When you take one image and match it into the space of another image.</dd>
+                <dt>Classification (AI/ML)</dt> 
+                <dd>Automatically recognizes different structures in a scan, for example, a tumor.</dd>
+                <dt>Metabolism</dt> 
+                <dd>Uses the dispersion, reflection, and refraction of light within the brain to indicate oxygen metabolism in a brain.</dd>
+                <dt>Tractography</dt> 
+                <dd>When you scan the same image from slightly different angles, solve diffusion equation, and build 3D image from it.</dd>
+                </dl>
+
+            </p>
+              <a href="https://youtu.be/p1Y9wlPSgt4?t=1016" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+                <img style="filter: brightness(95%);" class="card-img-top" src="/assets/images/library/tutorial-images/diagram-architecture.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">ChRIS Architecture Overview</h5>
+                <p class="card-text">ChRIS, from within Boston Children's Hospital, retrieves image data from a data source and image processing 
+                    plugin container from a plugin store and pushes them to the Massachusetts Open Cloud via an IO handler in MOC's OpenShift. Once computation 
+                    is finished, the plugin output is retrieved back into ChRIS.</p>
+                    
+                <p class="card-text">When ChRIS pushes data to the MOC, that data is stored in Swift within MOC's OpenStack. This is to enable data segmentation between jobs. 
+                    When ChRIS pushes a plugin to the MOC, the OpenShift process manager processes the plugin container launches it into a job starting with an init container 
+                    that pulls the data out of Swift and makes it available for the image plugin container, which passes its result to a publish 
+                    container that passes the data to Swift, and the IO Handler passes the output data back to ChRIS.</p>
+                <p class="card-text">The image processor doesn’t have to understand the environment around it. All it has to know is how to read and write data from the disk.</p>
+                        
+                        
+              <a href="https://youtu.be/p1Y9wlPSgt4" class="btn btn-primary">Watch video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<section id="library">
+
+<h3 class="pt-5">What's Next?</h3>
+
+<p class="pb-4">Now that you've got a good idea of what ChRIS is, what kinds of computation ChRIS enables, the technology behind ChRIS, and the basic structure of 
+    its architecture, why not get started running ChRIS on your own?</p>
+
+<div class="row no-gutters position-relative">
+    <div class="col-md-4 mb-md-0 p-md-4">
+        <img src="/assets/images/library/thumb-setupchris.png" class="w-100" alt="...">
+    </div>
+    <div class="col-md-8 position-static p-4 pl-md-0">
+        <h4 class="mt-0"><a href="#" class="stretched-link">Get ChRIS Up and Running on Your Laptop</a></h4>
+        <p>Here's a full set of instructions to get ChRIS running on your local system so you can start working with the codebase.</p>
+    </div>
+ </div>
