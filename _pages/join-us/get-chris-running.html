@@ -61,19 +61,28 @@ Open up a terminal on your system and follow these steps:
 
 <ol class="pt-2">
     <li>
-        <strong>Clone the ChRIS backend repo.</strong>
+        <strong>Clone the ChRIS backend repo.</strong><br />
         <code>git clone https://github.com/FNNDSC/ChRIS_ultron_backend</code>
     </li>
-    <li><strong>Go into the ChRIS backend directory.</strong>
+    <li><strong>Go into the ChRIS backend directory.</strong><br />
         <code>cd ChRIS_ultron_backend</code>
     </li>
     <li>
         <strong>Run CUBE.</strong>
         <ul>
         <li>Run with tests:
-        <code>./unmake.sh ; sudo rm -fr FS; rm -fr FS; ./make.sh</code></li>
+            <pre>
+./unmake.sh ;
+sudo rm -fr FS;
+rm -fr FS;
+./make.sh</pre>
+        </li>
         <li>Skip unit and integration tests:
-            <code>./unmake.sh ; sudo rm -fr FS; rm -fr FS; ./make.sh -U -I -s</code>
+            <pre>
+./unmake.sh ;
+sudo rm -fr FS;
+rm -fr FS;
+./make.sh -U -I -s</pre>
         </li>
         </ul>
     </li>
@@ -97,19 +106,19 @@ $ ./unmake.sh
 
 <ol class="pt-2">
     <li>
-        <strong>Clone the ChRIS UI repo.</strong>
+        <strong>Clone the ChRIS UI repo.</strong><br />
         <code>$ git clone https://github.com/FNNDSC/ChRIS_ui.git</code>
     </li>
-    <li><strong>Go into the ChRIS UI directory.</strong>
+    <li><strong>Go into the ChRIS UI directory.</strong><br />
         <code>cd ChRIS_ui</code>
     </li>
     <li>
-        <strong>Run the ChRIS UI.</strong>
+        <strong>Run the ChRIS UI.</strong><br />
         <code>docker run --rm -it -v $(pwd):/home/localuser -p 3000:3000 -u $(id -u):$(id -g) --name chris_ui fnndsc/chris_ui:dev</code>
     </li>
     <li>
-        <strong>Open the website in a browser.</strong> 
-        <p><a href="http://localhost:3000">http://localhost:3000</a></p>
+        <strong>Open the website in a browser.</strong></br />
+        <code><a href="http://localhost:3000">http://localhost:3000</a></code>
     </li>
 </ol>
 

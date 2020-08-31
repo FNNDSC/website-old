@@ -1251,3 +1251,7 @@ iframe {
 .card-img-top iframe {
     min-height: 315px !important;
 }
+
+#tutorial pre {
+    color: #e83e8c;
+}
