@@ -7,7 +7,8 @@ License: https://www.wowthemes.net/freebies-license/
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
 }
-@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;600;700&display=swap');
+
 .mainheading {
     padding: 2rem 0rem;
 }
@@ -330,7 +331,7 @@ span.post-read-more a:hover {
 }
 
 h1.sitetitle {
-    font-family: "Overpass" !important;
+    font-family: "Overpass", sans-serif; !important !important;
     font-weight: 300;
     font-size: 32px;
 }
