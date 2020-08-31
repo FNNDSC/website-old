@@ -331,7 +331,7 @@ span.post-read-more a:hover {
 }
 
 h1.sitetitle {
-    font-family: "Overpass", sans-serif; !important !important;
+    font-family: 'Overpass', sans-serif !important !important;
     font-weight: 300;
     font-size: 32px;
 }
