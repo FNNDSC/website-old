@@ -1,0 +1,129 @@
+---
+layout: page
+title: Run the ChRIS Store
+permalink: /join-us/run-chris-store
+sidebar: false
+---
+
+<div id="tutorial">
+
+
+<div class="media">
+    <img class="mr-4" src="/assets/images/library/thumb-setupchris-store.png" alt="Set Up ChRIS Store graphic">
+    <div class="media-body">
+        <h3 class="mt-0">Let's get the ChRIS Store running!</h3>
+        In this tutorial, you'll stand up a local instance of the ChRIS Store on your local system. You can use this 
+        setup to push plugins to in order to load them into ChRIS to test a ChRIS admin workflow. You can also follow
+        these instructions to get set up to work on the ChRIS Store itself.
+    </div>
+</div>
+
+<blockquote class="mt-5 mb-5">This tutorial is based on the README files for 
+    <a href="https://github.com/FNNDSC/ChRIS_store_ui">the ChRIS Store UI repository</a>. Where these instructions may 
+    end up differing with those resources, the README files will always be the most up-to-date 
+    and correct. We provide this tutorial as a single comprehensive document to get you started.
+</blockquote>
+
+<h3>Pre-requisites</h3>
+<blockquote><strong>NOTE: </strong>These pre-requisites are the same as in the <a href="join-us/get-chris-running">Get ChRIS Running</a> tutorial. If you have already
+completed that tutorial, you may skip the pre-requisites setup steps below and skip to the next section, "Get the ChRIS
+Store backend running."</blockquote>
+<ul>
+    <li>A laptop or workstation running <strong>Linux</strong> (<a href="https://hub.docker.com/editions/community/docker-ce-server-fedora">Fedora*</a>, 
+        <a href="https://hub.docker.com/editions/community/docker-ce-server-centos">CentOS</a>, 
+        <a href="https://hub.docker.com/editions/community/docker-ce-server-ubuntu">Ubuntu</a>, or 
+        <a href="https://hub.docker.com/editions/community/docker-ce-server-debian">Debian</a>), 
+        <strong><a href="https://www.docker.com/products/docker-desktop">Mac OS X 10.14+</a></strong>, or 
+        <strong><a href="https://www.docker.com/products/docker-desktop">Windows 10</a></strong> (64-bit).
+    </li>
+    <li>Docker 18.06.0+ with Docker Compose 1.22.0+ (Use link for your distro / OS above.)</li>
+    <li>(Linux-only) Your OS user should be in a <code>docker</code> user group. After installing Docker, do the following in a terminal:
+        <ol>
+            <li><code>sudo groupadd docker</code></li>
+            <li><code>sudo usermod -aG docker $USER</code></li>
+            <li>Log out, and log back in.</li>
+        </ol>
+    </li>
+</ul>
+<em>* Due to Docker's lack of support for cgroups v2 and DNFTables, there is no official Docker build for Fedora 32. Follow the instructions in 
+    <a href="https://fedoramagazine.org/docker-and-fedora-32/">this Fedora Magazine article</a> to get Docker running on your Fedora 32 system.</em>
+
+<h3 class="pt-4">Get the ChRIS Store backend running</h3>
+
+<p>After you've met the pre-requisites, you'll need to the ChRIS Store backend up and running.</p>
+
+Open up a terminal on your system and follow these steps:
+
+<ol class="pt-2">
+    <li>
+        <strong>Clone the ChRIS Store backend repo.</strong><br />
+        <code>git clone https://github.com/FNNDSC/ChRIS_store.git</code>
+    </li>
+    <li><strong>Go into the ChRIS Store backend directory.</strong><br />
+        <code>cd ChRIS_store</code>
+    </li>
+    <li>
+        <strong>Make the ChRIS Store.</strong><br />
+        <code>./make.sh up</code>
+    </li>
+</ol>
+
+<h5 class="pt-2">Tearing down the ChRIS Store backend</h5>
+<p>You can later remove all the backend containers and release storage volumes with:</p>
+<pre>
+$ cd ChRIS_store
+$ ./make.sh down
+</pre>
+
+<h3 class="pt-3">Get the ChRIS Store UI frontend up and running</h3>
+
+<p>Now, let's get the web-based UI for the ChRIS Store working. The ChRIS Store UI uses TypeScript, <a href="https://reactjs.org/">React</a>, the <a href="https://patternfly.org">PatternFly</a>
+    React pattern library.</p>
+
+    Open up a terminal on your system and follow these steps:
+
+<ol class="pt-2">
+    <li>
+        <strong>Clone the ChRIS Store UI repo.</strong><br />
+        <code>git clone https://github.com/FNNDSC/ChRIS_store_ui.git</code>
+    </li>
+    <li><strong>Go into the ChRIS UI directory.</strong><br />
+        <code>cd ChRIS_store_ui</code>
+    </li>
+    <li>
+        <strong>Run the ChRIS UI.</strong><br />
+        <code>docker run --rm -it -v $(pwd):/home/localuser -p 3000:3000 -u $(id -u):$(id -g) --name chris_store_ui fnndsc/chris_store_ui:dev</code>
+    </li>
+    <li>
+        <strong>Open the website in a browser.</strong></br />
+        <code><a href="http://localhost:3000">http://localhost:3000</a></code>
+    </li>
+</ol>
+
+<blockquote>
+    <h4>Development Note</h4>
+    <p>Before each commit, a precommit script is run automatically to ensure all tests pass and all JavaScript code follows the Airbnb style guide. 
+        Please note that if you are using the docker commands then you need to run git inside the container. For instance open a new terminal and type:
+        <br />
+        <code>$ docker exec -it chris_store_ui git status</code>
+    </p>
+</blockquote>
+
+More detailed instructions for the ChRIS Store UI are available in <a href="https://github.com/FNNDSC/ChRIS_store_ui">the ChRIS Store UI repository's README</a>.
+
+
+<section id="library">
+
+<h3 class="pt-5">What's Next?</h3>
+
+<p class="pb-4">Now that you've got a got both the ChRIS backend and ChRIS front end running, why not set up the ChRIS store?</p>
+
+<div class="row no-gutters position-relative">
+        <div class="col-md-4 mb-md-0 p-md-4">
+            <img src="/assets/images/library/thumb-setupchris-store.png" class="w-100" alt="...">
+        </div>
+        <div class="col-md-8 position-static p-4 pl-md-0">
+                <h4 class="mt-0"><a href="#" class="stretched-link">Set Up the ChRIS Store</a></h4>
+                <p>If you want to work on the ChRIS store, or need to test loading plugins into a ChRIS instance, you'll need to get the ChRIS store running on your system. Here's how.</p>
+        </div>
+     </div>
