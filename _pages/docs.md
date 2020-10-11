@@ -42,6 +42,6 @@ Here is a deep dive slidedeck on how plugins work in ChRIS:
 
 Now that you've got your pre-requisites ready and have learned about how ChRIS and its plugin system worked, it's time to create your first plugin:
 
-[ChRIS cookiecutter Tutorial App](https://github.com/FNNDSC/cookiecutter-chrisapp)
+[ChRIS cookiecutter Tutorial App](https://chrisstore.co/quickstart)
 
 Read through the README for the ChRIS cookiecutter tutorial app linked above. It will walk you through getting your first ChRIS plugin set up.
