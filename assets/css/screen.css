@@ -938,9 +938,11 @@ iframe {
     border-radius: 0;
     background-size: cover;
     min-height: 350px;
+    /* removing styles to support video jumbo on front page 
     background-image: url(../images/jumbo-front.jpg);
     background-position: bottom 10% left 0%;
     color: white;
+    */
  }
 
  .callout {
@@ -1275,8 +1277,8 @@ iframe {
     z-index: 0 !important;
 }
 
-.jumbo-top h2, #jumbo-container h4 {
-    text-shadow: 5px 5px 5px #000000 !important;
+.jumbo-top h2 {
+    text-shadow: 3px 1px 5px #444 !important;
 }
 
 #jumbo-why > div > div {
@@ -1293,11 +1295,6 @@ iframe {
     padding-right: 20px;
 }
 
-#jumbo-envs, #jumbo-partners {
-    margin: 12rem auto;
-    color: white;
-    text-shadow: 4px 4px 4px #000000 !important;
-}
 
 #jumbo-envs p,
 #jumbo-partners p {
@@ -1308,3 +1305,32 @@ iframe {
     margin-top: 8rem;
 }
 
+.video-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left:50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .video-text {
+    min-height: 500px;
+    z-index: 999!important; 
+    color: #fff;
+    padding-bottom: 2em;
+  }
+  .video-text h1, .video-text h2  {
+    margin: 0;
+    font-size: 3rem;
+  }
