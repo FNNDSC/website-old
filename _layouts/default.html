@@ -63,7 +63,7 @@ ga('send', 'pageview');
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
-                
+    
 		{% if page.url == "/about" %}
                 <li class="nav-item active">
                 {% else %}
@@ -72,7 +72,7 @@ ga('send', 'pageview');
                 <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
-                
+   
 		{% if page.url == "/demo" %}
                 <li class="nav-item active">
                 {% else %}
@@ -112,12 +112,12 @@ ga('send', 'pageview');
                 {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/code">Code</a>
                 </li>
-
+<!--
                 <li class="nav-item">
 
                 <a target="_blank" class="nav-link" href="https://github.com/FNNDSc"><i class="fab fa-github"></i> ChRIS on Github</a>
                 </li>
-
+            -->
                 {% include search-lunr.html %}
                 
 	                   
@@ -130,10 +130,6 @@ ga('send', 'pageview');
 
     </div>
 </nav>
-<!-- End Navigation
-================================================== -->
-
-<div class="site-content">
 
 <!-- Top Jumbotron
 ================================================== -->
@@ -215,23 +211,6 @@ ga('send', 'pageview');
 </div>
 
 
-<!--            {% assign categories_list = site.categories %}
-            {% if categories_list.first[0] == null %}
-                {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
-                {% endfor %}
-            {% else %}
-                {% for category in categories_list %}
-                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
-                {% endfor %}
-            {% endif %}
-            {% assign categories_list = nil %}
-		</div>
-	</div>
-</div>
--->
-
-
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">
@@ -263,7 +242,7 @@ ga('send', 'pageview');
         
     --> 
         </div>
-    </div>
+    
         <div class="row">
             <div class="col-md-12 col-sm-12 text-center">  
             Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital 
@@ -276,11 +255,11 @@ ga('send', 'pageview');
             </div>
         </div>
     </div>
+
 </footer>
 <!-- End Footer
 ================================================== -->
 
-</div> <!-- /.site-content -->
 
 <!-- Scripts
 ================================================== -->

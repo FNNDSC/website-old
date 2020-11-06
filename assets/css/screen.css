@@ -1087,7 +1087,7 @@ iframe {
 }
 
 #content-container {
-    margin-top: 50px;
+    margin-top: 160px;
 }
 
 #home #content-container {
@@ -1313,6 +1313,7 @@ iframe {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    margin-top: 100px;
   }
   
   .video-container video {
