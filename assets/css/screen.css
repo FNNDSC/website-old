@@ -1283,7 +1283,6 @@ iframe {
 
 #jumbo-why > div > div {
     background: rgba(255,255,255,0.85);
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 
@@ -1295,14 +1294,19 @@ iframe {
     padding-right: 20px;
 }
 
-
+/*
 #jumbo-envs p,
 #jumbo-partners p {
     font-size: 1.5rem !important;
 }
+*/
+
+#jumbo-partners img {
+    padding-top: 2em;
+}
 
 #jumbo-why {
-    margin-top: 8rem;
+    margin-top: 1rem;
 }
 
 .video-container {
