@@ -4,9 +4,9 @@ title: Try out ChRIS
 permalink: /demo
 ---
 
-We've deployed <a href="http://fnndsc.childrens.harvard.edu:5010">a development version of the core ChRIS user interface</a> to help demonstrate how ChRIS platform works. Note that this demo is running development-level code and may be unstable:
+We've deployed <a href="https://app.chrisproject.org">a development version of the core ChRIS user interface</a> to help demonstrate how ChRIS platform works. Note that this demo is running development-level code and may be unstable:
 
-<h4><a href="http://fnndsc.childrens.harvard.edu:5010">fnndsc.childrens.harvard.edu:5010</a></h4>
+<h4><a href="https://app.chrisproject.org">https://app.chrisproject.org</a></h4>
 
 Here's a quick tour of what you'll see in the demo:
 
