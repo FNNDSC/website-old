@@ -1266,24 +1266,6 @@ iframe {
     color: #e83e8c;
 }
 
-/* NEEDS MERGING - FOR VIDEO WORK ON FRONT PAGE */
-
-
-#shader {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0 !important;
-    background-color: rgba(0,0,0,0.3);
-}
-
-
-#front-page-video {
-    z-index: 0 !important;
-}
-
 .jumbo-top h2 {
     text-shadow: 3px 1px 5px #444 !important;
 }
@@ -1301,12 +1283,6 @@ iframe {
     padding-right: 20px;
 }
 
-/*
-#jumbo-envs p,
-#jumbo-partners p {
-    font-size: 1.5rem !important;
-}
-*/
 
 #jumbo-partners img {
     padding-top: 2em;
@@ -1346,6 +1322,16 @@ iframe {
     margin: 0;
     font-size: 3rem;
   }
+
+#video-shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.33) !important;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
 
 
 @media (max-width: 600px) {
