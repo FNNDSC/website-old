@@ -1,0 +1,197 @@
+---
+layout: post
+title:  "14 Jan Status - Kubernetes ChRIS demo and Script-based feed deploys"
+author: mo
+beforetoc: "Max demoed ChRIS setup in a Kubernetes environment and Rudolph demoed some of the updated UI bits with script-based feed deployments."
+image: "https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_1.png"
+toc: true
+categories: [ status ]
+tag: [ kubernetes, team19, scripts, feeds, pipelines, ui] 
+featured: true
+---
+
+
+= ChRIS Status Meeting 7th Jan 2021
+
+== Max
+
+=== Demo of Kubernetes support
+
+* Max will not be able to contribute much going forward, have overcommitted / the new year is too busy. 
+* Finishing up his ChRIS Kubernetes project. Demo'ed current state. Open pull request for pfcon. Once that's resolved, it should all work. Should be done soon - fixing the last integration test.
+* Pull request for documentation of this there as well 
+
+
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_0.png[]
+
+
+
+==== Repos where the work lives:
+
+* Pull request #76 under pfcon (to make pfcon kubernetes compliant)
+* pull request for pull request in CHRIS_docs. docs uses minikube for local deployment. 
+
+
+
+==== Demo Narrative
+
+* Need to tunnel to access individual pods locally
+* use IP addresS
+* minikube apply…
+* cube_script => smoke test (e.g pfcon_test.py)
+
+
+
+==== Next Steps
+
+* Rudolph going to have someone from his team to go over Max’s Kubernetes work and replicate it.
+  ** There are newer backend changes with pfcube, changed internals to hopefully be cleaner, will use flask instead of httpserver... hoping what Max has done here can be rebased to the new cuve without issue. 
+  ** Will have Jorge or Jennings look at it
+*  (Max) Documentation is pretty thorough so should be useful there
+* (Max) Added three more tasks to the  "pending to do" list on the kanban for Team-19 as suggestions for further development
+  ** frontend resources are not in kubernetes yet
+  ** pods are started at the same time, may need to enforce deployment ordering for the order of the container startups. there are diff ways to handle this in kubernetes, wrote up some options in the ticket (CUBE #279)
+  ** storage resources - not currently included in K8s deployment, needs to be focused on CUBE #280
+
+
+
+==== Questions / Requirements to Run
+
+* Could be set up on RHEL, Fedora, Ubuntu. Set up with Kubernetes upstream
+* Not sure about Travis. Max suggests a dedicated test cluster somewhere - this is one of the things OpenShift takes care of, makes this a little bit easier. Could also use the GitHub CI/CD.
+* Weakness is integration testing is on docker swarm, no openshift testing. Would be nice to have everything fully tested.
+* There is a new OpenShift deployment anyone can use for free, developers.redhat.com/ (devcentbox?) Max will look up the link and post it. Free to use for development.
+
+
+
+== Rudolph
+
+
+
+* A lot of backend work
+* Commandline clients that pull full workflows to backend instance
+
+
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_1.png[]
+
+=== Demo
+
+* covidnet feed script - 12 branches
+* scripts describe workflows in JSON, gives to a parser, and builds the workflow for you
+
+
+
+Sample JSON for COVID-Net sample feed:
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_2.png[]
+
+
+
+
+
+Screenshot showing the sample feed getting built (terminal where script was run):
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_3.png[]
+
+
+
+
+
+ChRIS UI: shows progress per node
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_4.png[]
+
+
+
+ChRIS UI: shows view-only terminal output for node as it gets setup in a new panel
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_5.png[]
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_6.png[]
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_7.png[]
+
+
+
+
+
+JSON to set up new feed using covidnet.sh client:
+
+image:https://raw.githubusercontent.com/FNNDSC/cube-design/master/CHRIS-UI/screenshots/Kubernetes%20%2B%20Scripted%20Feeds/img_8.png[]
+
+=== UI Issues
+
+*Graph labels:* graph labels overflow, hard to read w 12-branch/parallel covidnet feed
+
+
+
+*4 Panels issues:*
+
+* CSS issue, panels shift width... 
+* 4 quadrants are not fixed width, might be better
+* a lot of white space in the file viewer quadrant
+* Some ideas:
+* floating terminal (similar to youtube video preview) that could be full-screened
+
+
+
+*Super-long vertical scroll-list of folders on the left*
+
+
+
+Some ideas:
+
+* filter folders to only show folders for the currently-selected node
+* filter folders to only show folder for currently-selected node and its descendants
+* gray out / visually minimize any folders that dont apply to the current selected node
+* offer maybe via tab a categorized view of folders (collapse folders of the same plugin type into one category, leaf nodes into its own category)
+
+
+
+*Patternfly left vertical nav wastes horizontal space*
+
+* should be able to collapse ala hamburger menu, functionality built into patternfly, Mo to look up docs for Gideon on this
+
+
+
+=== Misc
++
+
+
+
+*GPU resource management issues*
+
+- some nodes use GPU, some don't (highlight on graph?) 
+
+   - if another node wants GPU, itll die somehow if another node is taking it up
+
+   - resource mgmt of GPUs is wonky, with the scripts you can ... in script -W (if multibranch structure, makes it wait at the end of the branch until starting next one) 
+
+     - openshift autoscaling can handle this GPU waiting issue
++
+
++
+ *Test environment for COVID-Net UI testing*
+
+
+- can use this scripting setup to set up test environment for COVID-Net test
++
+
++
+ *Orthanc help for DarwinAI*
+
+
+- aravind could work with darwinai on orthanc 
+
+
+
+== Mo
+
+* Have a lot going on with Red Hat work the next 2-3 weeks so temporarily a little less available
+* Looking at COVIDNet testing in the next 2-3 weeks with internal stakeholders to test the test first
+* Testing environment will use publicly available images that will be preloaded into UI
+* Will use publicly-available BCH-hosted ChRIS environment to run tests
+
+
