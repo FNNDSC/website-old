@@ -64,32 +64,25 @@ ga('send', 'pageview');
 
             <ul class="navbar-nav ml-auto">
     
-		{% if page.url == "/about" %}
+		{% if page.url == "/info" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                <a class="nav-link" href="{{ site.baseurl }}/info">Info</a>
                 </li>
-   
-		{% if page.url == "/demo" %}
+        
+        {% if page.url == "/about-us" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/demo">Demo</a>
-                </li>
-                
-		{% if page.url == "/plugins" %}
-                <li class="nav-item active">
-                {% else %}
                 <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/plugins">Plugins</a>
+                <a class="nav-link" href="{{ site.baseurl }}/about-us">About Us</a>
                 </li>
-
-		{% if page.url == "/join-us" %}
+ 
+        {% if page.url == "/join-us" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
@@ -97,20 +90,36 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/join-us">Join Us</a>
                 </li>
 
-                {% if page.url == "/docs" %}
+        {% if page.url == "/plugins" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/docs">Docs</a>
+                <a class="nav-link" href="{{ site.baseurl }}/plugins">Plugins</a>
                 </li>
 
-                {% if page.url == "/code" %}
+        {% if page.url == "/more-info" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/code">Code</a>
+                <a class="nav-link" href="{{ site.baseurl }}/more-info">More Info</a>
+                </li>
+
+		{% if page.url == "/for-users" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/for-users">For Users</a>
+                </li>
+                
+        {% if page.url == "/for-devs" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/for-devs">For Devs</a>
                 </li>
 <!--
                 <li class="nav-item">
