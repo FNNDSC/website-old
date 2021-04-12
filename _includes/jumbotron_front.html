@@ -2,10 +2,9 @@
     <div class="row justify-content-center">
         <div class="offset-lg-1 col-lg-4 col-md-4 col-sm-7 mt-lg-3">
             <h4 class="font-weight-light">
-                ChRIS reduces the barrier to cloud and distributed computing for researchers and developers. 
+                ChRIS reduces the barrier to cloud and distributed computing for researchers and developers. Deploy your existing code with minimal hassle and fuss.
             </h4><h6 class="font-weight-light mt-lg-3">
-                ChRIS is an open source platform that connects an open community of researchers and developers 
-                to data quickly and reliably from one computing environment to another.
+		Developed with scientific researchers in mind, ChRIS greatly reduces the barrier-to-entry for cloud-based containerized compute. In most cases, a cookie-cutter generated half-page "box" of python code is all that is needed to integrate your existing research analytics within the ChRIS platform.
             </h6>
         </div>
         <div class="col-lg-5 col-md-6 offset-md-1 col-sm-7 mt-md-0 mt-sm-5">
@@ -13,28 +12,80 @@
         </div>
     </div>
 </div>
-<div class="jumbotron container-fluid justify-content-center text-center" id="jumbo-arch">
-                <img src="{{ site.baseurl }}/assets/images/diagram_chris-arch.png" class="pb-5" alt="ChRIS Architecture Diagram">
-      
+
+<pre><code class="language-python" style="line-height: 0.9em;">
+   def define_parameters(self):
+        """
+        Define the CLI arguments accepted by your plugin app.
+        Use self.add_argument to specify a new app argument.
+        """
+        # For example...
+        self.add_argument('--ignoreInputDir',
+                           dest         = 'b_ignoreInputDir',
+                           type         = bool,
+                           optional     = True,
+                           help         = 'if set, ignore the input dir completely',
+                           default      = False)
+
+    def run(self, options):
+        """
+        Define the code to be run by this plugin app.
+        """
+        yourSuperDuperAnalyticsHere()
+</code>
+</pre>
+
+<div class="jumbotron container-fluid" id="jumbo-arch">
+<pre style="line-height: 0.9em; float:left; width:50%; background: black; color: white;">
+
+
+┌────────────────────┐
+│ ChRIS cookiecutter ├───┐
+└────────────────────┘   │
+                         ↓
+          ┌─────────────────────────┐
+          │ pl-app/                 │
+          │ ├── app                 │
+          │ │   ├── app.py ─────────┼──┐
+          │ │   ├── __init__.py     │  │
+          │ │   ├── __main__.py     │  │
+          │ │   └── tests           │  │
+          │ │       ├── __init__.py │  │
+          │ │       └── test_app.py │  │
+          │ ├── Dockerfile          │  │
+          │ ├── LICENSE             │  │
+          │ ├── README.rst          │  │
+          │ ├── requirements.txt    │  │
+          │ └── setup.py            │  │
+          └─────────────────────────┘  │
+                                       │
+                                       │
+                                       │
+                                       ↓
+
+	</pre>
+</div>
+	<div style="float:right; width:50%;">
                 <p>
                     You can easily convert existing analytics or create new ones.
                 </p><p>
-                    Once your analytics are containerized for ChRIS, you'll 
+                    Once your analytics are containerized for ChRIS, you'll
                     immediately have the benefits of distributed, containerized workflows.
                 </p><p>
-                    ChRIS uses leading open source technologies to standardize cloud-based 
-                    healthcare application development, removing barriers to innovation 
-                    so you can focus on your data.  
+                    ChRIS uses leading open source technologies to standardize cloud-based
+                    healthcare application development, removing barriers to innovation
+                    so you can focus on your data.
                 </p>
+	</div>
 </div>
 
 <div class="jumbotron container-fluid" id="jumbo-frontend">
         <div class="row justify-content-center align-items-sm-center">
                 <div class="offset-md-1 col-md-4 col-sm-12">
                     <p>
-                    ChRIS is an open, scalable, shareable platform with a beautiful 
-                    front-end that enables researchers to create, share, and run 
-                    analytic workflows in the cloud exclusively within a graphical 
+                    ChRIS is an open, scalable, shareable platform with a beautiful
+                    front-end that enables researchers to create, share, and run
+                    analytic workflows in the cloud exclusively within a graphical
                     user interface.
                     </p>
                 </div>
@@ -68,9 +119,9 @@
                 </div>
             <div class="col-lg-5 offset-lg-1 col-md-4 offset-md-0 pt-md-0 offset-sm-3 col-sm-6 pt-sm-2 font-weight-light">
                 <p>
-                    Through our strong partnership with Red Hat and the 
-                    Massachusetts Open Cloud (MOC), you can deploy 
-                    workflows to the MOC — while still maintaining 
+                    Through our strong partnership with Red Hat and the
+                    Massachusetts Open Cloud (MOC), you can deploy
+                    workflows to the MOC — while still maintaining
                     ownership of your own data.
                 </p>
             </div>
@@ -82,8 +133,8 @@
                 <div class="col-lg-6 col-12">
                     <h2>Why use ChRIS?</h2>
                     <p>
-                        ChRIS is a revolutionary platform that allows researchers the ability to 
-                        simply deploy their applications in a cloud infrastructure with access 
+                        ChRIS is a revolutionary platform that allows researchers the ability to
+                        simply deploy their applications in a cloud infrastructure with access
                         to <strong>more data</strong>, <strong>more compute</strong>, and <strong>more collaboration</strong> to drive medical innovation.
                     </p>
                 </div>
