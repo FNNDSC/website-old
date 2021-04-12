@@ -17,6 +17,9 @@ Diagram and ASCII ART styling for Jekyll (and other markdown parser that appends
  line-height: 0.8em;
 }
 
+.col3 {display: grid;    grid-template-columns: 10rem 10rem 10rem;}
+
+
 /* 
 Template Name: Mediumish 
 Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
