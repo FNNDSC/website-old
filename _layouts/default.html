@@ -15,6 +15,12 @@
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+/>
+<link rel="stylesheet" href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css">
+
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
@@ -70,7 +76,7 @@ ga('send', 'pageview');
                 <li class="nav-item">
                 {% endif %}
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/info">Info</a>
+                <a class="nav-link" href="{{ site.baseurl }}/info">About ChRIS</a>
                 </li>
         
         {% if page.url == "/about-us" %}
@@ -288,6 +294,10 @@ ga('send', 'pageview');
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/components/prism-python.min.js"></script>
+
 
 </body>
 </html>
