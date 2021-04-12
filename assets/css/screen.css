@@ -1,3 +1,22 @@
+/*
+Diagram and ASCII ART styling for Jekyll (and other markdown parser that appends a .language- prefix)
+*/
+
+.language-ascii-art {
+ display: inline-block; 
+ font-family: "Lucida Console", Monaco, monospace;
+ letter-spacing: -0.2em;
+ line-height: 0.8em;
+ text-shadow: 0 0 5px rgba(100,100,100,0.5);
+}
+
+.language-ascii-noshadows {
+ display: inline-block; 
+ font-family: "Lucida Console", Monaco, monospace;
+ letter-spacing: -0.2em;
+ line-height: 0.8em;
+}
+
 /* 
 Template Name: Mediumish 
 Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
