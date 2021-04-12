@@ -7,8 +7,8 @@ permalink: /plugins
 Here is a list of the plugins that have been created be some of our developers using the simple ChRIS cookiecutter application. 
 Have a look at them and get an idea about how they work. 
 
-<h4>pl-simpledsapp</h4>
-`simpledsapp` basically does an explicit copy of each file in an input directory to the output directory, prefixing an optional string to each filename.<br>
+<h4><tt>pl-simpledsapp</tt></h4>
+`pl-simpledsapp` basically does an explicit copy of each file in an input directory to the output directory, prefixing an optional string to each filename.<br>
 <a href="https://github.com/FNNDSC/pl-simpledsapp">Github</a> | <a href="https://hub.docker.com/repository/docker/fnndsc/pl-simpledsapp">Docker</a> 
 
 <h4>pl-dsdircopy</h4>
