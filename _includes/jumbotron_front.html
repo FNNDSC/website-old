@@ -13,30 +13,11 @@
     </div>
 </div>
 
-<pre><code class="language-python" style="line-height: 0.9em;">
-   def define_parameters(self):
-        """
-        Define the CLI arguments accepted by your plugin app.
-        Use self.add_argument to specify a new app argument.
-        """
-        # For example...
-        self.add_argument('--ignoreInputDir',
-                           dest         = 'b_ignoreInputDir',
-                           type         = bool,
-                           optional     = True,
-                           help         = 'if set, ignore the input dir completely',
-                           default      = False)
-
-    def run(self, options):
-        """
-        Define the code to be run by this plugin app.
-        """
-        yourSuperDuperAnalyticsHere()
-</code>
-</pre>
 
 <div class="jumbotron container-fluid" id="jumbo-arch">
-<pre style="line-height: 0.9em; float:left; width:50%; background: black; color: white;">
+  <div id="container3col">
+
+    <pre style="line-height: 1.5em; float:left; width:33%; background: black; color: white;">
 
 
 ┌────────────────────┐
@@ -63,9 +44,36 @@
                                        │
                                        ↓
 
-	</pre>
-</div>
-	<div style="float:right; width:50%;">
+    </pre>
+
+    <pre><code class="language-python" style="line-height: 0.9em; float:left; width:33%">
+      # Mostly you just need to define / fleshout these two methods:
+      def define_parameters(self):
+        """
+        Define the CLI arguments accepted by your plugin app.
+        Use self.add_argument to specify a new app argument.
+        """
+        # For example...
+        self.add_argument(
+            '--ignoreInputDir',
+            dest         = 'b_ignoreInputDir',
+            type         = bool,
+            optional     = True,
+            help         = 'if set, ignore the input dir completely',
+            default      = False
+       )
+
+      def run(self, options):
+        """
+        Define the code to be run by this plugin app.
+        """
+        yourSuperDuperAnalyticsStartsHere(
+		        inputDataFrom = options.inputDir,
+		        outputDataTo = options.outputDir
+	      )
+    </code></pre>
+
+	  <div style="float:right; width:33%;">
                 <p>
                     You can easily convert existing analytics or create new ones.
                 </p><p>
@@ -76,7 +84,8 @@
                     healthcare application development, removing barriers to innovation
                     so you can focus on your data.
                 </p>
-	</div>
+	  </div>
+  </div>
 </div>
 
 <div class="jumbotron container-fluid" id="jumbo-frontend">
