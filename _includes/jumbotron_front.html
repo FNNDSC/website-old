@@ -2,9 +2,17 @@
     <div class="row justify-content-center">
         <div class="offset-lg-1 col-lg-4 col-md-4 col-sm-7 mt-lg-3">
             <h4 class="font-weight-light">
-                ChRIS reduces the barrier to cloud and distributed computing for researchers and developers. Deploy your existing code with minimal hassle and fuss.
-            </h4><h6 class="font-weight-light mt-lg-3">
+                ChRIS reduces the barrier to cloud and distributed computing for researchers and developers. Re-use your existing code with minimal hassle and fuss or quickly create new apps.
+            </h4>
+            <h4 class="font-weight-light">
+                Code. Deploy. Replicate. Always.
+            </h4>
+
+            <h6 class="font-weight-light mt-lg-3">
 		Developed with scientific researchers in mind, ChRIS greatly reduces the barrier-to-entry for cloud-based containerized compute. In most cases, a cookie-cutter generated half-page "box" of python code is all that is needed to integrate your existing research analytics within the ChRIS platform.
+            </h6>
+            <h6 class="font-weight-light mt-lg-3">
+        You focus on your code/analytics. The ChRIS platform takes care of getting the right data to your code in where ever it needs it. And <i>where</i> is simply anywhere it makes most sense to run your analysis: in a secure hospital environments with direct access to patient data, on a high performance cluster, even out on some cloud with access to huge repositories of public accessible data.
             </h6>
         </div>
         <div class="col-lg-5 col-md-6 offset-md-1 col-sm-7 mt-md-0 mt-sm-5">
@@ -13,89 +21,125 @@
     </div>
 </div>
 
+<div class="callout" >
+    As more and more of our lives become ever intimately impacted by computing,
+    now more than ever, <strong>open source</strong>, <strong>open standards</strong>, and <strong>open platforms</strong> are
+    fundamentally important for our research community.
+</div>
 
 <div class="jumbotron container-fluid" id="jumbo-arch">
-  <div id="container3col">
+    <div class="cookie-cutter-diagram">
 
-    <pre style="line-height: 1.5em; float:left; width:33%; background: black; color: white;">
+        <!-- blocks -->
+        <div class="cookie-cutter component">
+            <h4>FNNDSC cookiecutter</h4>
+            <p>Your ChRIS journey as a developer typically starts here. This app creates everything you need to build a fully formed ChRIS plugin. We supply this as part of the package. The cookiecutter creates...
+            </p>
+        </div>
+
+        <div class="overview">
+            <h4>No mess no fuss...</h4>
+            <p>
+                You can easily convert existing analytics or create new ones.
+            </p><p>
+                Once your analytics are containerized for ChRIS, you'll
+                immediately have the benefits of distributed, containerized workflows.
+            </p><p>
+                ChRIS uses leading open source technologies to standardize cloud-based
+                healthcare application development, removing barriers to innovation
+                so you can focus on your data.
+            </p>
+            </div>
 
 
-┌────────────────────┐
-│ ChRIS cookiecutter ├───┐
-└────────────────────┘   │
-                         ↓
-          ┌─────────────────────────┐
-          │ pl-app/                 │
-          │ ├── app                 │
-          │ │   ├── app.py ─────────┼──┐
-          │ │   ├── __init__.py     │  │
-          │ │   ├── __main__.py     │  │
-          │ │   └── tests           │  │
-          │ │       ├── __init__.py │  │
-          │ │       └── test_app.py │  │
-          │ ├── Dockerfile          │  │
-          │ ├── LICENSE             │  │
-          │ ├── README.rst          │  │
-          │ ├── requirements.txt    │  │
-          │ └── setup.py            │  │
-          └─────────────────────────┘  │
-                                       │
-                                       │
-                                       │
-                                       ↓
-
-    </pre>
-
-    <pre><code class="language-python" style="line-height: 0.9em; float:left; width:33%">
-      # Mostly you just need to define / fleshout these two methods:
-      def define_parameters(self):
-        """
-        Define the CLI arguments accepted by your plugin app.
-        Use self.add_argument to specify a new app argument.
-        """
-        # For example...
-        self.add_argument(
-            '--ignoreInputDir',
-            dest         = 'b_ignoreInputDir',
-            type         = bool,
-            optional     = True,
-            help         = 'if set, ignore the input dir completely',
-            default      = False
-       )
-
-      def run(self, options):
-        """
-        Define the code to be run by this plugin app.
-        """
-        yourSuperDuperAnalyticsStartsHere(
-		        inputDataFrom = options.inputDir,
-		        outputDataTo = options.outputDir
-	      )
+        <div class="file-listing component">
+            <h4>all the files you need</h4>
+            <p>The cookiecutter asks you some simple questions and then
+                creates a working skeleton structure that contains everything you need for a fully containerized, functional ChRIS app.
+            </p><p>
+                All you need to do is jump in and start editing the
+                code snippets provided for you!
+            </p>
+            <pre><code class="language-treeview">
+pl-app
+|-- app/
+|   |-- app.py
+|   |-- __init__.py
+|   |-- __main__.py
+|   `-- tests/
+|       |-- __init__.py
+|       `-- test_app.py
+|-- Dockerfile
+|-- LICENSE
+|-- README.rst
+|-- requirements.txt
+`-- setup.py*
     </code></pre>
+        </div>
 
-	  <div style="float:right; width:33%;">
-                <p>
-                    You can easily convert existing analytics or create new ones.
-                </p><p>
-                    Once your analytics are containerized for ChRIS, you'll
-                    immediately have the benefits of distributed, containerized workflows.
-                </p><p>
-                    ChRIS uses leading open source technologies to standardize cloud-based
-                    healthcare application development, removing barriers to innovation
-                    so you can focus on your data.
-                </p>
-	  </div>
-  </div>
+        <div class="code-view component">
+            <h4>Come on in, the water's fine!</h4>
+            <p>You simply start coding/editing the main app, <tt>app.py</tt> in this case.</p>
+            <pre><code class="language-python" style="line-height: 1em;">
+# Mostly you just need to define / fleshout these two methods:
+def define_parameters(self):
+  """
+  Define the CLI arguments accepted by your plugin app.
+  Use self.add_argument to specify a new app argument.
+  """
+  # For example...
+  self.add_argument(
+      '--ignoreInputDir',
+      dest         = 'b_ignoreInputDir',
+      type         = bool,
+      optional     = True,
+      help         = 'if set, ignore the input dir completely',
+      default      = False
+ )
+
+def run(self, options):
+  """
+  Define the code to be run by this plugin app.
+  """
+  yourSuperDuperAnalyticsStartsHere(
+          inputDataFrom = options.inputDir,
+          outputDataTo  = options.outputDir
+    )
+              </code></pre>
+                  </div>
+
+        <!-- connectors -->
+        <div class="conn row-3 col-8"> <!-- cookie cutter => file view -->
+            <svg viewBox="0 2 10 10">
+              <path d="M5 10 L1 5 L4 5 L4 -9 L6 -9 L6 5 L9 5z"/>
+              <!-- <line x1="3" y1="0" x2="3" y2="10" stroke="black" /> -->
+            </svg>
+          </div>
+
+          <div class="conn row-4 col-11"> <!-- file view <=> code -->
+            <svg viewBox="5 -50 10 10">
+              <path d="M0 5 L4 2 L4 4 L6 4 L6 6 L4 6 L4 8z"/>
+              <path d="M10 5 L6 2 L6 4 L4 4 L4 6 L6 6 L6 8z"/>
+            </svg>
+          </div>
+
+    </div>
 </div>
 
 <div class="jumbotron container-fluid" id="jumbo-frontend">
         <div class="row justify-content-center align-items-sm-center">
                 <div class="offset-md-1 col-md-4 col-sm-12">
+                    <h4 class="font-weight-light">
+                        The many faces of ChRIS: from web-GUIs to shell scripts. We've got you covered.
+                    </h4>
                     <p>
+                    With you new app in hand, you can now link it to other apps in the ecosystem using an intuitive React-based web front end.
+                    </p><p>
+                    Don't worry though -- you can also script up complex workflows in shell and python... even javascript! Fire them up from the comfort and power of your terminal and then hop onto the GUI to seem self-construct visually.
+                    </p><p>
                     ChRIS is an open, scalable, shareable platform with a beautiful
                     front-end that enables researchers to create, share, and run
-                    analytic workflows in the cloud exclusively within a graphical
-                    user interface.
+                    analytic workflows in the cloud from a growing library of graphical interfaces.
                     </p>
                 </div>
                 <div class="offset-md-1 col-md-6 offset-md-1 col-sm-12 mt-md-0 mt-sm-2">
@@ -104,7 +148,7 @@
         </div>
 </div>
 
-<div class="jumbotron container-fluid" id="jumbo-envs">
+<!-- <div class="jumbotron container-fluid" id="jumbo-envs">
         <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12 mt-3">
                     <p class="mt-3 mb-3">
@@ -115,7 +159,7 @@
                         <img class="mb-3 mt-3" src="{{ site.baseurl }}/assets/images/illus_envs.png" alt="Laptop, server, and cloud environments icons">
                 </div>
         </div>
-</div>
+</div> -->
 
 
 <div class="jumbotron container-fluid" id="jumbo-partners">
@@ -137,14 +181,12 @@
         </div>
 </div>
 
-<div class="jumbotron container-fluid" id="jumbo-why">
+<!-- <div class="jumbotron container-fluid" id="jumbo-why">
         <div class="row justify-content-center align-items-center text-center">
                 <div class="col-lg-6 col-12">
                     <h2>Why use ChRIS?</h2>
                     <p>
-                        ChRIS is a revolutionary platform that allows researchers the ability to
-                        simply deploy their applications in a cloud infrastructure with access
-                        to <strong>more data</strong>, <strong>more compute</strong>, and <strong>more collaboration</strong> to drive medical innovation.
+                        ChRIS is a revolutionary platform that allows researchers to simply deploy their applications in an infrastructure with access to <strong>more data</strong>, <strong>more compute</strong>, and <strong>more collaboration</strong> to drive medical innovation.
                     </p>
                 </div>
         </div>
@@ -159,4 +201,4 @@
                         <img src="{{ site.baseurl }}/assets/images/illus_collaborate.png" alt="Collabore icon">
                 </div>
         </div>
-</div>
+</div> -->
