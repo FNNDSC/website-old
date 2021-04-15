@@ -1,0 +1,7 @@
+.sass-cache
+_site
+
+.git/
+.dockerignore
+Dockerfile
+docker-compose.yml
