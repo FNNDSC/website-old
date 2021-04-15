@@ -1,7 +1,112 @@
-/* 
-Template Name: Mediumish 
-Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
-License: https://www.wowthemes.net/freebies-license/ 
+/*
+Diagram and ASCII ART styling for Jekyll (and other markdown parser that appends a .language- prefix)
+*/
+
+.language-ascii-art {
+ display: inline-block;
+ font-family: "Lucida Console", Monaco, monospace;
+ letter-spacing: -0.2em;
+ line-height: 0.8em;
+ text-shadow: 0 0 5px rgba(100,100,100,0.5);
+}
+
+.language-ascii-noshadows {
+ display: inline-block;
+ font-family: "Lucida Console", Monaco, monospace;
+ letter-spacing: -0.2em;
+ line-height: 0.8em;
+}
+
+.cookie-cutter-diagram {
+    display:                grid;
+    grid-template-columns:  repeat(30, 1fr);
+    align-items:            start;
+    justify-items:          center;
+    /* max-width:              10in; */
+    margin:                 .2in 0;
+}
+
+#jumbo-arch .cookie-cutter-diagram > div {
+/* .cookie-cutter-diagram { */
+    padding: 12px;
+    /* background: #999; */
+    border: 1px solid #C0C0C0;
+  }
+
+#jumbo-arch .cookie-cutter-diagram > .component {
+    border-radius: 12px;
+    /* background: #E6E0FF; */
+    border: 2px solid #8E8EFF;
+}
+
+.overview {
+    background: #02B875;
+    grid-column: 14/span 10;
+    grid-row: 1/span 2;
+}
+.cookie-cutter {
+    grid-column: 4/span 8;
+    grid-row: 2;
+}
+.file-listing {
+    grid-column: 6/span 5;
+    grid-row: 4;
+}
+.code-view {
+    grid-column: 12/span 9;
+    grid-row: 4;
+}
+
+.row-2 {
+    grid-row: 2;
+}
+.row-3 {
+    grid-row: 3;
+}
+.row-4 {
+    grid-row: 4;
+}
+.col-4 {
+    grid-column: 4;
+}
+.col-8 {
+    grid-column: 8;
+}
+.col-9 {
+    grid-column: 9;
+}
+.col-10 {
+    grid-column: 10;
+}
+.col-11 {
+    grid-column: 11;
+}
+.col-11s5 {
+    grid-column: 11/5;
+}
+
+.conn {
+    position: relative;
+    width: .5in;
+    height: .5in;
+    padding: 0;
+    border: none;
+    background: transparent;
+    z-index: 0;
+  }
+
+.conn svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    fill: #a490f3;
+}
+
+/*
+Template Name: Mediumish
+Copyright: Sal, WowThemes.net, https://www.wowthemes.net
+License: https://www.wowthemes.net/freebies-license/
 */
 @media screen and (min-width:1500px) {
     html { font-size:18px; } /* Increase the font size on higher resolutions */
@@ -945,7 +1050,7 @@ iframe {
     border-radius: 0;
     background-size: cover;
     min-height: 350px;
-    /* removing styles to support video jumbo on front page 
+    /* removing styles to support video jumbo on front page
     background-image: url(../images/jumbo-front.jpg);
     background-position: bottom 10% left 0%;
     color: white;
@@ -961,7 +1066,7 @@ iframe {
     background: -moz-linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
     background: -webkit-linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
     background: linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a7cc7",endColorstr="#7ad4ed",GradientType=1); 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a7cc7",endColorstr="#7ad4ed",GradientType=1);
     color: white;
     font-weight: 300;
 }
@@ -985,8 +1090,8 @@ iframe {
 
 /* Custom People Headshot Listing Styles */
 /*
-/* These look for an element with id "team" as 
-/* the containing element. 
+/* These look for an element with id "team" as
+/* the containing element.
 /*
 ***/
 
@@ -1018,7 +1123,7 @@ iframe {
 /*
 */
 
-@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg"); } 
+@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg"); }
 
 
 #fnndsc-logo * {
@@ -1110,20 +1215,20 @@ iframe {
     background: #f0f7f7;
     padding: 1em;
   }
-  
+
   #page-sidebar h1 {
       margin-top: 1em;
       text-transform: uppercase;
       font-size: 1em;
       color: #777;
   }
-  
+
   #page-sidebar h2 {
       font-size: 1.2em;
       font-weight: bold;
   }
-  
-  #page-sidebar p, 
+
+  #page-sidebar p,
   #page-sidebar li {
       font-size: .9em;
   }
@@ -1271,12 +1376,13 @@ iframe {
 }
 
 #jumbo-why > div > div {
-    background: rgba(255,255,255,0.85);
+    background: rgba(212, 204, 204, 0.85);
     padding-bottom: 20px;
 }
 
 #jumbo-arch div {
     background: rgba(255,255,255,.93) !important;
+    padding:        0px;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 20px;
@@ -1302,7 +1408,7 @@ iframe {
     overflow: hidden;
     margin-top: 120px;
   }
-  
+
   .video-container video {
     position: absolute;
     z-index: 0;
@@ -1314,7 +1420,7 @@ iframe {
   }
   .video-text {
     min-height: 500px;
-    z-index: 999!important; 
+    z-index: 999!important;
     color: #fff;
     padding-bottom: 2em;
   }

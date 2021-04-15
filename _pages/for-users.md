@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Try out ChRIS
-permalink: /demo
+permalink: /for-users
 ---
 
 We've deployed <a href="https://app.chrisproject.org">a development version of the core ChRIS user interface</a> to help demonstrate how ChRIS platform works. Note that this demo is running development-level code and may be unstable:
