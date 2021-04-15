@@ -1,6 +1,9 @@
 .sass-cache
 _site
 
+.idea/
+.vscode/
+
 .git/
 .dockerignore
 Dockerfile
