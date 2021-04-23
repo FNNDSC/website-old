@@ -152,18 +152,26 @@ $accentColor: hsla(195, 74%, 69%, 1);
     ul {
       color: black;
       list-style-type: none;
+      margin-left: -1rem;
+      width: 100%;
+      margin: 0px !important;
     }
     
     li {
       color: #4185ca !important;
-      
+      width: 100%;
+
       i {
         color: #74ccea !important;
+        padding-left: 10px;  
+        padding-right: 10px;
+      }
+      
+      .active {
+        color: white !important;
+        background-color: #3065ab;
       }
     }
-ul {
-  margin-left: -1rem;
-}
   }
 
   main.main-editor {

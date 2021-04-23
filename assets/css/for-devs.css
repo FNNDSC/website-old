@@ -106,13 +106,20 @@
     padding-top: 4rem; }
     .editor aside.nav ul {
       color: black;
-      list-style-type: none; }
+      list-style-type: none;
+      margin-left: -1rem;
+      width: 100%;
+      margin: 0px !important; }
     .editor aside.nav li {
-      color: #4185ca !important; }
+      color: #4185ca !important;
+      width: 100%; }
       .editor aside.nav li i {
-        color: #74ccea !important; }
-    .editor aside.nav ul {
-      margin-left: -1rem; }
+        color: #74ccea !important;
+        padding-left: 10px;
+        padding-right: 10px; }
+      .editor aside.nav li .active {
+        color: white !important;
+        background-color: #3065ab; }
   .editor main.main-editor {
     flex-grow: 1;
     border-radius: 0.5rem;

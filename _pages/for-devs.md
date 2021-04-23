@@ -11,7 +11,7 @@ permalink: /for-devs
     <div>
       <!-- <img src="/assets/images/icons/optimized-for-dev-monitor.svg" alt="Setup icon" /> -->
       <h5>ChRIS cookiecutter</h5>
-      <p>Run <b>cookiecutter</b> with the ChRIS template, and a template ChRIS app will be generated for you</p>
+      <p>Run <b>cookiecutter</b> with the ChRIS template, and a template ChRIS app will be generated for you.</p>
     </div>
     <div class="info-div">
       <ul class="labels">
@@ -40,7 +40,7 @@ permalink: /for-devs
 		  <ul>
 			  <li><i class="fas fa-folder-open"></i> app
 		        <ul>
-		          <li><i class="far fa-file-code"></i> app.py</li>
+		          <li class="active"><i class="far fa-file-code"></i> app.py</li>
 		          <li><i class="far fa-file-code"></i> __init__.py</li>
 		          <li><i class="far fa-file-code"></i> __main__.py</li>
 		          <li><i class="fas fa-folder-open"></i> tests
