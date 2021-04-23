@@ -4,6 +4,44 @@ title: For Developers
 permalink: /for-devs
 ---
 
+<div id="banner">
+  <h3>It's easy to create a ChRIS app.</h3>
+
+  <div class="banner-content">
+    <div>
+      <!-- <img src="/assets/images/icons/optimized-for-dev-monitor.svg" alt="Setup icon" /> -->
+      <h5>ChRIS cookiecutter</h5>
+      <p>Run <b>cookiecutter</b> with the ChRIS template, and a template ChRIS app will be generated for you</p>
+    </div>
+    <div class="info-div">
+      <ul class="labels">
+        <li>author_name</li>
+        <li>author_email</li>
+        <li>app_repo_name</li>
+        <li>app_type</li>
+        <li>app_title</li>
+        <li>app_description</li>
+      </ul>
+      <ul class="dummy-info">
+        <li>ChRIS Dev</li>
+        <li>&lt;dev@chrisproject.org&gt;</li>
+        <li>pl-app</li>
+        <li>1 - ds</li>
+        <li>Cookie cutter sample app</li>
+        <li>A simple ChRIS app generated using cookiecutter</li>
+      </ul>
+    </div>
+  </div>
+  <div class="editor">
+    <div class="top-arrow"></div>
+    <aside class="nav">
+    </aside>
+    <main class="main-editor"></main>
+  </div>
+</div>
+
+<!-- prettier-ignore-start -->
+
 Here are a few helpful links for you to start off on some basics of setting up CUBE on your system and creating your first plugin.
 
 <section id="library">
@@ -58,8 +96,7 @@ Here are a few helpful links for you to start off on some basics of setting up C
     </div>
 </div>
 
-
 </section>
 
-    
 </div>
+<!-- prettier-ignore-end -->

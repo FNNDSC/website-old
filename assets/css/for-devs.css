@@ -1,0 +1,166 @@
+#banner {
+  color: white;
+  padding: 2.75rem;
+  padding-bottom: 5rem;
+  margin-bottom: 2rem;
+  background-color: #4483ca;
+  position: relative;
+}
+
+#banner h3 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 7rem;
+}
+
+.banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  margin-bottom: 9rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.banner-content div:first-of-type {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner-content div:first-of-type img {
+  max-width: 35%;
+  height: auto;
+}
+
+.banner-content div:first-of-type h5 {
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.banner-content div:first-of-type p {
+  width: 100%;
+  font-weight: 200;
+  margin: 0;
+}
+
+.banner-content div:first-of-type p b {
+  font-weight: 600;
+}
+
+.banner-content .info-div {
+  border-radius: 0.5rem;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  background: white;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-content .info-div > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  color: #4483ca;
+}
+
+.banner-content .info-div > ul.labels {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.banner-content .info-div > ul.labels li {
+  color: #94bee1;
+  font-weight: 400;
+}
+
+.banner-content .info-div > ul.dummy-info {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.banner-content .info-div > ul.dummy-info li {
+  color: #3065ab;
+  font-weight: 500;
+}
+
+.banner-content .info-div > ul.dummy-info li:nth-of-type(2n - 1) {
+  font-weight: 700;
+}
+
+.banner-content .info-div > ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.75rem 0 0 0;
+}
+
+.editor {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 36rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.editor .top-arrow {
+  margin-left: 4%;
+  width: 12rem;
+  height: 4.5rem;
+  top: -1.8rem;
+  position: absolute;
+  background: url("../images/icons/top-editor-arrow.svg") no-repeat center;
+  background-size: cover;
+}
+
+.editor aside.nav {
+  height: 100%;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+
+.editor main.main-editor {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #293e70;
+}
