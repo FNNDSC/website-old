@@ -35,8 +35,59 @@ permalink: /for-devs
   <div class="editor">
     <div class="top-arrow"></div>
     <aside class="nav">
+		<ul>
+		  <li>pl-app
+		  <ul>
+			  <li>app
+		        <ul>
+		          <li>app.py</li>
+		          <li>__init__.py</li>
+		          <li>__main__.py</li>
+		          <li>tests
+		            <ul>
+					  <li>__init__.py</li>
+					  <li>test_app.py</li>
+		            </ul>
+		          </li>
+		        </ul>
+		    </li>
+		    <li>Dockerfile</li>
+		    <li>LICENSE</li>
+		    <li>README.rst</li>
+		    <li>requirements.txt</li>
+		    <li>setup.py</li>
+		    </ul>
+		  </li>
+		</ul>
     </aside>
-    <main class="main-editor"></main>
+    <main class="main-editor">
+<code class=" language-python">
+<span class="token comment" spellcheck="true"># Mostly you just need to define / fleshout these two methods:</span>
+<span class="token keyword">def</span> <span class="token function">define_parameters</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token triple-quoted-string string">"""
+  Define the CLI arguments accepted by your plugin app.
+  Use self.add_argument to specify a new app argument.
+  """</span>
+  <span class="token comment" spellcheck="true"># For example...</span>
+  self<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span>
+      <span class="token string">'--ignoreInputDir'</span><span class="token punctuation">,</span>
+      dest         <span class="token operator">=</span> <span class="token string">'b_ignoreInputDir'</span><span class="token punctuation">,</span>
+      type         <span class="token operator">=</span> bool<span class="token punctuation">,</span>
+      optional     <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+      help         <span class="token operator">=</span> <span class="token string">'if set, ignore the input dir completely'</span><span class="token punctuation">,</span>
+      default      <span class="token operator">=</span> <span class="token boolean">False</span>
+ <span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token triple-quoted-string string">"""
+  Define the code to be run by this plugin app.
+  """</span>
+  yourSuperDuperAnalyticsStartsHere<span class="token punctuation">(</span>
+          inputDataFrom <span class="token operator">=</span> options<span class="token punctuation">.</span>inputDir<span class="token punctuation">,</span>
+          outputDataTo  <span class="token operator">=</span> options<span class="token punctuation">.</span>outputDir
+    <span class="token punctuation">)</span>
+              </code>
+    </main>
   </div>
 </div>
 

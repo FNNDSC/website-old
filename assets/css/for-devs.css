@@ -102,10 +102,23 @@
     background-size: cover; }
   .editor aside.nav {
     height: 100%;
-    flex-basis: 33%; }
+    flex-basis: 33%;
+    padding-top: 4rem; }
+    .editor aside.nav ul {
+      color: black;
+      list-style-type: none; }
+    .editor aside.nav li {
+      border-left: 1px dashed #ccc;
+      padding-left: 1rem; }
   .editor main.main-editor {
     flex-grow: 1;
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: #293e70; }
+    .editor main.main-editor code {
+      font-family: monospace;
+      white-space: pre;
+      display: block;
+      margin-left: 2rem !important;
+      background: none !important; }

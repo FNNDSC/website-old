@@ -147,6 +147,17 @@ $accentColor: hsla(195, 74%, 69%, 1);
   aside.nav {
     height: 100%;
     flex-basis: 33%;
+    padding-top: 4rem;
+ 
+    ul {
+      color: black;
+      list-style-type: none;
+    }
+    
+    li {
+      border-left: 1px dashed #ccc;
+      padding-left: 1rem;
+    }
   }
 
   main.main-editor {
@@ -160,5 +171,13 @@ $accentColor: hsla(195, 74%, 69%, 1);
       $saturation: -9%,
       $lightness: -23%
     );
+    
+    code {
+    font-family: monospace;
+    white-space: pre;
+    display: block;
+    margin-left: 2rem !important;
+    background: none !important;
+    }
   }
 }
