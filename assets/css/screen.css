@@ -1,6 +1,7 @@
 /*
 Diagram and ASCII ART styling for Jekyll (and other markdown parser that appends a .language- prefix)
 */
+@import url("./for-devs.css");
 
 .language-ascii-art {
  display: inline-block;
@@ -437,7 +438,7 @@ span.post-read-more a:hover {
 }
 
 h1.sitetitle {
-    font-family: 'Overpass', sans-serif !important !important;
+    font-family: 'Overpass', sans-serif !important;
     font-weight: 300;
     font-size: 32px;
 }
