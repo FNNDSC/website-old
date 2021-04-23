@@ -108,8 +108,11 @@
       color: black;
       list-style-type: none; }
     .editor aside.nav li {
-      border-left: 1px dashed #ccc;
-      padding-left: 1rem; }
+      color: #4185ca !important; }
+      .editor aside.nav li i {
+        color: #74ccea !important; }
+    .editor aside.nav ul {
+      margin-left: -1rem; }
   .editor main.main-editor {
     flex-grow: 1;
     border-radius: 0.5rem;

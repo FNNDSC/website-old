@@ -155,9 +155,15 @@ $accentColor: hsla(195, 74%, 69%, 1);
     }
     
     li {
-      border-left: 1px dashed #ccc;
-      padding-left: 1rem;
+      color: #4185ca !important;
+      
+      i {
+        color: #74ccea !important;
+      }
     }
+ul {
+  margin-left: -1rem;
+}
   }
 
   main.main-editor {

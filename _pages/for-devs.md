@@ -36,26 +36,26 @@ permalink: /for-devs
     <div class="top-arrow"></div>
     <aside class="nav">
 		<ul>
-		  <li>pl-app
+		  <li><i class="fas fa-folder-open"></i> pl-app
 		  <ul>
-			  <li>app
+			  <li><i class="fas fa-folder-open"></i> app
 		        <ul>
-		          <li>app.py</li>
-		          <li>__init__.py</li>
-		          <li>__main__.py</li>
-		          <li>tests
+		          <li><i class="far fa-file-code"></i> app.py</li>
+		          <li><i class="far fa-file-code"></i> __init__.py</li>
+		          <li><i class="far fa-file-code"></i> __main__.py</li>
+		          <li><i class="fas fa-folder-open"></i> tests
 		            <ul>
-					  <li>__init__.py</li>
-					  <li>test_app.py</li>
+					  <li><i class="far fa-file-code"></i> __init__.py</li>
+					  <li><i class="far fa-file-code"></i> test_app.py</li>
 		            </ul>
 		          </li>
 		        </ul>
 		    </li>
-		    <li>Dockerfile</li>
-		    <li>LICENSE</li>
-		    <li>README.rst</li>
-		    <li>requirements.txt</li>
-		    <li>setup.py</li>
+		    <li><i class="far fa-file-code"></i> Dockerfile</li>
+		    <li><i class="far fa-file-alt"></i> LICENSE</li>
+		    <li><i class="far fa-file-alt"></i> README.rst</li>
+		    <li><i class="far fa-file-alt"></i> requirements.txt</li>
+		    <li><i class="far fa-file-code"></i> setup.py</li>
 		    </ul>
 		  </li>
 		</ul>
@@ -133,7 +133,7 @@ Here are a few helpful links for you to start off on some basics of setting up C
     <div class="col-md-8 position-static p-4 pl-md-0">
         <h4 class="mt-0"><a href="#" class="stretched-link">Create Your First ChRIS Plugin</a> (Under construction)</h4>
         <p>Have an application you'd like to package as a ChRIS-compatible plugin container? Find out how in these instructions.</p>
-	<em>Note: This tutorial is currently under development. It should be ready by mid-to-late September 2020.</em>
+	<em>Note: This tutorial is currently under development.</em>
     </div>
 </div>
 <div class="row no-gutters position-relative">
@@ -143,11 +143,10 @@ Here are a few helpful links for you to start off on some basics of setting up C
     <div class="col-md-8 position-static p-4 pl-md-0">
         <h4 class="mt-0"><a href="#" class="stretched-link">Get Started Working with ChRIS Design Assets</a> (Under construction)</h4>
         <p>Want to work on graphics, UX design, or marketing for ChRIS? This resource will familiarize you with ChRIS's design assets.</p>
-	<em>Note: This tutorial is currently under development. It should be ready by mid-to-late September 2020.</em>
+	<em>Note: This tutorial is currently under development.</em>
     </div>
 </div>
 
 </section>
 
-</div>
 <!-- prettier-ignore-end -->
