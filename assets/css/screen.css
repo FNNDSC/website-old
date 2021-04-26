@@ -3,106 +3,6 @@ Diagram and ASCII ART styling for Jekyll (and other markdown parser that appends
 */
 @import url("./for-devs.css");
 
-.language-ascii-art {
- display: inline-block;
- font-family: "Lucida Console", Monaco, monospace;
- letter-spacing: -0.2em;
- line-height: 0.8em;
- text-shadow: 0 0 5px rgba(100,100,100,0.5);
-}
-
-.language-ascii-noshadows {
- display: inline-block;
- font-family: "Lucida Console", Monaco, monospace;
- letter-spacing: -0.2em;
- line-height: 0.8em;
-}
-
-.cookie-cutter-diagram {
-    display:                grid;
-    grid-template-columns:  repeat(30, 1fr);
-    align-items:            start;
-    justify-items:          center;
-    /* max-width:              10in; */
-    margin:                 .2in 0;
-}
-
-#jumbo-arch .cookie-cutter-diagram > div {
-/* .cookie-cutter-diagram { */
-    padding: 12px;
-    /* background: #999; */
-    border: 1px solid #C0C0C0;
-  }
-
-#jumbo-arch .cookie-cutter-diagram > .component {
-    border-radius: 12px;
-    /* background: #E6E0FF; */
-    border: 2px solid #8E8EFF;
-}
-
-.overview {
-    background: #02B875;
-    grid-column: 14/span 10;
-    grid-row: 1/span 2;
-}
-.cookie-cutter {
-    grid-column: 4/span 8;
-    grid-row: 2;
-}
-.file-listing {
-    grid-column: 6/span 5;
-    grid-row: 4;
-}
-.code-view {
-    grid-column: 12/span 9;
-    grid-row: 4;
-}
-
-.row-2 {
-    grid-row: 2;
-}
-.row-3 {
-    grid-row: 3;
-}
-.row-4 {
-    grid-row: 4;
-}
-.col-4 {
-    grid-column: 4;
-}
-.col-8 {
-    grid-column: 8;
-}
-.col-9 {
-    grid-column: 9;
-}
-.col-10 {
-    grid-column: 10;
-}
-.col-11 {
-    grid-column: 11;
-}
-.col-11s5 {
-    grid-column: 11/5;
-}
-
-.conn {
-    position: relative;
-    width: .5in;
-    height: .5in;
-    padding: 0;
-    border: none;
-    background: transparent;
-    z-index: 0;
-  }
-
-.conn svg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    fill: #a490f3;
-}
 
 /*
 Template Name: Mediumish
@@ -1176,7 +1076,8 @@ iframe {
 }
 
 #jumbo-arch,
-#jumbo-why {
+#jumbo-why,
+#jumbo-apps {
     background-color: white;
 }
 
@@ -1397,6 +1298,10 @@ iframe {
 
 #jumbo-why {
     margin-top: 1rem;
+}
+
+#jumbo-apps {
+  text-align: center;
 }
 
 .video-container {
