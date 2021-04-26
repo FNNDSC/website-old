@@ -4,7 +4,7 @@ title: About Us
 permalink: /about-us
 ---
 
-<h5>Who works on ChRIS?</h5>
+<h5>ChRIS is growing collaborative effort. While most of the primary teams are in the Boston area, anyone can join!</h5>
 
 {% include people.html %}
 

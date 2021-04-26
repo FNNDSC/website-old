@@ -60,16 +60,52 @@ ChRIS plugins are standardized via containers, because containers enable easy cr
 An instance of ChRIS is deployed at <a href="https://www.fnndsc.org/">Boston Children’s Hospital</a> (BCH) using the <a href="https://massopen.cloud">Massachusetts Open Cloud</a> (MOC). It is possible to develop and embed medical analytics plugins into the BCH-MOC deployment and that work is ongoing. This deployment was <a href="https://www.dotmed.com/news/story/42972?p_begin=0">highlighted in two keynotes at the Red Hat Summit in 2019</a> with over seven thousand people in attendance.
 </p>
 
-<h5>How did the ChRIS project begin?</h5>
+<h5>How did the ChRIS project begin and where do I get apps?</h5>
 
 <p>
 The platform began as a project at Boston Children's Hospital to facilitate the organization, 3D visualization, and collaboration around medical imaging amongst researchers; it has evolved into an open source platform with the potential to democratize the development of image processing software within an ecosystem following common standards, rather than disparate silos, and powered by Red Hat’s OpenShift and OpenStack in the MOC.
 </p>
 
 <p>
+A ChRIS Store is a one-stop destination for all ChRIS-conformant apps. Anyone is free to build out their own store, too.
+</p>
+
+<!-- <p>
 Watch the full story of the origins around the ChRIS project in part 1 of Red Hat's video series <em>Creating ChRIS</em> below:
 </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7WIGC1VjLqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ -->
 
+<div class="card-deck front">
+  <div class="card">
+	  <div class="card-header">
+	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" />
+	</div>
+    <div class="card-body">
+	    <h4 class="card-title"><a href="https://chrisstore.co/">The ChRIS Store</a></h4>
+      <p class="card-text"><a href="https://chrisstore.co/">The ChRIS Store</a> is where you can find, download, or contribute your own medical imaging analytical software for deployment on the ChRIS platform. We link to a recent prototype here.</p>
+    </div>
+  </div>
 
+  <div class="card">
+	  <div class="card-header">
+	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_creating-chris.jpg" />
+	  </div>
+    <div class="card-body">
+	    <h4 class="card-title"><a href="https://redhat.com/chris">Creating ChRIS</a></h4>
+	    <p class="card-text">This <a href="https://redhat.com/chris">video series</a> created by <a href="https://redhat.com">Red Hat</a> tells the story of the ChRIS project, introduces some of the people behind it, and lays out the ChRIS vision of cloud technology improving medical care.</p>
+    </div>
+  </div>
+
+  <div class="card">
+	  <div class="card-header">
+		<iframe style="width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/e3QJjLwVwQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+    <div class="card-body">
+	    <h4 class="card-title"><a href="https://youtu.be/e3QJjLwVwQo">ChRIS on theCUBE</a></h4>
+      <p class="card-text">Watch this great overview of ChRIS as explained by Dr. Ellen Grant and Dr. Rudolph Pienaar of Boston Children's Hospital in an interview with theCUBE during the 2019 Red Hat Summit in Boston, Massachusetts.</p>
+    </div>
+  </div>
+
+</div>
