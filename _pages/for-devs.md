@@ -119,11 +119,35 @@ permalink: /for-devs
               </code>
     </main>
   </div>
-</div>
+  <div class="dev-banner-followup">
+	<div class="row">
+    <div class="col">
+    <h5>Simple app creation.</h5>
+      <p>To create a ChRIS app, you can easily convert existing 
+      analytics or create new ones. Once your analytics are 
+      containerized for ChRIS, you'll immediately have the benefits of 
+      <strong>distributed</strong>, <strong>containerized</strong> 
+      workflows.</p>
+    </div>
+    <div class="col">
+	<h5>All the files you need.</h5>
+      <p>The cookiecutter asks you some simple questions and then 
+      creates a working skeleton structure that contains everything 
+      you need for a fully containerized, functional ChRIS app.</p>
+    </div>
 
+    <div class="row">
+		<div class="col">
+    <h3>All you need to do is jump in and start editing the code 
+    snippets provided for you!</h3>
+    </div> 
+    </div>
+  </div>
+</div>
+</div>
 <!-- prettier-ignore-start -->
 
-Here are a few helpful links for you to start off on some basics of setting up CUBE on your system and creating your first plugin.
+<h4 style="margin:1.8rem; margin-top: 4rem; width: 80%;" class="main-dev-content-header">Here are a few helpful links for you to start off on some basics of setting up CUBE on your system and creating your first plugin:</h4>
 
 <section id="library">
 
