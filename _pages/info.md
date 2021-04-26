@@ -57,17 +57,19 @@ ChRIS plugins are standardized via containers, because containers enable easy cr
 <h5>How is ChRIS being used today?</h5>
 
 <p>
-An instance of ChRIS is deployed at <a href="https://www.fnndsc.org/">Boston Children’s Hospital</a> (BCH) using the <a href="https://massopen.cloud">Massachusetts Open Cloud</a> (MOC). It is possible to develop and embed medical analytics plugins into the BCH-MOC deployment and that work is ongoing. This deployment was <a href="https://www.dotmed.com/news/story/42972?p_begin=0">highlighted in two keynotes at the Red Hat Summit in 2019</a> with over seven thousand people in attendance.
+An instance of ChRIS is deployed at <a href="https://www.fnndsc.org/">Boston Children’s Hospital</a> (BCH) using the <a href="https://massopen.cloud">Mass Open Cloud</a> (MOC). It is possible to develop and embed medical analytics plugins into the BCH-MOC deployment and that work is ongoing. This deployment was <a href="https://www.dotmed.com/news/story/42972?p_begin=0">highlighted in two keynotes at the Red Hat Summit in 2019</a> with over seven thousand people in attendance.
 </p>
 
 <h5>How did the ChRIS project begin and where do I get apps?</h5>
 
 <p>
-The platform began as a project at Boston Children's Hospital to facilitate the organization, 3D visualization, and collaboration around medical imaging amongst researchers; it has evolved into an open source platform with the potential to democratize the development of image processing software within an ecosystem following common standards, rather than disparate silos, and powered by Red Hat’s OpenShift and OpenStack in the MOC.
+The platform began as a project at Boston Children's Hospital to facilitate the organization, 3D visualization, and collaboration around medical imaging amongst researchers. Subsequently, it has evolved into a general purpose open source platform with the potential to democratize the development and distribution of not just medical computation, but any type of analytic compute.
+
+At the Mass Open Cloud, ChRIS is being used to schedule medical analytics powered by Red Hat's OpenShift and OpenStack.
 </p>
 
 <p>
-A ChRIS Store is a one-stop destination for all ChRIS-conformant apps. Anyone is free to build out their own store, too.
+A ChRIS Store is a one-stop destination for all ChRIS apps. While there is a global store, anyone is free to fire up their own local version and populate it with their own specific apps, too.
 </p>
 
 <!-- <p>
