@@ -10,7 +10,7 @@ permalink: /info
 <h2>Overview</h2>
 
 <p>
-ChRIS is a pervasively open source platform that utilizes cloud technologies to democratize medical analytics application development. It enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. ChRIS is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Massachusetts Open Cloud</a> (MOC).
+ChRIS is a pervasively open source platform that utilizes cloud technologies to democratize medical analytics application development. It enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. ChRIS is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Mass Open Cloud</a> (MOC).
 </p>
 
 <h5>Why use ChRIS?</h5>
@@ -48,10 +48,10 @@ ChRIS allows researchers the ability to simply deploy their applications in a cl
 <li>Ansible</li>
 </ul>
 
-<p>The ChRIS backend resides within a hospital or institutional network, as well as a core web front end. Plugins of medical image analysis software are deployed to the ChRIS backend, which users can then run against data retrieved securely from the internal hospital network. End users can compose multiple plugin workflows to run against their data and retrieve the results from the system when the workflow is complete. The computation for the image processing is run in containers on the <a href="https://massopen.cloud">Massachusetts Open Cloud</a>, which results in much faster computation and results back to the users. Computational output is transferred back to the ChRIS platform from the Massachusetts Open Cloud. </p>  
+<p>The ChRIS backend resides within a hospital or institutional network, as well as a core web front end. Plugins of medical image analysis software are deployed to the ChRIS backend, which users can then run against data retrieved securely from the internal hospital network. End users can compose multiple plugin workflows to run against their data and retrieve the results from the system when the workflow is complete. The computation for the image processing is run in containers on the <a href="https://massopen.cloud">Mass Open Cloud</a>, which results in much faster computation and results back to the users. Computational output is transferred back to the ChRIS platform from the Mass Open Cloud. </p>
 
 <p>
-ChRIS plugins are standardized via containers, because containers enable easy creation of portable image processing software that includes everything it needs to run in a lightweight and recreatable environment. Established such as <a href="https://duckduckgo.com/?q=freesurfer&t=ffab&atb=v160-1&ia=web">Freesurfer</a>, <a href="http://stnava.github.io/ANTs/">ANTS</a>, and <a href="https://www.tensorflow.org/">TensorFlow</a> as well as new innovative tools such as Boston University's <a href="https://multiparty.org/">Multi-Party Compute (MPC)</a> secure anonymous data sharing method can be packaged as ChRIS plugins via containers that run on ChRIS.  
+ChRIS plugins are standardized via containers, because containers enable easy creation of portable image processing software that includes everything it needs to run in a lightweight and recreatable environment. Established such as <a href="https://duckduckgo.com/?q=freesurfer&t=ffab&atb=v160-1&ia=web">Freesurfer</a>, <a href="http://stnava.github.io/ANTs/">ANTS</a>, and <a href="https://www.tensorflow.org/">TensorFlow</a> as well as new innovative tools such as Boston University's <a href="https://multiparty.org/">Multi-Party Compute (MPC)</a> secure anonymous data sharing method can be packaged as ChRIS plugins via containers that run on ChRIS.
 </p>
 
 <h5>How is ChRIS being used today?</h5>
