@@ -10,11 +10,18 @@
 
 {% seo %}
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
 
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+/>
+<link rel="stylesheet" href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.min.css">
+
+<link href="{{ site.baseurl }}/assets/css/prism-treeview.css" rel="stylesheet">
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
@@ -63,33 +70,26 @@ ga('send', 'pageview');
         <!-- Begin Menu -->
 
             <ul class="navbar-nav ml-auto">
-    
-		{% if page.url == "/about" %}
+
+		{% if page.url == "/info" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
                 <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
-                </li>
-   
-		{% if page.url == "/demo" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/demo">Demo</a>
-                </li>
-                
-		{% if page.url == "/plugins" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/plugins">Plugins</a>
+                <a class="nav-link" href="{{ site.baseurl }}/info">About ChRIS</a>
                 </li>
 
-		{% if page.url == "/join-us" %}
+        {% if page.url == "/about-us" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/about-us">About Us</a>
+                </li>
+
+        {% if page.url == "/join-us" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
@@ -97,20 +97,36 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/join-us">Join Us</a>
                 </li>
 
-                {% if page.url == "/docs" %}
+        {% if page.url == "/plugins" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/docs">Docs</a>
+                <a class="nav-link" href="{{ site.baseurl }}/plugins">Plugins</a>
                 </li>
 
-                {% if page.url == "/code" %}
+        {% if page.url == "/more-info" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
                 {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/code">Code</a>
+                <a class="nav-link" href="{{ site.baseurl }}/more-info">More Info</a>
+                </li>
+
+		{% if page.url == "/for-users" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/for-users">For Users</a>
+                </li>
+
+        {% if page.url == "/for-devs" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/for-devs">For Devs</a>
                 </li>
 <!--
                 <li class="nav-item">
@@ -119,8 +135,8 @@ ga('send', 'pageview');
                 </li>
             -->
                 {% include search-lunr.html %}
-                
-	                   
+
+
 
             </ul>
 
@@ -161,7 +177,7 @@ ga('send', 'pageview');
 
 <div class="container" id="content-container">
 
-       
+
 
 <div class="main-content">
     {{ content }}
@@ -182,12 +198,12 @@ ga('send', 'pageview');
 	</div>
 </div>
 {% endif %}
-    
+
 </div>
 
 <!-- Categories Jumbotron
 ================================================== -->
-<div class="jumbotron fortags">
+<!-- <div class="jumbotron fortags">
 	<div class="d-md-flex h-100">
 		<div class="col-md-4 transpdark align-self-center text-center h-100">
             <div class="d-md-flex align-items-center justify-content-center h-100">
@@ -208,7 +224,7 @@ ga('send', 'pageview');
             {% assign tags_list = nil %}
 		</div>
 	</div>
-</div>
+</div> -->
 
 
 <!-- Begin Footer
@@ -232,25 +248,25 @@ ga('send', 'pageview');
                 </a>
             <!-- End Logo -->
             </div>
-<!-- Space for more logos, eg MOC, RH, BU, etc TBD 
+<!-- Space for more logos, eg MOC, RH, BU, etc TBD
             <div class="col-lg-3 col-md-6 text-center text-lg-left">
 
             </div>
             <div class="col-lg-3 col-md-6 text-center text-lg-left">
 
             </div>
-        
-    --> 
+
+    -->
         </div>
-    
+
         <div class="row">
-            <div class="col-md-12 col-sm-12 text-center">  
+            <div class="col-md-12 col-sm-12 text-center">
             <a href="https://www.fnndsc.org">Copyright © {{ site.time | date: "%Y" }} Boston Children's Hospital Fetal-Neonatal Neuroimaging and Developmental Science Center</a>
 	    <!-- {{ site.name }} -->
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 col-sm-12 text-center">  
+            <div class="col-md-12 col-sm-12 text-center">
                 <a href="{{ site.baseurl}}/credits">Credits for this website</a>
             </div>
         </div>
@@ -274,11 +290,15 @@ ga('send', 'pageview');
 <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
 {% endif %}
 
-<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
+<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/components/prism-python.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/prism-treeview.js"></script>
 
 </body>
 </html>

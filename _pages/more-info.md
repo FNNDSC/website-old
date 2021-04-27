@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Documentation
-permalink: /docs
+permalink: /more-info
 sidebar: docs-sidebar.html
 ---
 
@@ -45,3 +45,13 @@ Now that you've got your pre-requisites ready and have learned about how ChRIS a
 [ChRIS cookiecutter Tutorial App](https://chrisstore.co/quickstart)
 
 Read through the README for the ChRIS cookiecutter tutorial app linked above. It will walk you through getting your first ChRIS plugin set up.
+
+<div class="row no-gutters position-relative">
+    <div class="col-md-4 mb-md-0 p-md-4">
+        <img src="/assets/images/library/thumb-arch.png" class="w-100" alt="...">
+    </div>
+    <div class="col-md-8 position-static p-4 pl-md-0">
+        <h4 class="mt-0"><a href="/join-us/how-chris-works" class="stretched-link">How ChRIS Works: An Architectural Overview</a></h4>
+         <p>Start here to get an overview of what ChRIS is, what technologies it used, and how it is architected. Video and text summary available.</p>
+    </div>
+</div>

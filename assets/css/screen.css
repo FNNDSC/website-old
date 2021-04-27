@@ -1,7 +1,13 @@
-/* 
-Template Name: Mediumish 
-Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
-License: https://www.wowthemes.net/freebies-license/ 
+/*
+Diagram and ASCII ART styling for Jekyll (and other markdown parser that appends a .language- prefix)
+*/
+@import url("./for-devs.css");
+
+
+/*
+Template Name: Mediumish
+Copyright: Sal, WowThemes.net, https://www.wowthemes.net
+License: https://www.wowthemes.net/freebies-license/
 */
 @media screen and (min-width:1500px) {
     html { font-size:18px; } /* Increase the font size on higher resolutions */
@@ -332,7 +338,7 @@ span.post-read-more a:hover {
 }
 
 h1.sitetitle {
-    font-family: 'Overpass', sans-serif !important !important;
+    font-family: 'Overpass', sans-serif !important;
     font-weight: 300;
     font-size: 32px;
 }
@@ -945,7 +951,7 @@ iframe {
     border-radius: 0;
     background-size: cover;
     min-height: 350px;
-    /* removing styles to support video jumbo on front page 
+    /* removing styles to support video jumbo on front page
     background-image: url(../images/jumbo-front.jpg);
     background-position: bottom 10% left 0%;
     color: white;
@@ -961,10 +967,11 @@ iframe {
     background: -moz-linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
     background: -webkit-linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
     background: linear-gradient(180deg, rgba(58,124,199,1) 27%, rgba(122,212,237,1) 98%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a7cc7",endColorstr="#7ad4ed",GradientType=1); 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a7cc7",endColorstr="#7ad4ed",GradientType=1);
     color: white;
     font-weight: 300;
 }
+
 
 .card-deck.front {
     margin: 2.5rem 0rem !important;
@@ -985,8 +992,8 @@ iframe {
 
 /* Custom People Headshot Listing Styles */
 /*
-/* These look for an element with id "team" as 
-/* the containing element. 
+/* These look for an element with id "team" as
+/* the containing element.
 /*
 ***/
 
@@ -1018,7 +1025,7 @@ iframe {
 /*
 */
 
-@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg"); } 
+@font-face {font-family: "DINNextW01-Light"; src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot"); src: url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.woff") format("woff"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9ae5e19516bc6428f1327ff3311b2617.svg#DINNextW01-Light") format("svg"); }
 
 
 #fnndsc-logo * {
@@ -1070,7 +1077,8 @@ iframe {
 }
 
 #jumbo-arch,
-#jumbo-why {
+#jumbo-why,
+#jumbo-apps {
     background-color: white;
 }
 
@@ -1110,20 +1118,20 @@ iframe {
     background: #f0f7f7;
     padding: 1em;
   }
-  
+
   #page-sidebar h1 {
       margin-top: 1em;
       text-transform: uppercase;
       font-size: 1em;
       color: #777;
   }
-  
+
   #page-sidebar h2 {
       font-size: 1.2em;
       font-weight: bold;
   }
-  
-  #page-sidebar p, 
+
+  #page-sidebar p,
   #page-sidebar li {
       font-size: .9em;
   }
@@ -1271,12 +1279,13 @@ iframe {
 }
 
 #jumbo-why > div > div {
-    background: rgba(255,255,255,0.85);
+    background: rgba(212, 204, 204, 0.85);
     padding-bottom: 20px;
 }
 
 #jumbo-arch div {
     background: rgba(255,255,255,.93) !important;
+    padding:        0px;
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 20px;
@@ -1292,6 +1301,10 @@ iframe {
     margin-top: 1rem;
 }
 
+#jumbo-apps {
+  text-align: center;
+}
+
 .video-container {
     display: grid;
     justify-items: center;
@@ -1302,7 +1315,7 @@ iframe {
     overflow: hidden;
     margin-top: 120px;
   }
-  
+
   .video-container video {
     position: absolute;
     z-index: 0;
@@ -1314,7 +1327,7 @@ iframe {
   }
   .video-text {
     min-height: 500px;
-    z-index: 999!important; 
+    z-index: 999!important;
     color: #fff;
     padding-bottom: 2em;
   }
