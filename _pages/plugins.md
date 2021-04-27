@@ -1,15 +1,35 @@
 ---
 layout: page
-title: Plugins for ChRIS
+title: ChRIS Plugins
 permalink: /plugins
 ---
 
-Here is a list of the plugins that have been created be some of our developers using the simple ChRIS cookiecutter application. 
-Have a look at them and get an idea about how they work. 
+<h5>Let's go browsing!</h5>
+<p>
+The best way to see what's available on the <a href="https://chrisstore.co/"> ChRIS Store</a> is to go shopping. What's even better is that all apps are free!
+</p>
+
+<div class="card-deck front">
+  <div class="card">
+         <div class="card-header">
+           <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" />
+       </div>
+    <div class="card-body">
+           <h4 class="card-title"><a href="https://chrisstore.co/">The ChRIS Store</a></h4>
+      <p class="card-text"><a href="https://chrisstore.co/">The ChRIS Store</a> is where you can find, download, or contribute your own medical imaging analytical software for deployment on the ChRIS platform
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!--
+Here is a list of the plugins that have been created be some of our developers using the simple ChRIS cookiecutter application.
+Have a look at them and get an idea about how they work.
 
 <h4><tt>pl-simpledsapp</tt></h4>
 `pl-simpledsapp` basically does an explicit copy of each file in an input directory to the output directory, prefixing an optional string to each filename.<br>
-<a href="https://github.com/FNNDSC/pl-simpledsapp">Github</a> | <a href="https://hub.docker.com/repository/docker/fnndsc/pl-simpledsapp">Docker</a> 
+<a href="https://github.com/FNNDSC/pl-simpledsapp">Github</a> | <a href="https://hub.docker.com/repository/docker/fnndsc/pl-simpledsapp">Docker</a>
 
 <h4>pl-dsdircopy</h4>
 A ChRIS DS (Data Synthesis) plugin app that copies files/dirs data from one or more input sources in obj storage to an output sink.<br>
@@ -46,3 +66,4 @@ A ChRIS DS (Data Synthesis) plugin app that copies files/dirs data from one or m
 <h4>pl-heatmap</h4>
 A ChRIS DS plugin that compares two different image sets and generates useful difference image data and metrics.<br>
 <a href="https://github.com/FNNDSC/pl-heatmap">Github</a> | <a href="https://hub.docker.com/repository/docker/fnndsc/pl-heatmap">Docker</a> | <a href="https://chrisstore.co/plugin/52">ChRIS Store</a>
+-->
