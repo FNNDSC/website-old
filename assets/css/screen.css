@@ -1347,6 +1347,50 @@ iframe {
 }
 
 
+
+/* front page jumbo feed code demo hover */
+
+
+#jumbo-frontend {
+  overflow: hidden;
+}
+
+#jumbo-frontend div.feed-script pre {
+  height: 665px;
+}
+
+#jumbo-frontend .demo-hover pre {
+visibility: hidden;
+}
+
+#jumbo-frontend .demo-hover pre code {
+  font-size: 90% !important;
+}
+
+#jumbo-frontend .demo-hover:hover * {
+visibility: visible !important;
+}
+
+#jumbo-frontend img {
+display: none;
+}
+
+#jumbo-frontend #feed-demo {
+  display: block;
+  background: url("http://127.0.0.1:4000/assets/images/chris-screenshot.jpg") no-repeat !important;
+  background-size: 100% auto !important;
+  padding: 0px;
+  margin: 0px;
+}
+
+#jumbo-frontend #feed-demo pre {
+  margin: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+
+
 @media (max-width: 600px) {
     .navbar-expand-lg {
     }
