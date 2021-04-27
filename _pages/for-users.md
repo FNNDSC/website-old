@@ -14,7 +14,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_login.jpg" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_login.png" />
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">Log in</h4>
@@ -24,7 +24,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feeds.jpg" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feeds.png" />
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">View Feeds List</h4>
@@ -37,7 +37,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feed.jpg" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feed.png" />
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">View a Feed</h4>
@@ -47,7 +47,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_output.jpg" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_output.png" />
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">Built-in Viewer</h4>
