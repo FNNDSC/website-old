@@ -1377,7 +1377,7 @@ display: none;
 
 #jumbo-frontend #feed-demo {
   display: block;
-  background: url("http://127.0.0.1:4000/assets/images/chris-screenshot.jpg") no-repeat !important;
+  background: url("../images/chris-screenshot.jpg") no-repeat !important;
   background-size: 100% auto !important;
   padding: 0px;
   margin: 0px;
