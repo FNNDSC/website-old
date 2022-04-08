@@ -192,7 +192,7 @@ permalink: /for-devs
 </div>
 <div class="row no-gutters position-relative">
     <div class="col-md-4 mb-md-0 p-md-4">
-        <img src="/assets/images/library/thumb-designassets.png" class="w-100" alt="ChRIS design assets graphic.">
+        <img src="/assets/images/library/thumb-designassets.png" class="w-100" alt="ChRIS design assets graphic">
     </div>
     <div class="col-md-8 position-static p-4 pl-md-0">
         <h4 class="mt-0"><a href="#" class="stretched-link">Get Started Working with ChRIS Design Assets</a> (Under construction)</h4>
