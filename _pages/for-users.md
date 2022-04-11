@@ -14,7 +14,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_login.png" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_login.png" alt="Screenshot of the ChRIS web application showing a demo login"/>
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">Log in</h4>
@@ -24,7 +24,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feeds.png" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feeds.png" alt="Screenshot of the ChRIS web application showing demo feedlist with date of creation, last commit, number of jobs done, ranking of job and errors"/>
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">View Feeds List</h4>
@@ -37,7 +37,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feed.png" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_feed.png" alt="Screenshot of the ChRIS web application showing a demo feed with name of creator, date, total runtime, feed graph and description about selected node and feed"/>
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">View a Feed</h4>
@@ -47,7 +47,7 @@ Here's a quick tour of what you'll see in the demo:
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_output.png" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/demo_output.png" alt="Screenshot of the ChRIS web application showing an output video in Image viewer of ChRIS output viewer"/>
 	</div>
     <div class="card-body">
 	    <h4 class="card-title">Built-in Viewer</h4>

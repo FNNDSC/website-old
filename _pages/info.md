@@ -18,17 +18,17 @@ ChRIS is a pervasively open source platform that utilizes cloud technologies to 
 <div class="row">
 <div class="col-md-4">
 <h6>More Data</h6>
-<img src="/assets/images/illus_data.png" />
+<img src="/assets/images/illus_data.png" alt="Data icon"/>
 </div>
 
 <div class="col-md-4">
 <h6>More Compute</h6>
-<img src="/assets/images/illus_compute.png" />
+<img src="/assets/images/illus_compute.png" alt="Compute icon" />
 </div>
 
 <div class="col-md-4">
 <h6>More Collaboration</h6>
-<img src="/assets/images/illus_collaborate.png" />
+<img src="/assets/images/illus_collaborate.png" alt = "Collaborate icon"/>
 </div>
 </div>
 
@@ -82,7 +82,7 @@ Watch the full story of the origins around the ChRIS project in part 1 of Red Ha
 <div class="card-deck front">
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" alt="Set Up ChRIS graphic"/>
 	</div>
     <div class="card-body">
 	    <h4 class="card-title"><a href="https://chrisstore.co/">The ChRIS Store</a></h4>
@@ -92,7 +92,7 @@ Watch the full story of the origins around the ChRIS project in part 1 of Red Ha
 
   <div class="card">
 	  <div class="card-header">
-	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_creating-chris.jpg" />
+	    <img style="height: 100%; width: 100%;" src="/assets/images/thumb_creating-chris.jpg" alt="Creating ChRIS graphic"/>
 	  </div>
     <div class="card-body">
 	    <h4 class="card-title"><a href="https://redhat.com/chris">Creating ChRIS</a></h4>

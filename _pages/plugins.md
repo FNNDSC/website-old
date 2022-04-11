@@ -12,7 +12,7 @@ The best way to see what's available on the <a href="https://chrisstore.co/"> Ch
 <div class="card-deck front">
   <div class="card">
          <div class="card-header">
-           <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" />
+           <img style="height: 100%; width: 100%;" src="/assets/images/thumb_chris-store.jpg" alt="Set Up ChRIS Store graphic"/>
        </div>
     <div class="card-body">
            <h4 class="card-title"><a href="https://chrisstore.co/">The ChRIS Store</a></h4>

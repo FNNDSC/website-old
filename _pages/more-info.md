@@ -48,7 +48,7 @@ Read through the README for the ChRIS cookiecutter tutorial app linked above. It
 
 <div class="row no-gutters position-relative">
     <div class="col-md-4 mb-md-0 p-md-4">
-        <img src="/assets/images/library/thumb-arch.png" class="w-100" alt="...">
+        <img src="/assets/images/library/thumb-arch.png" class="w-100" alt="ChRIS architecture graphic">
     </div>
     <div class="col-md-8 position-static p-4 pl-md-0">
         <h4 class="mt-0"><a href="/join-us/how-chris-works" class="stretched-link">How ChRIS Works: An Architectural Overview</a></h4>

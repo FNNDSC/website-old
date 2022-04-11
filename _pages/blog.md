@@ -16,7 +16,7 @@ comments: true
 
 <div class="col-md-4">
 
-<p><img src="{{site.baseurl}}/assets/images/ChRIS-2018-Hackathon.jpg" alt="photo of ChRIS developers in a conference room with laptops hacking on code" /></p>
+<p><img src="{{site.baseurl}}/assets/images/ChRIS-2018-Hackathon.jpg" alt="Photo of ChRIS developers in a conference room with laptops hacking on code" /></p>
 
 </div>
 </div>
