@@ -41,16 +41,10 @@ podman unshare chown 1000:1000 -R .; podman-compose up
 To stop it, hit Ctrl+C and run
 
 ```bash
-podman-compose down
+podman-compose down; chown $(id -u):$(id -g)
 ```
 
-Your directory permissions will be a little wonky on your host system afterwards. You can read more about that at [https://docs.podman.io/en/latest/markdown/podman-unshare.1.html], but to correct the issue you'll just have to do:
-
-```bash
-sudo chown yourusername:yourusername -R .
-```
-
-Replacing "yourusername" with your own actual username, of course! :-)
+You can read more about why podman unshare and chown commands are needed here at [https://docs.podman.io/en/latest/markdown/podman-unshare.1.html].
 
 ### If you're using Docker
 ```bash
