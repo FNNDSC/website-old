@@ -4,7 +4,7 @@ title: Try out ChRIS
 permalink: /for-users
 ---
 
-We've deployed <a href="https://app.chrisproject.org">a development version of the core ChRIS user interface</a> to help demonstrate how ChRIS platform works. Note that this demo is running development-level code and may be unstable:
+Please visit our public demo instance:
 
 <h4><a href="https://app.chrisproject.org">https://app.chrisproject.org</a></h4>
 

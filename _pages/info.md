@@ -10,7 +10,7 @@ permalink: /info
 <h2>Overview</h2>
 
 <p>
-ChRIS is a pervasively open source platform that utilizes cloud technologies to democratize medical analytics application development. It enables healthcare organizations to keep owning their data while benefiting from public cloud processing capabilities. ChRIS is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Mass Open Cloud</a> (MOC).
+ChRIS is an open source platform democratizing computational medicine, enabling translational research at scale on the hybrid cloud. <em>ChRIS</em> is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Mass Open Cloud</a> (MOC).
 </p>
 
 <h5>Why use ChRIS?</h5>
@@ -33,19 +33,19 @@ ChRIS is a pervasively open source platform that utilizes cloud technologies to 
 </div>
 
 <p>
-ChRIS allows researchers the ability to simply deploy their applications in a cloud infrastructure with access to <strong>more data</strong>, <strong>more compute</strong>, and <strong>more collaboration</strong> to drive medical innovation. ChRIS uses leading open source technologies to standardize cloud-based healthcare application development, taking care of the infrastructure so medical researchers can focus on their data.
+<em>ChRIS</em> leverages cutting-edge technologies and simple standards to facilitate
+both application development and deployment, so that users can focus on their data.
 </p>
 
-<h5>How does ChRIS work?</h5>
+<h5>How does <em>ChRIS</em> work?</h5>
 
-<p>ChRIS is a cloud-based platform using a full suite of open source technology including:</p>
+<p>The <em>ChRIS</em> technology stack is fully open source featuring industry-standard software including:</p>
+
 <ul>
 <li>Red Hat Enterprise Linux</li>
-<li>Open Stack</li>
 <li>Kubernetes / OpenShift</li>
 <li>Ceph / Swift / Cinder</li>
-<li>Docker/OCI containers</li>
-<li>Ansible</li>
+<li>OCI Containers</li>
 </ul>
 
 <p>The ChRIS backend resides within a hospital or institutional network, as well as a core web front end. Plugins of medical image analysis software are deployed to the ChRIS backend, which users can then run against data retrieved securely from the internal hospital network. End users can compose multiple plugin workflows to run against their data and retrieve the results from the system when the workflow is complete. The computation for the image processing is run in containers on the <a href="https://massopen.cloud">Mass Open Cloud</a>, which results in much faster computation and results back to the users. Computational output is transferred back to the ChRIS platform from the Mass Open Cloud. </p>
