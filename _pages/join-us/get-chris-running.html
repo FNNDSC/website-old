@@ -17,128 +17,43 @@ sidebar: false
     </div>
 </div>
 
-<blockquote class="mt-5 mb-5">This tutorial is based on the README files for <a href="https://github.com/FNNDSC/ChRIS_ultron_backEnd">
-    the ChRIS backend repository</a> and <a href="https://github.com/FNNDSC/ChRIS_ui">the ChRIS UI repository</a>. Where these instructions may
-    end up differing with those resources, the README files will always be the most up-to-date and correct. We provide this tutorial as a single
-    comprehensive document to get you started.
-</blockquote>
-
 <h3>Pre-requisites</h3>
-<ul>
-    <li>A laptop or workstation running <strong>Linux</strong> (<a href="https://hub.docker.com/editions/community/docker-ce-server-fedora">Fedora*</a>, 
-        <a href="https://hub.docker.com/editions/community/docker-ce-server-centos">CentOS</a>, 
-        <a href="https://hub.docker.com/editions/community/docker-ce-server-ubuntu">Ubuntu</a>, or 
-        <a href="https://hub.docker.com/editions/community/docker-ce-server-debian">Debian</a>), 
-        <strong><a href="https://www.docker.com/products/docker-desktop">Mac OS X 10.14+</a></strong>, or 
-        <strong><a href="https://www.docker.com/products/docker-desktop">Windows 10</a></strong> (64-bit).
-    </li>
-    <li>Docker 18.06.0+ with Docker Compose 1.22.0+ (Use link for your distro / OS above.)</li>
-    <li>(Linux-only) Your OS user should be in a <code>docker</code> user group. After installing Docker, do the following in a terminal:
-        <ol>
-            <li><code>sudo groupadd docker</code></li>
-            <li><code>sudo usermod -aG docker $USER</code></li>
-            <li>Log out, and log back in.</li>
-        </ol>
-    </li>
-</ul>
-<em>* Due to Docker's lack of support for cgroups v2 and DNFTables, there is no official Docker build for Fedora 32. Follow the instructions in 
-    <a href="https://fedoramagazine.org/docker-and-fedora-32/">this Fedora Magazine article</a> to get Docker running on your Fedora 32 system.</em>
 
-<h3 class="pt-4">Get the ChRIS backend (CUBE) up and running</h3>
-
-<p>After you've met the pre-requisites, you'll need to the ChRIS backend up and running.
-<em>(The ChRIS backend is also called CUBE, an acronym for ChRIS Ultron Back End.)</em> 
-This is the core of ChRIS, not including its web interface (we'll get that working after.)
-</p>
 <p>
-    We're going to set up a development version of ChRIS. (It will use the default Django 
-    development server and therefore is not suitable for production.) <em>If you are interested
-    in setting ChRIS up for production, <a href="https://github.com/FNNDSC/ChRIS_ultron_backEnd#single-machine-production-deployment">please
-    refer to the README in the CUBE repository</a>.</em>
+Have
+<b><a href="https://docs.docker.com/compose/install/">docker-compose</a></b>
+version 2.6 or later installed and working on a Linux system.
+WSL 2 on Windows and Docker Desktop for Mac also work, however for optimal performance,
+we strongly encourage you to run Linux natively.
 </p>
 
-Open up a terminal on your system and follow these steps:
+<p>
+Linux users, be sure to have added yourself to the <code>docker</code> group before proceeding.
+Refer to the
+<a href="https://docs.docker.com/engine/install/linux-postinstall/">
+Docker post-installation instructions
+</a>
+for more details.
+</p>
 
-<ol class="pt-2">
-    <li>
-        <strong>Clone the ChRIS backend repo.</strong><br />
-        <code>git clone https://github.com/FNNDSC/ChRIS_ultron_backend</code>
-    </li>
-    <li><strong>Go into the ChRIS backend directory.</strong><br />
-        <code>cd ChRIS_ultron_backend</code>
-    </li>
-    <li>
-        <strong>Run CUBE.</strong>
-        <ul>
-        <li>Run with tests:
-            <pre>
-./unmake.sh ;
-sudo rm -fr FS;
-rm -fr FS;
-./make.sh</pre>
-        </li>
-        <li>Skip unit and integration tests:
-            <pre>
-./unmake.sh ;
-sudo rm -fr FS;
-rm -fr FS;
-./make.sh -U -I -s</pre>
-        </li>
-        </ul>
-    </li>
-</ol>
+<p>
+At least 8GB RAM and 20GB disk space is recommended.
+Docker Desktop users should make sure that the Linux VM has 8GB memory allocated to it.    
+</p>
 
-<h5 class="pt-2">Tearing down the ChRIS backend</h5>
-<p>You can later remove all the backend containers and release storage volumes with:</p>
-<pre>
-$ cd ChRIS_ultron_backEnd
-$ sudo rm -r FS
-$ ./unmake.sh
-</pre>
+<h3 class="pt-4">Get <em>ChRIS</em> up and running</h3>
 
-<h3 class="pt-3">Get the ChRIS UI frontend up and running</h3>
-
-<p>Now that you have CUBE, the ChRIS backend, running, it's time to get the ChRIS web-based UI working.
-    The ChRIS UI is written primarily in TypeScript and <a href="https://reactjs.org/">React</a>, and uses the <a href="https://patternfly.org">PatternFly</a>
-    React pattern library.</p>
-
-    Open up a terminal on your system and follow these steps:
-
-<ol class="pt-2">
-    <li>
-        <strong>Clone the ChRIS UI repo.</strong><br />
-        <code>$ git clone https://github.com/FNNDSC/ChRIS_ui.git</code>
-    </li>
-    <li><strong>Go into the ChRIS UI directory.</strong><br />
-        <code>cd ChRIS_ui</code>
-    </li>
-    <li>
-        <strong>Run the ChRIS UI.</strong><br />
-        <code>docker run --rm -it -v $(pwd):/home/localuser -p 3000:3000 -u $(id -u):$(id -g) --name chris_ui fnndsc/chris_ui:dev</code>
-    </li>
-    <li>
-        <strong>Open the website in a browser.</strong></br />
-        <code><a href="http://localhost:3000">http://localhost:3000</a></code>
-    </li>
-</ol>
-
-More detailed instructions for the ChRIS UI are available in <a href="https://github.com/FNNDSC/ChRIS_ui">the ChRIS UI repository's README</a>, 
-including how to run interactive tests and build for production.
-
-
-
-<section id="library">
+<p>
+Please check out <a href="https://github.com/FNNDSC/miniChRIS-docker">miniChRIS</a>,
+a complete <em>ChRIS</em> distribution for local testing purposes.
+</p>
 
 <h3 class="pt-5">What's Next?</h3>
 
-<p class="pb-4">Now that you've got a got both the ChRIS backend and ChRIS front end running, why not set up the ChRIS store?</p>
+Ready to start hacking away?
 
-<div class="row no-gutters position-relative">
-        <div class="col-md-4 mb-md-0 p-md-4">
-            <img src="/assets/images/library/thumb-setupchris-store.png" class="w-100" alt="Set Up ChRIS Store graphic">
-        </div>
-        <div class="col-md-8 position-static p-4 pl-md-0">
-                <h4 class="mt-0"><a href="/join-us/run-chris-store" class="stretched-link">Set Up the ChRIS Store</a></h4>
-                <p>If you want to work on the ChRIS store, or need to test loading plugins into a ChRIS instance, you'll need to get the ChRIS store running on your system. Here's how.</p>
-        </div>
-     </div>
+<ul>
+<li>Check out our guide on <a href="https://github.com/FNNDSC/chris_plugin#getting-started">how to develop <em>ChRIS</em> plugins in Python</a>.</li>
+<li>Try spinning up the full <a href="https://github.com/FNNDSC/ChRIS_ultron_backEnd">ChRIS backend in development mode</a>.</li>
+<li>Customize the look and features of <em>ChRIS</em> by running the <a href="https://github.com/FNNDSC/ChRIS_ui">ChRIS_ui</a> separately.</li>
+</ul>
