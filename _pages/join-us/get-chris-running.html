@@ -112,6 +112,9 @@ $ ./unmake.sh
     <li><strong>Go into the ChRIS UI directory.</strong><br />
         <code>cd ChRIS_ui</code>
     </li>
+    <li><strong>Build ChRIS_ui Docker container.</strong><br />
+        <code>docker build -t fnndsc/chris_ui:dev -f Dockerfile_dev .</code>
+    </li>
     <li>
         <strong>Run the ChRIS UI.</strong><br />
         <code>docker run --rm -it -v $(pwd):/home/localuser -p 3000:3000 -u $(id -u):$(id -g) --name chris_ui fnndsc/chris_ui:dev</code>
