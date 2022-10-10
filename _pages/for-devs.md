@@ -139,7 +139,12 @@ permalink: /for-devs
     <div class="row">
 		<div class="col">
     <h3>All you need to do is jump in and start editing the code 
-    snippets provided for you!</h3>
+    snippets provided for you!
+    <br />
+    <a href="https://github.com/FNNDSC/cookiecutter-chrisapp">
+    https://github.com/FNNDSC/cookiecutter-chrisapp
+    </a>
+    </h3>
     </div> 
     </div>
   </div>
@@ -147,7 +152,7 @@ permalink: /for-devs
 </div>
 <!-- prettier-ignore-start -->
 
-<h4 style="margin:1.8rem; margin-top: 4rem; width: 80%;" class="main-dev-content-header">Here are a few helpful links for you to start off on some basics of setting up CUBE on your system and creating your first plugin:</h4>
+<h4 style="margin:1.8rem; margin-top: 4rem; width: 80%;" class="main-dev-content-header">Here are a few helpful links for you to start off on some basics of setting up <em>ChRIS</em> on your system and creating your first plugin:</h4>
 
 <section id="library">
 
