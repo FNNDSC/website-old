@@ -153,7 +153,7 @@ permalink: /for-devs
 
 <!-- <h3>New Contributor Library</h3> -->
 
-<!-- <div class="row no-gutters position-relative">
+<div class="row no-gutters position-relative">
     <div class="col-md-4 mb-md-0 p-md-4">
         <img src="/assets/images/library/thumb-arch.png" class="w-100" alt="...">
     </div>
@@ -161,7 +161,7 @@ permalink: /for-devs
         <h4 class="mt-0"><a href="/join-us/how-chris-works" class="stretched-link">How ChRIS Works: An Architectural Overview</a></h4>
          <p>Start here to get an overview of what ChRIS is, what technologies it used, and how it is architected. Video and text summary available.</p>
     </div>
-</div> -->
+</div>
 <div class="row no-gutters position-relative">
     <div class="col-md-4 mb-md-0 p-md-4">
         <img src="/assets/images/library/thumb-setupchris.png" class="w-100" alt="Set Up ChRIS graphic">
@@ -171,7 +171,8 @@ permalink: /for-devs
         <p>Here's a full set of instructions to get ChRIS running on your local system so you can start working with the codebase.</p>
     </div>
  </div>
- <div class="row no-gutters position-relative">
+ <!-- these pages are under construction -->
+ <!-- <div class="row no-gutters position-relative">
     <div class="col-md-4 mb-md-0 p-md-4">
         <img src="/assets/images/library/thumb-setupchris-store.png" class="w-100" alt="Set Up ChRIS Store graphic">
     </div>
@@ -199,7 +200,7 @@ permalink: /for-devs
         <p>Want to work on graphics, UX design, or marketing for ChRIS? This resource will familiarize you with ChRIS's design assets.</p>
 	<em>Note: This tutorial is currently under development.</em>
     </div>
-</div>
+</div> -->
 
 </section>
 
