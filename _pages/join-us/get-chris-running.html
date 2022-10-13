@@ -22,30 +22,41 @@ sidebar: false
 <p>
 Have
 <b><a href="https://docs.docker.com/compose/install/">docker-compose</a></b>
-version 2.6 or later installed and working on a Linux system.
+version 2.6 or later installed and working on a <b>Linux</b> system.
 WSL 2 on Windows and Docker Desktop for Mac also work, however for optimal performance,
 we strongly encourage you to run Linux natively.
 </p>
 
 <p>
-Linux users, be sure to have added yourself to the <code>docker</code> group before proceeding.
-Refer to the
-<a href="https://docs.docker.com/engine/install/linux-postinstall/">
-Docker post-installation instructions
-</a>
-for more details.
+At least 8GB RAM and 20GB disk space is recommended.
+Docker Desktop users should make sure that the Linux VM has 8GB memory or more allocated to it.    
 </p>
 
-<p>
-At least 8GB RAM and 20GB disk space is recommended.
-Docker Desktop users should make sure that the Linux VM has 8GB memory allocated to it.    
-</p>
+<h4>Installing Docker on Linux</h4>
+
+<ol>
+<li>
+    Install <a href="https://docs.docker.com/engine/install/">Docker Engine</a>
+    by following the "server" installation guide for your Linux distro.
+</li>
+<li>
+    Add your user account to the <code>docker</code> group as instructed by the
+    <a href="https://docs.docker.com/engine/install/linux-postinstall/">post-installation steps</a>.
+</li>
+</ol>
+
+<div class="alert alert-warning" role="alert">
+Do <b>not</b> install "Docker Desktop for Linux!"
+</div>
 
 <h3 class="pt-4">Get <em>ChRIS</em> up and running</h3>
 
 <p>
 Please check out <a href="https://github.com/FNNDSC/miniChRIS-docker">miniChRIS</a>,
 a complete <em>ChRIS</em> distribution for local testing purposes.
+Follow the instructions in the
+<a href="https://github.com/FNNDSC/miniChRIS-docker#readme">README.md</a>
+file to get <em>ChRIS</em> running on your computer.
 </p>
 
 <h3 class="pt-5">What's Next?</h3>
