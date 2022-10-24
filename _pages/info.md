@@ -10,7 +10,7 @@ permalink: /info
 <h2>Overview</h2>
 
 <p>
-ChRIS is an open source platform democratizing computational medicine, enabling translational research at scale on the hybrid cloud. <em>ChRIS</em> is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://www.bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Mass Open Cloud</a> (MOC).
+ChRIS is an open source platform democratizing computational medicine, enabling translational research at scale on the hybrid cloud. <em>ChRIS</em> is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://www.bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">Mass Open Cloud</a> (MOC).
 </p>
 
 <h5>Why use ChRIS?</h5>
@@ -57,7 +57,7 @@ ChRIS plugins are standardized via containers, because containers enable easy cr
 <h5>How is ChRIS being used today?</h5>
 
 <p>
-An instance of ChRIS is deployed at <a href="https://www.fnndsc.org/">Boston Children’s Hospital</a> (BCH) using the <a href="https://massopen.cloud">Mass Open Cloud</a> (MOC). It is possible to develop and embed medical analytics plugins into the BCH-MOC deployment and that work is ongoing. This deployment was <a href="https://www.dotmed.com/news/story/42972?p_begin=0">highlighted in two keynotes at the Red Hat Summit in 2019</a> with over seven thousand people in attendance.
+An instance of ChRIS is deployed at <a href="https://childrenshospital.org">Boston Children’s Hospital</a> (BCH) using the <a href="https://massopen.cloud">Mass Open Cloud</a> (MOC). It is possible to develop and embed medical analytics plugins into the BCH-MOC deployment and that work is ongoing. This deployment was <a href="https://www.dotmed.com/news/story/42972?p_begin=0">highlighted in two keynotes at the Red Hat Summit in 2019</a> with over seven thousand people in attendance.
 </p>
 
 <h5>How did the ChRIS project begin and where do I get apps?</h5>
