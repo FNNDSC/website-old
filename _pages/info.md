@@ -10,7 +10,7 @@ permalink: /info
 <h2>Overview</h2>
 
 <p>
-ChRIS is an open source platform democratizing computational medicine, enabling translational research at scale on the hybrid cloud. <em>ChRIS</em> is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Mass Open Cloud</a> (MOC).
+ChRIS is an open source platform democratizing computational medicine, enabling translational research at scale on the hybrid cloud. <em>ChRIS</em> is developed as part of a collaborative effort between <a href="https://childrenshospital.org">Boston Children’s Hospital</a>, <a href="https://redhat.com/chris">Red Hat</a>, <a href="https://www.bu.edu/rhcollab/projects/radiology">Boston University</a>, and <a href="https://massopen.cloud">the Mass Open Cloud</a> (MOC).
 </p>
 
 <h5>Why use ChRIS?</h5>
