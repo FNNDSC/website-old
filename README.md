@@ -1,4 +1,4 @@
-# ChRIS Status Updates Blog
+# Deprecated: Please see https://github.com/FNNDSC/chrisproject.org
 
 This repo drives [https://fnndsc.github.io/website/](https://fnndsc.github.io/website/) & [https://chrisproject.org/](https://chrisproject.org/), which is meant to be the main upstream website for the ChRIS project.
 
