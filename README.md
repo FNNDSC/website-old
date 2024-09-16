@@ -31,6 +31,22 @@ Other tips:
 
 If you would like to set up a local copy of this website to test changes, etc. to it beyond adding posts:
 
+### If you're using Podman
+```bash
+git clone git@github.com:FNNDSC/website.git website-chrisproject
+cd website-chrisproject
+podman unshare chown 1000:1000 -R .; podman-compose up
+```
+
+To stop it, hit Ctrl+C and run
+
+```bash
+podman-compose down; chown $(id -u):$(id -g)
+```
+
+You can read more about why podman unshare and chown commands are needed here at [https://docs.podman.io/en/latest/markdown/podman-unshare.1.html].
+
+### If you're using Docker
 ```bash
 git clone git@github.com:FNNDSC/website.git website-chrisproject
 cd website-chrisproject
